@@ -1,0 +1,12 @@
+﻿<MudContainer MaxWidth="@MaxWidth.Large">
+    @ChildContent
+</MudContainer>
+<MudContainer MaxWidth="@MaxWidth.Large">
+    <CHFooter />
+</MudContainer>
+
+@code
+{
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
