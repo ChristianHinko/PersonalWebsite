@@ -3,7 +3,7 @@
 @inject CHThemeService ThemeService;
 @implements IDisposable
 
-<MudThemeProvider Theme="@ThemeService.Theme" DefaultScrollbar="@ThemeService.DefaultScrollbar" IsDarkMode="@ThemeService.IsDarkMode" IsDarkModeChanged="@ThemeService.SetIsDarkMode" /> <!-- hook up our ThemeService's theming to the MudThemeProvider -->
+<MudThemeProvider @ref="@ThemeProvider" Theme="@ThemeService.Theme" DefaultScrollbar="@ThemeService.DefaultScrollbar" IsDarkMode="@ThemeService.IsDarkMode" IsDarkModeChanged="@ThemeService.SetIsDarkMode" /> <!-- hook up our ThemeService's theming to the MudThemeProvider -->
 <MudDialogProvider />
 <MudSnackbarProvider />
 
@@ -11,6 +11,20 @@
 
 @code
 {
+    private MudThemeProvider ThemeProvider { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        if (firstRender)
+        {
+            // Use system preference for default IsDarkMode value
+            bool darkMode = await ThemeProvider.GetSystemPreference();
+            ThemeService.SetIsDarkMode(darkMode);
+        }
+    }
+
     protected override void OnInitialized()
     {
         // Listen for theme changes
