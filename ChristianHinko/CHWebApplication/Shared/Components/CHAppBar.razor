@@ -1,4 +1,7 @@
-﻿<MudAppBar Color="@Color.Primary" Elevation="1">
+﻿@using Services
+@inject CHThemeService ThemeService
+
+<MudAppBar Color="@Color.Primary" Elevation="1">
     <MudLink Class="me-4" Color="@Color.Default" Underline="@Underline.None" Href="/"> <!-- use Color.Default to override MudLink from changing the color to Color.Primary -->
         <MudText Typo="@Typo.h5">Christian Hinkle</MudText>
     </MudLink>
@@ -12,7 +15,7 @@
         }
     </div>
     <MudSpacer />
-    <MudIconButton Icon="@Icons.Material.Outlined.DarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
+    <MudIconButton Icon="@GetDarkModeButtonIcon()" OnClick="@ThemeService.ToggleIsDarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
 </MudAppBar>
 
 @code
@@ -31,4 +34,19 @@
     /// </summary>
     [Parameter]
     public List<HrefText> HrefTextButtonList { get; set; } = new List<HrefText>();
+
+    /// <summary>
+    /// Get appropriate dark/light mode icon according to our ThemeService.
+    /// </summary>
+    private string GetDarkModeButtonIcon()
+    {
+        if (ThemeService.IsDarkMode)
+        {
+            return Icons.Material.Filled.DarkMode;
+        }
+        else
+        {
+            return Icons.Material.Outlined.DarkMode;
+        }
+    }
 }
