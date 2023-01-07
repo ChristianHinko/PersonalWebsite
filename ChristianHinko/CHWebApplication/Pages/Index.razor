@@ -1,3 +1,18 @@
 ﻿@page "/"
 
-<MudText>Hello, world!</MudText>
+<MudCarousel Class="mud-width-full" Style="height: 300px;" TData="object" AutoCycle="true" AutoCycleTime="@TimeSpan.FromSeconds(3)" ShowArrows="true" ShowBullets="true" UncheckedIcon="@Icons.Material.Outlined.Square" CheckedIcon="@Icons.Material.Filled.Square">
+    <MudCarouselItem Class="d-flex mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Primary">
+        <MudIcon Class="ma-auto" Icon="@Icons.Custom.Brands.GitHub" Size="@Size.Large" />
+    </MudCarouselItem>
+    <MudCarouselItem Class="d-flex mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Secondary">
+        <MudIcon Class="ma-auto" Icon="@Icons.Custom.Brands.Twitter" Size="@Size.Large" />
+    </MudCarouselItem>
+    <MudCarouselItem Class="d-flex mud-height-full" Transition="@CarouselItemTransition">
+        <MudIcon Class="ma-auto" Icon="@Icons.Custom.Brands.YouTube" Size="@Size.Large" Color="@Color.Primary" />
+    </MudCarouselItem>
+</MudCarousel>
+
+@code
+{
+    private Transition CarouselItemTransition { get; set; } = Transition.Slide;
+}
