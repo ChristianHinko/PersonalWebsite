@@ -13,6 +13,11 @@ namespace CHWebApplication.Services
         public MudTheme Theme { get; private set; }
 
         /// <summary>
+        /// Determines whether to use the default scrollbar.
+        /// </summary>
+        public bool DefaultScrollbar { get; private set; }
+
+        /// <summary>
         /// Determines whether to use the dark palette.
         /// </summary>
         public bool IsDarkMode { get; private set; }
@@ -26,6 +31,7 @@ namespace CHWebApplication.Services
         public CHThemeService()
         {
             Theme = new();
+            DefaultScrollbar = false;
             IsDarkMode = false;
             ThemeChanged = null;
         }

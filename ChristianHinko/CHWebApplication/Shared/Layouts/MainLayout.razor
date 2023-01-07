@@ -3,7 +3,7 @@
 @inject CHThemeService ThemeService;
 @implements IDisposable
 
-<MudThemeProvider Theme="@ThemeService.Theme" IsDarkMode="@ThemeService.IsDarkMode" IsDarkModeChanged="@ThemeService.SetIsDarkMode" /> <!-- hook up our ThemeService's theming to the MudThemeProvider -->
+<MudThemeProvider Theme="@ThemeService.Theme" DefaultScrollbar="@ThemeService.DefaultScrollbar" IsDarkMode="@ThemeService.IsDarkMode" IsDarkModeChanged="@ThemeService.SetIsDarkMode" /> <!-- hook up our ThemeService's theming to the MudThemeProvider -->
 <MudDialogProvider />
 <MudSnackbarProvider />
 
