@@ -1,0 +1,34 @@
+﻿<MudAppBar Color="@Color.Primary" Elevation="1">
+    <MudLink Class="me-4" Color="@Color.Default" Underline="@Underline.None" Href="/"> <!-- use Color.Default to override MudLink from changing the color to Color.Primary -->
+        <MudText Typo="@Typo.h5">Christian Hinkle</MudText>
+    </MudLink>
+    <div class="d-inline-flex flex-row gap-4">
+        @* Populate buttons *@
+        @foreach (var hrefText in HrefTextButtonList)
+        {
+            <MudButton Variant="@Variant.Text" Href="@hrefText.Href">
+                <MudText>@hrefText.Text</MudText>
+            </MudButton>
+        }
+    </div>
+    <MudSpacer />
+    <MudIconButton Icon="@Icons.Material.Outlined.DarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
+</MudAppBar>
+
+@code
+{
+    /// <summary>
+    /// A hyperlink reference grouped with its display text.
+    /// </summary>
+    public struct HrefText
+    {
+        public string Href { get; set; }
+        public string Text { get; set; }
+    }
+
+    /// <summary>
+    /// Populates buttons on the App Bar.
+    /// </summary>
+    [Parameter]
+    public List<HrefText> HrefTextButtonList { get; set; }
+}

@@ -1,25 +1,12 @@
 ﻿@inherits LayoutComponentBase
+@using CHWebApplication.Shared.Components
 
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Color="@Color.Primary" Elevation="1">
-        <MudLink Class="me-4" Color="@Color.Default" Underline="@Underline.None" Href="/"> <!-- use Color.Default to override MudLink from changing the color to Color.Primary -->
-            <MudText Typo="@Typo.h5">Christian Hinkle</MudText>
-        </MudLink>
-        <div class="d-inline-flex flex-row gap-4">
-            <MudButton Variant="@Variant.Text" Href="/art">
-                <MudText>Art</MudText>
-            </MudButton>
-            <MudButton Variant="@Variant.Text" Href="/games">
-                <MudText>Games</MudText>
-            </MudButton>
-        </div>
-        <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.Outlined.DarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
-    </MudAppBar>
+    <CHAppBar HrefTextButtonList="@HrefTextButtonList" />
     <MudMainContent>
         <MudContainer>
             @Body
@@ -29,3 +16,12 @@
         <MudFab Icon="@Icons.Material.Filled.ArrowUpward" />
     </MudScrollToTop>
 </MudLayout>
+
+@code
+{
+    private List<CHAppBar.HrefText> HrefTextButtonList { get; set; } = new()
+    {
+        new() { Href = "/art", Text = "Art" },
+        new() { Href = "/games", Text = "Games" }
+    };
+}
