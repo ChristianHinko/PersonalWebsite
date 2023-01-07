@@ -1,0 +1,16 @@
+﻿@inherits LayoutComponentBase
+@using CHWebApplication.Shared.Components
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <CHAppBar />
+    <MudMainContent>
+        <MudContainer>
+            @Body
+        </MudContainer>
+    </MudMainContent>
+    <CHScrollToTop />
+</MudLayout>
