@@ -15,7 +15,9 @@
         }
     </MudStack>
     <MudSpacer />
-    <MudIconButton Icon="@GetDarkModeButtonIcon()" OnClick="@ThemeService.ToggleIsDarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
+    <MudTooltip Text="@(ThemeService.IsDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode")" Delay="2000.0">
+        <MudIconButton Icon="@(ThemeService.IsDarkMode ? Icons.Material.Filled.DarkMode : Icons.Material.Outlined.DarkMode)" OnClick="@ThemeService.ToggleIsDarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
+    </MudTooltip>
 </MudAppBar>
 
 @code
@@ -34,19 +36,4 @@
     /// </summary>
     [Parameter]
     public List<HrefText> HrefTextButtonList { get; set; } = new List<HrefText>();
-
-    /// <summary>
-    /// Get appropriate dark/light mode icon according to our ThemeService.
-    /// </summary>
-    private string GetDarkModeButtonIcon()
-    {
-        if (ThemeService.IsDarkMode)
-        {
-            return Icons.Material.Filled.DarkMode;
-        }
-        else
-        {
-            return Icons.Material.Outlined.DarkMode;
-        }
-    }
 }
