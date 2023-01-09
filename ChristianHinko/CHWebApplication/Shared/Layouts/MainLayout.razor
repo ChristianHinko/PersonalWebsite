@@ -1,0 +1,42 @@
+﻿@inherits LayoutComponentBase
+@using Services
+@inject CHThemeService ThemeService;
+@implements IDisposable
+
+<MudThemeProvider @ref="@ThemeProvider" Theme="@ThemeService.Theme" DefaultScrollbar="@ThemeService.DefaultScrollbar" IsDarkMode="@ThemeService.IsDarkMode" IsDarkModeChanged="@ThemeService.SetIsDarkMode" /> <!-- hook up our ThemeService's theming to the MudThemeProvider -->
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+@Body
+
+@code
+{
+    private MudThemeProvider ThemeProvider { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        if (firstRender)
+        {
+            // Use system preference for default IsDarkMode value
+            bool darkMode = await ThemeProvider.GetSystemPreference();
+            ThemeService.SetIsDarkMode(darkMode);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        // Listen for theme changes
+        ThemeService.ThemeChanged += OnThemeChanged;
+        base.OnInitialized();
+    }
+
+    private void OnThemeChanged(object? sender, EventArgs e) => StateHasChanged(); // re-render from theme change
+
+    public void Dispose()
+    {
+        // Unbind from theme changes
+        ThemeService.ThemeChanged -= OnThemeChanged;
+    }
+}

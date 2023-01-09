@@ -1,0 +1,34 @@
+﻿@page "/games"
+@layout Shared.Layouts.GamesLayout
+
+<CHPage>
+    <!-- Title banner -->
+    <div class="relative mud-width-full" style="height: 500px;">
+        <!-- Carousel background detached from the DOM -->
+        <MudCarousel Class="absolute mud-width-full mud-height-full" TData="object" AutoCycle="true" AutoCycleTime="@TimeSpan.FromSeconds(3)" ShowArrows="false" ShowBullets="false">
+            <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Primary" />
+            <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Secondary" />
+            <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Tertiary" />
+        </MudCarousel>
+        <!-- Title text on top of the detached background -->
+        <div class="relative mud-width-full mud-height-full d-flex justify-center align-center"> <!-- position has to be non-static in order to draw over the non-static-positioned mud carousel elements -->
+            <MudText Typo="@Typo.h1" Align="@Align.Center">Games</MudText>
+        </div>
+    </div>
+    <!-- Content -->
+    <MudContainer MaxWidth="@MaxWidth.Large">
+        <MudStack Class="my-10" Row="false" Spacing="10">
+            <MudPaper Class="mud-width-full d-flex justify-center align-center" Height="400px">
+                <MudText Typo="@Typo.h2" Align="@Align.Center">Game</MudText>
+            </MudPaper>
+            <MudPaper Class="mud-width-full d-flex justify-center align-center" Height="400px">
+                <MudText Typo="@Typo.h2" Align="@Align.Center">Plugin</MudText>
+            </MudPaper>
+        </MudStack>
+    </MudContainer>
+</CHPage>
+
+@code
+{
+    private Transition CarouselItemTransition { get; set; } = Transition.Slide;
+}

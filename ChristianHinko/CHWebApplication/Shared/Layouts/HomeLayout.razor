@@ -1,0 +1,19 @@
+﻿@inherits LayoutComponentBase
+@layout MainLayout
+
+<MudLayout>
+    <CHAppBar HrefTextButtonList="@HrefTextButtonList" />
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+    <CHScrollToTop />
+</MudLayout>
+
+@code
+{
+    private List<CHAppBar.HrefText> HrefTextButtonList { get; set; } = new()
+    {
+        new() { Href = "/art", Text = "Art" },
+        new() { Href = "/games", Text = "Games" }
+    };
+}
