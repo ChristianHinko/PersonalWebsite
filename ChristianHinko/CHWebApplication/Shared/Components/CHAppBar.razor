@@ -2,6 +2,7 @@
 @inject CHLayoutService LayoutService
 
 <MudAppBar Color="@Color.Primary" Elevation="1">
+    <!-- Navigation -->
     <MudLink Class="me-4" Color="@Color.Default" Underline="@Underline.None" Href="/"> <!-- use Color.Default to override MudLink from changing the color to Color.Primary -->
         <MudText Typo="@Typo.h5">Christian Hinkle</MudText>
     </MudLink>
@@ -15,6 +16,10 @@
         }
     </MudStack>
     <MudSpacer />
+    <!-- End buttons -->
+    <MudTooltip Text="@(LayoutService.RightToLeft ? "Switch to Left-Aligned" : "Switch to Right-Aligned")" Delay="2000.0">
+        <MudIconButton Icon="@(LayoutService.RightToLeft ? Icons.Material.Filled.FormatAlignLeft : Icons.Material.Filled.FormatAlignRight)" OnClick="@LayoutService.ToggleRightToLeft" />
+    </MudTooltip>
     <MudTooltip Text="@(LayoutService.IsDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode")" Delay="2000.0">
         <MudIconButton Icon="@(LayoutService.IsDarkMode ? Icons.Material.Filled.DarkMode : Icons.Material.Outlined.DarkMode)" OnClick="@LayoutService.ToggleIsDarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
     </MudTooltip>
