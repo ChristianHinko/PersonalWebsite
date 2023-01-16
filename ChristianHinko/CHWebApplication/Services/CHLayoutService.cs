@@ -3,9 +3,9 @@
 namespace CHWebApplication.Services
 {
     /// <summary>
-    /// Central theming control over the web application.
+    /// Central layout control over the web application.
     /// </summary>
-    public class CHThemeService
+    public class CHLayoutService
     {
         /// <summary>
         /// Current theme of the application.
@@ -23,31 +23,52 @@ namespace CHWebApplication.Services
         public bool IsDarkMode { get; private set; }
 
         /// <summary>
-        /// Invoked when theme changes occur. Use this for
+        /// Determines whether to use the right-to-left layout.
+        /// </summary>
+        public bool RightToLeft { get; private set; }
+
+        /// <summary>
+        /// Invoked when layout changes occur. Use this for
         /// notifying ComponentBase.StateHasChanged() when necessary.
         /// </summary>
-        public event EventHandler? ThemeChanged;
+        public event EventHandler? LayoutChanged;
 
-        public CHThemeService()
+        public CHLayoutService()
         {
             Theme = new();
             DefaultScrollbar = false;
             IsDarkMode = false;
-            ThemeChanged = null;
+            RightToLeft = false;
+
+            LayoutChanged = null;
         }
 
         public void SetIsDarkMode(bool isDarkMode)
         {
             IsDarkMode = isDarkMode;
-            if (ThemeChanged is not null)
+            if (LayoutChanged is not null)
             {
-                ThemeChanged.Invoke(this, EventArgs.Empty);
+                LayoutChanged.Invoke(this, EventArgs.Empty);
             }
         }
 
         public void ToggleIsDarkMode()
         {
             SetIsDarkMode(!IsDarkMode);
+        }
+
+        public void SetRightToLeft(bool rightToLeft)
+        {
+            RightToLeft = rightToLeft;
+            if (LayoutChanged is not null)
+            {
+                LayoutChanged.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        public void ToggleRightToLeft()
+        {
+            SetRightToLeft(!RightToLeft);
         }
     }
 }

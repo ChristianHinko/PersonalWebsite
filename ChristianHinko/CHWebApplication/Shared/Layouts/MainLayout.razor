@@ -1,13 +1,14 @@
 ﻿@inherits LayoutComponentBase
 @using Services
-@inject CHThemeService ThemeService;
+@inject CHLayoutService LayoutService;
 @implements IDisposable
 
-<MudThemeProvider @ref="@ThemeProvider" Theme="@ThemeService.Theme" DefaultScrollbar="@ThemeService.DefaultScrollbar" IsDarkMode="@ThemeService.IsDarkMode" IsDarkModeChanged="@ThemeService.SetIsDarkMode" /> <!-- hook up our ThemeService's theming to the MudThemeProvider -->
-<MudDialogProvider />
-<MudSnackbarProvider />
-
-@Body
+<MudRTLProvider RightToLeft="@LayoutService.RightToLeft"> <!-- hook up our LayoutService layout to the MudRTLProvider -->
+    <MudThemeProvider @ref="@ThemeProvider" Theme="@LayoutService.Theme" DefaultScrollbar="@LayoutService.DefaultScrollbar" IsDarkMode="@LayoutService.IsDarkMode" IsDarkModeChanged="@LayoutService.SetIsDarkMode" /> <!-- hook up our LayoutService's theming to the MudThemeProvider -->
+    <MudDialogProvider />
+    <MudSnackbarProvider />
+    @Body
+</MudRTLProvider>
 
 @code
 {
@@ -21,22 +22,22 @@
         {
             // Use system preference for default IsDarkMode value
             bool darkMode = await ThemeProvider.GetSystemPreference();
-            ThemeService.SetIsDarkMode(darkMode);
+            LayoutService.SetIsDarkMode(darkMode);
         }
     }
 
     protected override void OnInitialized()
     {
-        // Listen for theme changes
-        ThemeService.ThemeChanged += OnThemeChanged;
+        // Listen for layout changes
+        LayoutService.LayoutChanged += OnLayoutChanged;
         base.OnInitialized();
     }
 
-    private void OnThemeChanged(object? sender, EventArgs e) => StateHasChanged(); // re-render from theme change
+    private void OnLayoutChanged(object? sender, EventArgs e) => StateHasChanged(); // re-render from layout change
 
     public void Dispose()
     {
-        // Unbind from theme changes
-        ThemeService.ThemeChanged -= OnThemeChanged;
+        // Unbind from layout changes
+        LayoutService.LayoutChanged -= OnLayoutChanged;
     }
 }

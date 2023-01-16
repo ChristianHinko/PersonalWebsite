@@ -1,5 +1,5 @@
 ﻿@using Services
-@inject CHThemeService ThemeService
+@inject CHLayoutService LayoutService
 
 <MudAppBar Color="@Color.Primary" Elevation="1">
     <MudLink Class="me-4" Color="@Color.Default" Underline="@Underline.None" Href="/"> <!-- use Color.Default to override MudLink from changing the color to Color.Primary -->
@@ -15,8 +15,8 @@
         }
     </MudStack>
     <MudSpacer />
-    <MudTooltip Text="@(ThemeService.IsDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode")" Delay="2000.0">
-        <MudIconButton Icon="@(ThemeService.IsDarkMode ? Icons.Material.Filled.DarkMode : Icons.Material.Outlined.DarkMode)" OnClick="@ThemeService.ToggleIsDarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
+    <MudTooltip Text="@(LayoutService.IsDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode")" Delay="2000.0">
+        <MudIconButton Icon="@(LayoutService.IsDarkMode ? Icons.Material.Filled.DarkMode : Icons.Material.Outlined.DarkMode)" OnClick="@LayoutService.ToggleIsDarkMode" Edge="@Edge.End" /> <!-- use Edge.End to align the icon (instead of the outer button) to the end edge -->
     </MudTooltip>
 </MudAppBar>
 
