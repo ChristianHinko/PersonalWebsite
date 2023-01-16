@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @using Services
+@using Models
 @inject CHLayoutService LayoutService;
 @implements IDisposable
 
@@ -14,20 +15,14 @@
 {
     private MudThemeProvider ThemeProvider { get; set; }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await base.OnAfterRenderAsync(firstRender);
-
-        if (firstRender)
-        {
-            // Use system preference for default IsDarkMode value
-            bool darkMode = await ThemeProvider.GetSystemPreference();
-            LayoutService.SetIsDarkMode(darkMode);
-        }
-    }
-
     protected override void OnInitialized()
     {
+        // Initialize our layout with the defaults
+        LayoutService.SetTheme(CHLayoutDefinition.Theme);
+        LayoutService.SetDefaultScrollbar(CHLayoutDefinition.DefaultScrollbar);
+        LayoutService.SetIsDarkMode(CHLayoutDefinition.IsDarkMode);
+        LayoutService.SetRightToLeft(CHLayoutDefinition.RightToLeft);
+
         // Listen for layout changes
         LayoutService.LayoutChanged += OnLayoutChanged;
         base.OnInitialized();

@@ -35,7 +35,7 @@ namespace CHWebApplication.Services
 
         public CHLayoutService()
         {
-            Theme = new();
+            Theme = new MudTheme();
             DefaultScrollbar = false;
             IsDarkMode = false;
             RightToLeft = false;
@@ -43,15 +43,27 @@ namespace CHWebApplication.Services
             LayoutChanged = null;
         }
 
+        public void SetTheme(MudTheme theme)
+        {
+            Theme = theme;
+            LayoutChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void SetDefaultScrollbar(bool defaultScrollbar)
+        {
+            DefaultScrollbar = defaultScrollbar;
+            LayoutChanged?.Invoke(this, EventArgs.Empty);
+        }
+        public void ToggleDefaultScrollbar()
+        {
+            SetDefaultScrollbar(!DefaultScrollbar);
+        }
+
         public void SetIsDarkMode(bool isDarkMode)
         {
             IsDarkMode = isDarkMode;
-            if (LayoutChanged is not null)
-            {
-                LayoutChanged.Invoke(this, EventArgs.Empty);
-            }
+            LayoutChanged?.Invoke(this, EventArgs.Empty);
         }
-
         public void ToggleIsDarkMode()
         {
             SetIsDarkMode(!IsDarkMode);
@@ -60,12 +72,8 @@ namespace CHWebApplication.Services
         public void SetRightToLeft(bool rightToLeft)
         {
             RightToLeft = rightToLeft;
-            if (LayoutChanged is not null)
-            {
-                LayoutChanged.Invoke(this, EventArgs.Empty);
-            }
+            LayoutChanged?.Invoke(this, EventArgs.Empty);
         }
-
         public void ToggleRightToLeft()
         {
             SetRightToLeft(!RightToLeft);
