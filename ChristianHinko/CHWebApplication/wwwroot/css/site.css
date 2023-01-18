@@ -1,0 +1,15 @@
+/**
+ * Header text of entire webpage.
+ * Expected to be used with MudBlazor.Typo.h1.
+ */
+.ch-header-text {
+    font-weight: bold;
+}
+
+/**
+ * Subheader text of webpage.
+ * Expected to be used with MudBlazor.Typo.subtitle1.
+ */
+.ch-subheader-text {
+    font-size: 2rem;
+}
