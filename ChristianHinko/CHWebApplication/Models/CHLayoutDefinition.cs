@@ -22,13 +22,15 @@ namespace CHWebApplication.Models
                 {
                     Primary = new MudColor(127, 95, 255, 1.0),
                     Secondary = new MudColor(15, 223, 191, 1.0),
-                    Tertiary = new MudColor(255, 127, 143, 1.0)
+                    Tertiary = new MudColor(255, 127, 143, 1.0),
+                    HoverOpacity = 0.05
                 },
                 PaletteDark = new PaletteDark()
                 {
                     Primary = new MudColor(127, 95, 255, 1.0),
                     Secondary = new MudColor(15, 223, 191, 1.0),
-                    Tertiary = new MudColor(255, 127, 143, 1.0)
+                    Tertiary = new MudColor(255, 127, 143, 1.0),
+                    HoverOpacity = 0.05
                 },
                 Shadows = new Shadow()
                 {
