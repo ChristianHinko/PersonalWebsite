@@ -1,7 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @using Services
-@using Models
-@inject CHLayoutService LayoutService;
+@inject CHLayoutService LayoutService
 @implements IDisposable
 
 <MudRTLProvider RightToLeft="@LayoutService.RightToLeft"> <!-- hook up our LayoutService layout to the MudRTLProvider -->
@@ -17,12 +16,6 @@
 
     protected override void OnInitialized()
     {
-        // Initialize our layout with the defaults
-        LayoutService.SetTheme(CHLayoutDefinition.Theme);
-        LayoutService.SetDefaultScrollbar(CHLayoutDefinition.DefaultScrollbar);
-        LayoutService.SetIsDarkMode(CHLayoutDefinition.IsDarkMode);
-        LayoutService.SetRightToLeft(CHLayoutDefinition.RightToLeft);
-
         // Listen for layout changes
         LayoutService.LayoutChanged += OnLayoutChanged;
 

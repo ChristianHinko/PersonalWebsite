@@ -1,20 +1,14 @@
 ﻿using MudBlazor;
 using MudBlazor.Utilities;
 
-namespace CHWebApplication.Models
+namespace CHWebApplication.Services
 {
     /// <summary>
-    /// Static definition of default values for CHLayoutService.
-    /// This is the definition of the web application's layout.
+    /// Defines the layout of the web application.
     /// </summary>
-    public static class CHLayoutDefinition
+    public class CHLayoutServiceCustom : CHLayoutService
     {
-        public static readonly MudTheme Theme;
-        public static readonly bool DefaultScrollbar;
-        public static readonly bool IsDarkMode;
-        public static readonly bool RightToLeft;
-
-        static CHLayoutDefinition()
+        public CHLayoutServiceCustom()
         {
             Theme = new MudTheme()
             {
