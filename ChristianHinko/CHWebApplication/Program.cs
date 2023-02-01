@@ -8,6 +8,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
 builder.Services.AddScoped<CHLayoutService>();
+builder.Services.AddScoped<ICHPostsService, CHPostsService>();
 
 var app = builder.Build();
 

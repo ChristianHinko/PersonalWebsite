@@ -1,0 +1,21 @@
+﻿@using CHWebApplication.Models
+
+<div style="margin-top: 100px; margin-bottom: 100px;">
+    <header>
+        <MudText Class="ch-header-text" Typo="@Typo.h1">
+            @Post.Title
+        </MudText>
+        <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+            @Post.Subtitle
+        </MudText>
+    </header>
+    <div class="mt-4">
+        <MudImage Class="mud-width-full" Src="@Post.ImageSrc" />
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public CHPost Post { get; set; }
+}

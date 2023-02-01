@@ -1,0 +1,29 @@
+﻿@page "/posts"
+@using CHWebApplication.Models
+@using CHWebApplication.Services
+@using CHWebApplication.Shared.Components.Post
+@inject ICHPostsService PostService
+
+<CHPage>
+    <MudContainer MaxWidth="@MaxWidth.Large">
+        <div style="margin-top: 50px; margin-bottom: 50px;">
+            <header>
+                <MudText Class="ch-header-text" Typo="@Typo.h1">
+                    Posts
+                </MudText>
+                <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+                    List of All Posts
+                </MudText>
+            </header>
+        </div>
+        <MudGrid Justify="@Justify.FlexStart">
+            @* Populate the grid with post cards. *@
+            @foreach (CHPost post in PostService.Posts)
+            {
+                <MudItem>
+                    <CHPostCard Post="@post" />
+                </MudItem>
+            }
+        </MudGrid>
+    </MudContainer>
+</CHPage>

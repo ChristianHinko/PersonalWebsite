@@ -1,0 +1,26 @@
+﻿@using CHWebApplication.Models
+
+<a href="@($"/posts/{Post.Slug}")">
+    <MudCard Style="width: 500px;">
+        <MudCardMedia Image="@Post.ImageSrc" />
+        <MudCardContent>
+            <MudText Style="font-weight: bold;" Typo="@Typo.h6">
+                @Post.Title
+            </MudText>
+            <MudText Typo="@Typo.subtitle1">
+                @Post.Subtitle
+            </MudText>
+            <div class="mt-4">
+                <MudText Typo="@Typo.body2">
+                    @Post.Date.ToString("yyyy-MM-dd")
+                </MudText>
+            </div>
+        </MudCardContent>
+    </MudCard>
+</a>
+
+@code
+{
+    [Parameter]
+    public CHPost Post { get; set; }
+}
