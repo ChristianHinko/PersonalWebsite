@@ -1,0 +1,15 @@
+﻿<MudTooltip Text="@Name" Delay="2000.0">
+    <MudIconButton Icon="@Icon" Href="@Href" Target="_blank" Size="@Size.Large" Title="@Name" aria-label="@Name" />
+</MudTooltip>
+
+@code
+{
+    [Parameter]
+    public string Name { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Icon { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Href { get; set; } = string.Empty;
+}

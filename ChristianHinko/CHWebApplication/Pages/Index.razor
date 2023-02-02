@@ -2,17 +2,15 @@
 
 <CHPage>
     <MudContainer MaxWidth="@MaxWidth.Large">
-        <div class="mud-width-full d-flex align-center" style="height: 600px;">
-            <MudText Typo="@Typo.h1">
-                Christian
-                <br>
-                Hinkle
-            </MudText>
+        <div style="margin-top: 200px; margin-bottom: 200px;">
+            <header>
+                <MudText Class="ch-header-text" Typo="@Typo.h1">
+                    Christian Hinkle
+                </MudText>
+                <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+                    Artist and Gameplay Programmer
+                </MudText>
+            </header>
         </div>
     </MudContainer>
 </CHPage>
-
-@code
-{
-    private Transition CarouselItemTransition { get; set; } = Transition.Slide;
-}
