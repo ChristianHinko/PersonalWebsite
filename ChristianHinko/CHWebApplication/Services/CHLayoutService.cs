@@ -3,29 +3,29 @@
 namespace CHWebApplication.Services
 {
     /// <summary>
-    /// Central layout control over the web application.
+    /// Determines the layout of the application.
     /// </summary>
     public class CHLayoutService
     {
         /// <summary>
         /// Current theme of the application.
         /// </summary>
-        public MudTheme Theme { get; private set; }
+        public MudTheme Theme { get; protected set; }
 
         /// <summary>
         /// Determines whether to use the default scrollbar.
         /// </summary>
-        public bool DefaultScrollbar { get; private set; }
+        public bool DefaultScrollbar { get; protected set; }
 
         /// <summary>
         /// Determines whether to use the dark palette.
         /// </summary>
-        public bool IsDarkMode { get; private set; }
+        public bool IsDarkMode { get; protected set; }
 
         /// <summary>
         /// Determines whether to use the right-to-left layout.
         /// </summary>
-        public bool RightToLeft { get; private set; }
+        public bool RightToLeft { get; protected set; }
 
         /// <summary>
         /// Invoked when layout changes occur. Use this for
