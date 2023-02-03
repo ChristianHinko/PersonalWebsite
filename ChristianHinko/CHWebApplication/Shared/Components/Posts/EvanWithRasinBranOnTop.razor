@@ -1,0 +1,22 @@
+﻿@using CHWebApplication.Models
+
+<CHPage>
+    <MudContainer MaxWidth="@MaxWidth.Large">
+        <CHPostHeader Post="@Post" />
+        <MudText Typo="@Typo.h2">
+            Words of Advice
+        </MudText>
+        <MudText Typo="@Typo.body1">
+            Make sure not to pull too hard on the krave because then you will get too much krave.
+        </MudText>
+        <MudText Typo="@Typo.body1">
+            If you get too much Krave then you get too much sugar. If you get too much suger then youll crash in the middle of your next class.
+        </MudText>
+    </MudContainer>
+</CHPage>
+
+@code
+{
+    [CascadingParameter(Name = "Post")]
+    public CHPost Post { get; set; }
+}

@@ -5,8 +5,10 @@
 
 @if (Post is not null)
 {
-    // Render the post's component and pass in the post to it
-    <DynamicComponent Type="@Post.Component" Parameters="@(new Dictionary<string, object>() { ["Post"] = Post })" />
+    // Render the post's component and use the post as a cascading value
+    <CascadingValue Value="@Post" Name="Post" IsFixed="true">
+        <DynamicComponent Type="@Post.Component" />
+    </CascadingValue>
 }
 
 @code
