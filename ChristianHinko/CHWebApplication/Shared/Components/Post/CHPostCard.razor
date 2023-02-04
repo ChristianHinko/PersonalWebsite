@@ -1,8 +1,8 @@
 ﻿@using CHWebApplication.Models
 
 <a href="@($"/posts/{Post.Slug}")">
-    <MudCard Style="width: 500px;">
-        <MudCardMedia Image="@Post.ImageSrc" />
+    <MudCard>
+        <MudCardMedia Image="@Post.ImageSrc" Height="225" />
         <MudCardContent>
             <MudText Style="font-weight: bold;" Typo="@Typo.h6">
                 @Post.Title

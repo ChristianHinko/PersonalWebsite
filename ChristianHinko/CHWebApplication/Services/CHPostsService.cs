@@ -41,6 +41,9 @@ namespace CHWebApplication.Services
                     Component = typeof(Shared.Components.Posts.EvanWithRasinBranOnTop)
                 }
             };
+
+            // Sort Posts by date
+            Posts.Sort((a, b) => a.Date.CompareTo(b.Date));
         }
     }
 }
