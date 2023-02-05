@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using CHWebApplication.Shared.Components.Post
 
 <CHPage>
     <MudContainer MaxWidth="@MaxWidth.Large">
@@ -12,5 +13,6 @@
                 </MudText>
             </header>
         </div>
+        <CHNewestPosts />
     </MudContainer>
 </CHPage>
