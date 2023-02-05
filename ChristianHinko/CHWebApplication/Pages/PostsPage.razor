@@ -4,26 +4,24 @@
 @using CHWebApplication.Shared.Components.Post
 @inject ICHPostsService PostsService
 
-<CHPage>
-    <MudContainer MaxWidth="@MaxWidth.Large">
-        <div style="margin-top: 50px; margin-bottom: 50px;">
-            <header>
-                <MudText Class="ch-header-text" Typo="@Typo.h1">
-                    Posts
-                </MudText>
-                <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
-                    List of All Posts
-                </MudText>
-            </header>
-        </div>
-        <MudGrid Justify="@Justify.FlexStart">
-            @* Populate the grid with post cards. *@
-            @foreach (CHPost post in PostsService.Posts.AsEnumerable().Reverse()) @* TODO: This is slow. Maybe cache this? Or just do a backwards for loop? *@
-            {
-                <MudItem xs="12" sm="6" md="4">
-                    <CHPostCard Post="@post" />
-                </MudItem>
-            }
-        </MudGrid>
-    </MudContainer>
-</CHPage>
+<MudContainer MaxWidth="@MaxWidth.Large">
+    <div style="margin-top: 50px; margin-bottom: 50px;">
+        <header>
+            <MudText Class="ch-header-text" Typo="@Typo.h1">
+                Posts
+            </MudText>
+            <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+                List of All Posts
+            </MudText>
+        </header>
+    </div>
+    <MudGrid Justify="@Justify.FlexStart">
+        @* Populate the grid with post cards. *@
+        @foreach (CHPost post in PostsService.Posts.AsEnumerable().Reverse()) @* TODO: This is slow. Maybe cache this? Or just do a backwards for loop? *@
+        {
+            <MudItem xs="12" sm="6" md="4">
+                <CHPostCard Post="@post" />
+            </MudItem>
+        }
+    </MudGrid>
+</MudContainer>
