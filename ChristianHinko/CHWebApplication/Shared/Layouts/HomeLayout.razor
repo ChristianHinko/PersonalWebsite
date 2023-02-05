@@ -1,11 +1,15 @@
 ﻿@inherits LayoutComponentBase
 @layout MainLayout
+@using CHWebApplication.Shared.Components.Footer
 
 <MudLayout>
     <CHAppBar HrefTextButtonList="@HrefTextButtonList" />
     <MudMainContent>
         @Body
     </MudMainContent>
+    <MudContainer MaxWidth="@MaxWidth.Large">
+        <CHFooter />
+    </MudContainer>
     <CHScrollToTop />
 </MudLayout>
 
