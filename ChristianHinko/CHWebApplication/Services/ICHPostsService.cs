@@ -1,4 +1,4 @@
-﻿using CHWebApplication.Models;
+﻿using CHWebApplication.Types;
 
 namespace CHWebApplication.Services
 {

@@ -1,23 +1,25 @@
-﻿@using CHWebApplication.Models
+﻿@using CHWebApplication.Types
 
-<a href="@($"/posts/{Post.Slug}")">
-    <MudCard>
+<MudCard>
+    <MudLink Href="@Post.GetHref()">
         <MudCardMedia Image="@Post.ImageSrc" Height="225" />
-        <MudCardContent>
+    </MudLink>
+    <MudCardContent>
+        <MudLink Href="@Post.GetHref()" Color="@Color.Default" Underline="@Underline.Hover">
             <MudText Style="font-weight: bold;" Typo="@Typo.h6">
                 @Post.Title
             </MudText>
-            <MudText Typo="@Typo.subtitle1">
-                @Post.Subtitle
+        </MudLink>
+        <MudText Typo="@Typo.subtitle1">
+            @Post.Subtitle
+        </MudText>
+        <div class="mt-4">
+            <MudText Typo="@Typo.body2">
+                @Post.Date.ToString("yyyy-MM-dd")
             </MudText>
-            <div class="mt-4">
-                <MudText Typo="@Typo.body2">
-                    @Post.Date.ToString("yyyy-MM-dd")
-                </MudText>
-            </div>
-        </MudCardContent>
-    </MudCard>
-</a>
+        </div>
+    </MudCardContent>
+</MudCard>
 
 @code
 {

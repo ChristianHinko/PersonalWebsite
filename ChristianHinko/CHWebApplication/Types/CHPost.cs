@@ -1,4 +1,4 @@
-﻿namespace CHWebApplication.Models
+﻿namespace CHWebApplication.Types
 {
     /// <summary>
     /// Defines a post - basic information and what to render.
