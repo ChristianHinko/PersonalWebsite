@@ -15,6 +15,7 @@
             </MudText>
         </header>
     </div>
+    <MudDivider Class="mb-2" Vertical="false" />
     <MudGrid Justify="@Justify.FlexStart">
         @* Populate the grid with post cards. *@
         @foreach (CHPost post in PostsService.Posts.AsEnumerable().Reverse()) @* TODO: This is slow. Maybe cache this? Or just do a backwards for loop? *@
@@ -24,4 +25,5 @@
             </MudItem>
         }
     </MudGrid>
+    <MudDivider Class="mt-2" Vertical="false" />
 </MudContainer>
