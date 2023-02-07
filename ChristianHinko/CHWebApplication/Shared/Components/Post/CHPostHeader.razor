@@ -1,6 +1,6 @@
 ﻿@using CHWebApplication.Types
 
-<div style="margin-top: 100px;">
+<div class="my-16">
     <header>
         <MudText Class="ch-header-text" Typo="@Typo.h1">
             @Post.Title
@@ -9,15 +9,13 @@
             @Post.Subtitle
         </MudText>
     </header>
-    <div class="mt-4">
-        <MudImage Class="mud-width-full" Src="@Post.ImageSrc" />
-    </div>
 </div>
-<div style="margin-top: 50px;">
-    <MudText Typo="@Typo.h5" Align="@Align.End">
-        @Post.Date.ToString("MMMM d, yyyy")
-    </MudText>
+<div class="my-4">
+    <MudImage Class="mud-width-full" Style="aspect-ratio: 16 / 9;" Src="@Post.ImageSrc" ObjectFit="@ObjectFit.Cover" />
 </div>
+<MudText Typo="@Typo.h5" Align="@Align.End">
+    @Post.Date.ToString("MMMM d, yyyy")
+</MudText>
 <MudDivider Class="my-2" Vertical="false" />
 
 @code
