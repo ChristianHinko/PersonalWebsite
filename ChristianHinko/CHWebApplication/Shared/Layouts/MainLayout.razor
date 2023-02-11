@@ -1,30 +1,5 @@
 ﻿@inherits LayoutComponentBase
-@using MudBlazorExtensionLibrary.Services
-@inject MBELLayoutService LayoutService
-@implements IDisposable
+@using MudBlazorExtensionLibrary.Shared.Layouts
+@layout MBELMainLayout
 
-<MudRTLProvider RightToLeft="@LayoutService.RightToLeft"> <!-- hook up our LayoutService layout to the MudRTLProvider -->
-    <MudThemeProvider Theme="@LayoutService.Theme" DefaultScrollbar="@LayoutService.DefaultScrollbar" IsDarkMode="@LayoutService.IsDarkMode" IsDarkModeChanged="@LayoutService.SetIsDarkMode" /> <!-- hook up our LayoutService's theming to the MudThemeProvider -->
-    <MudDialogProvider />
-    <MudSnackbarProvider />
-    @Body
-</MudRTLProvider>
-
-@code
-{
-    protected override void OnInitialized()
-    {
-        // Listen for layout changes
-        LayoutService.LayoutChanged += OnLayoutChanged;
-
-        base.OnInitialized();
-    }
-
-    private void OnLayoutChanged(object? sender, EventArgs e) => StateHasChanged(); // re-render from layout change
-
-    public void Dispose()
-    {
-        // Unbind from layout changes
-        LayoutService.LayoutChanged -= OnLayoutChanged;
-    }
-}
+@Body
