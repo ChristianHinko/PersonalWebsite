@@ -1,6 +1,6 @@
 ﻿@inherits LayoutComponentBase
-@using Services
-@inject CHLayoutService LayoutService
+@using MudBlazorExtensionLibrary.Services
+@inject MBELLayoutService LayoutService
 @implements IDisposable
 
 <MudRTLProvider RightToLeft="@LayoutService.RightToLeft"> <!-- hook up our LayoutService layout to the MudRTLProvider -->
