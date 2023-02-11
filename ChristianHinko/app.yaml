@@ -1,0 +1,5 @@
+runtime: custom # use custom runtime because Google Cloud App Engine doesn't have the ASP.NET version that we need
+env: flex
+
+manual_scaling:
+  instances: 1

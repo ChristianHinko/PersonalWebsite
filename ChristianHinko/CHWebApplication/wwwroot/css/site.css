@@ -13,3 +13,19 @@
 .ch-subheader-text {
     font-size: 2rem;
 }
+
+/**
+ * General purpose version of MudBlazor's fluid class.
+ */
+.ch-fluid-width {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ * Version of ch-fluid-width for scaling with the parent's height.
+ */
+.ch-fluid-height {
+    max-height: 100%;
+    width: auto;
+}

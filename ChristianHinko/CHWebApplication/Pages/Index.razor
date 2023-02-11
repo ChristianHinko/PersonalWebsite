@@ -1,16 +1,16 @@
 ﻿@page "/"
+@using CHWebApplication.Shared.Components.Post
 
-<CHPage>
-    <MudContainer MaxWidth="@MaxWidth.Large">
-        <div style="margin-top: 200px; margin-bottom: 200px;">
-            <header>
-                <MudText Class="ch-header-text" Typo="@Typo.h1">
-                    Christian Hinkle
-                </MudText>
-                <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
-                    Artist and Gameplay Programmer
-                </MudText>
-            </header>
-        </div>
-    </MudContainer>
-</CHPage>
+<MudContainer MaxWidth="@MaxWidth.Large">
+    <div style="margin-top: 200px; margin-bottom: 200px;">
+        <header>
+            <MudText Class="ch-header-text" Typo="@Typo.h1">
+                Christian Hinkle
+            </MudText>
+            <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+                Artist and Gameplay Programmer
+            </MudText>
+        </header>
+    </div>
+    <CHNewestPosts />
+</MudContainer>

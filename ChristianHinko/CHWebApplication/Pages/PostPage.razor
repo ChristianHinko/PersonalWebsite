@@ -1,0 +1,36 @@
+﻿@page "/posts/{Slug}"
+@using CHWebApplication.Types
+@using CHWebApplication.Services;
+@inject ICHPostsService PostService
+
+@if (Post is not null)
+{
+    // Render the post's component and use the post as a cascading value
+    <CascadingValue Value="@Post" Name="Post" IsFixed="true">
+        <DynamicComponent Type="@Post.Component" />
+    </CascadingValue>
+}
+
+@code
+{
+    /// <summary>
+    /// The requested slug from the URL.
+    /// </summary>
+    [Parameter]
+    public string Slug { get; set; }
+
+    /// <summary>
+    /// The post corresponding to the requested slug.
+    /// </summary>
+    private CHPost? Post { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        // Find post by slug
+        Post = PostService.Posts.Find(
+            post => (post.Slug == Slug)
+        );
+    }
+}

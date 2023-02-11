@@ -1,0 +1,26 @@
+﻿@using CHWebApplication.Services
+@inject ICHPostsService PostsService
+@using CHWebApplication.Types
+@using CHWebApplication.Shared.Components.Post
+
+<div>
+    <div class="d-flex flex-row align-center">
+        <MudText Typo="@Typo.h2">Newest Posts</MudText>
+        <MudSpacer />
+        <MudButton Href="/posts" Variant="@Variant.Text">
+            <MudText Typo="@Typo.subtitle1">
+                All Posts
+            </MudText>
+        </MudButton>
+    </div>
+    <MudDivider Class="mb-2" Vertical="false" />
+    <MudGrid>
+        @foreach (CHPost post in PostsService.Posts.AsEnumerable().Reverse().Take(3))
+        {
+            <MudItem xs="@(12 / 3)">
+                <CHPostCard Post="@post" />
+            </MudItem>
+        }
+    </MudGrid>
+    <MudDivider Class="mt-2" Vertical="false" />
+</div>

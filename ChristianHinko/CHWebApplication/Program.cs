@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
+builder.Services.AddScoped<ICHPostsService, CHPostsService>();
 builder.Services.AddScoped<CHLayoutService, CHLayoutServiceCustom>();
 
 var app = builder.Build();

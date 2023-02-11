@@ -1,2 +1,2 @@
 # PersonalWebsite
-Hosted on https://christianhinko.azurewebsites.net/.
+Hosted on https://christianhinko.com/.

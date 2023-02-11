@@ -4,7 +4,7 @@
 @implements IDisposable
 
 <MudRTLProvider RightToLeft="@LayoutService.RightToLeft"> <!-- hook up our LayoutService layout to the MudRTLProvider -->
-    <MudThemeProvider @ref="@ThemeProvider" Theme="@LayoutService.Theme" DefaultScrollbar="@LayoutService.DefaultScrollbar" IsDarkMode="@LayoutService.IsDarkMode" IsDarkModeChanged="@LayoutService.SetIsDarkMode" /> <!-- hook up our LayoutService's theming to the MudThemeProvider -->
+    <MudThemeProvider Theme="@LayoutService.Theme" DefaultScrollbar="@LayoutService.DefaultScrollbar" IsDarkMode="@LayoutService.IsDarkMode" IsDarkModeChanged="@LayoutService.SetIsDarkMode" /> <!-- hook up our LayoutService's theming to the MudThemeProvider -->
     <MudDialogProvider />
     <MudSnackbarProvider />
     @Body
@@ -12,8 +12,6 @@
 
 @code
 {
-    private MudThemeProvider ThemeProvider { get; set; }
-
     protected override void OnInitialized()
     {
         // Listen for layout changes

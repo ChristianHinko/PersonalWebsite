@@ -1,0 +1,28 @@
+﻿@using CHWebApplication.Types
+
+<MudCard>
+    <MudLink Href="@Post.GetHref()">
+        <MudCardMedia Image="@Post.ImageSrc" Height="225" />
+    </MudLink>
+    <MudCardContent>
+        <MudLink Href="@Post.GetHref()" Color="@Color.Default" Underline="@Underline.Hover">
+            <MudText Style="font-weight: bold;" Typo="@Typo.h6">
+                @Post.Title
+            </MudText>
+        </MudLink>
+        <MudText Typo="@Typo.subtitle1">
+            @Post.Subtitle
+        </MudText>
+        <div class="mt-4">
+            <MudText Typo="@Typo.body2">
+                @Post.Date.ToString("yyyy-MM-dd")
+            </MudText>
+        </div>
+    </MudCardContent>
+</MudCard>
+
+@code
+{
+    [Parameter]
+    public CHPost Post { get; set; }
+}
