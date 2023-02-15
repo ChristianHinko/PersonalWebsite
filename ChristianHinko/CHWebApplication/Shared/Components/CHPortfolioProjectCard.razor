@@ -1,22 +1,30 @@
 ﻿<MudPaper Class="mud-width-full">
     <div class="d-flex flex-row">
         <MudImage Class="rounded" Style="aspect-ratio: 4 / 3;" Height="400" ObjectFit="@ObjectFit.Cover" Src="https://cdn2.unrealengine.com/unreal-engine-5-1-feed-1920x1080-32e2b379653e.png" />
-        <div class="mx-1"></div>
-        <div class="mud-width-full">
+        <div class="mud-width-full pa-4">
             <MudText Typo="@Typo.h3">
                 @Title
             </MudText>
-            <MudText Typo="@Typo.body1">
-                Team Size: @TeamSize
-            </MudText>
-            <MudText Typo="@Typo.body1">
-                Project Status: @ProjectStatus
-            </MudText>
-            <MudText Typo="@Typo.body1">
-                Development Time: @DevelopmentTime
-            </MudText>
+            <div class="my-2"></div>
+            <MudChip Style="opacity: 1;" Disabled="true" Label="true" Size="@Size.Small" Variant="@Variant.Filled">
+                <MudText Typo="@Typo.body1">
+                    @ProjectStatus
+                </MudText>
+            </MudChip>
+            <MudChip Style="opacity: 1;" Disabled="true" Label="true" Size="@Size.Small" Variant="@Variant.Filled">
+                <MudText Typo="@Typo.body1">
+                    Development Time: @DevelopmentTime
+                </MudText>
+            </MudChip>
+            <MudChip Style="opacity: 1;" Disabled="true" Label="true" Size="@Size.Small" Variant="@Variant.Filled">
+                <MudText Typo="@Typo.body1">
+                    Team Size: @TeamSize
+                </MudText>
+            </MudChip>
+            <div class="my-2"></div>
             @ChildContent
-            <MudButton Href="@ProjectHref" Target="_blank">
+            <div class="my-2"></div>
+            <MudButton Href="@ProjectHref" Target="_blank" Variant="@Variant.Filled" DisableElevation="true">
                 <MudIcon Icon="@Icons.Custom.Brands.GitHub" />
                 <div class="mx-1"></div>
                 <MudText Typo="@Typo.body1">
