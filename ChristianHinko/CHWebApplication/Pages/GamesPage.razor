@@ -32,18 +32,46 @@
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Title="Strength Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
             <MudText Typo="Typo.body1">
+                Developed custom collision queries that are dependent on the concept of strength. The queries become weaker as they ricochet and travel through penetrable hits (the air as well). Functionality is made using a collection of specialized collision queries that build off of each other, each implementing its own feature.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                Penetration scene casts pass through blocking hits until a specified condition with a hit is met, and return data preserves the distinction between blocking hits and overlaps. Exit hits can optionally be included in the return data and are ordered in the direction of the query with the entrance hits.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                All collision queries are generic to both line traces and shape sweeps.
             </MudText>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Title="Ability System Setup" TeamSize="2" DevelopmentTime="2 Years" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
             <MudText Typo="Typo.body1">
+                Developed a C++ plugin that extends Epic's Gameplay Ability System. It provides a foundation and an efficient workflow to speed up development, eliminate boilerplate code, and improve scalability.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                The AvatarActorExtension component is a generalized component for initializing/uninitializing an Avatar Actor when provided with an AbilitySystemComponent and optional AbilitySets. It stays agnostic to AbilitySystemComponent location and supports any Avatar Actor. For Avatar Actors that are Pawns, a more specialized "PawnAvatarActorExtension" component inherits and provides extra logic for ability input binding.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                The plugin also provides a new and more efficient workflow for ability input binding, replacing GAS's input enum approach. This is achieved by utilizing the "Input Setup" plugin and expanding its use to the ability system. With this approach, input events use their input action's tag to know its relevant abilities and GAS input events. The result is a fully in-editor workflow for assigning abilities to inputs via tags!
             </MudText>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
             <MudText Typo="Typo.body1">
+                Developed a C++ plugin that extends Enhanced Input and improves workflows both in code and in editor by streamlining the process for defining and accessing Input Actions. It makes use of Gameplay Tags to identify Input Actions via a configurable map in the project settings. The map is stored in an EngineSubsystem, creating a centralized place for all Input Actions and eliminating duplicate code scenarios. Modules external to the game project can also contribute to the Input Actions map through a provided Primary Data Asset. Dynamically loaded modules (e.g. Game Features) are also supported for adding input actions.
             </MudText>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
             <MudText Typo="Typo.body1">
+                Developed a generic property wrapper that allows users to respond to changes in their variables’ values. This simplifies and cleans up code bases. Initially developed to improve the workflow of push model replication, Property Wrapper’s use has become more diverse. The wrapper is implemented as a lightweight UStruct, with functionality implemented generically across all types.
             </MudText>
         </CHPortfolioProjectCard>
     </MudStack>
