@@ -1,0 +1,49 @@
+﻿<MudPaper Class="mud-width-full">
+    <div class="d-flex flex-row">
+        <MudImage Class="rounded" Style="aspect-ratio: 4 / 3;" Height="400" ObjectFit="@ObjectFit.Cover" Src="https://cdn2.unrealengine.com/unreal-engine-5-1-feed-1920x1080-32e2b379653e.png" />
+        <div class="mx-1"></div>
+        <div class="mud-width-full">
+            <MudText Typo="@Typo.h3">
+                @Title
+            </MudText>
+            <MudText Typo="@Typo.body1">
+                Team Size: @TeamSize
+            </MudText>
+            <MudText Typo="@Typo.body1">
+                Project Status: @ProjectStatus
+            </MudText>
+            <MudText Typo="@Typo.body1">
+                Development Time: @DevelopmentTime
+            </MudText>
+            @ChildContent
+            <MudButton Href="@ProjectHref" Target="_blank">
+                <MudIcon Icon="@Icons.Custom.Brands.GitHub" />
+                <div class="mx-1"></div>
+                <MudText Typo="@Typo.body1">
+                    Source Available on GitHub
+                </MudText>
+            </MudButton>
+        </div>
+    </div>
+</MudPaper>
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string ProjectHref { get; set; }
+
+    [Parameter]
+    public int TeamSize { get; set; }
+
+    [Parameter]
+    public string ProjectStatus { get; set; }
+
+    [Parameter]
+    public string DevelopmentTime { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

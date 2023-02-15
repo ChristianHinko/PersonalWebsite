@@ -20,17 +20,32 @@
 </div>
 <!-- Content -->
 <MudContainer MaxWidth="@MaxWidth.Large">
-    <MudStack Class="my-10" Row="false" Spacing="10">
-        <MudPaper Class="mud-width-full d-flex justify-center align-center" Height="400px">
-            <MudText Typo="@Typo.h2" Align="@Align.Center">
-                Game
+    <div class="my-16">
+        <MudText Typo="@Typo.h2" Align="@Align.Center">
+            Plugins Showcase
+        </MudText>
+    </div>
+    <MudStack Class="my-10" Row="false" Spacing="16">
+        <CHPortfolioProjectCard Title="Animation Setup" TeamSize="1" DevelopmentTime="About 6 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+            <MudText Typo="Typo.body1">
             </MudText>
-        </MudPaper>
-        <MudPaper Class="mud-width-full d-flex justify-center align-center" Height="400px">
-            <MudText Typo="@Typo.h2" Align="@Align.Center">
-                Plugin
+        </CHPortfolioProjectCard>
+        <CHPortfolioProjectCard Title="Strength Collision Queries" TeamSize="2" DevelopmentTime="About 2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+            <MudText Typo="Typo.body1">
             </MudText>
-        </MudPaper>
+        </CHPortfolioProjectCard>
+        <CHPortfolioProjectCard Title="Ability System Setup" TeamSize="2" DevelopmentTime="About 2 Years" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
+            <MudText Typo="Typo.body1">
+            </MudText>
+        </CHPortfolioProjectCard>
+        <CHPortfolioProjectCard Title="Input Setup" TeamSize="2" DevelopmentTime="About 1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
+            <MudText Typo="Typo.body1">
+            </MudText>
+        </CHPortfolioProjectCard>
+        <CHPortfolioProjectCard Title="Property Wrapper" TeamSize="2" DevelopmentTime="About 16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
+            <MudText Typo="Typo.body1">
+            </MudText>
+        </CHPortfolioProjectCard>
     </MudStack>
 </MudContainer>
 
