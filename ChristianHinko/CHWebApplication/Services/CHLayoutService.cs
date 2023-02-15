@@ -1,82 +1,51 @@
 ﻿using MudBlazor;
+using MudBlazor.Utilities;
+using MudBlazorExtensionLibrary.Services;
 
 namespace CHWebApplication.Services
 {
     /// <summary>
-    /// Determines the layout of the application.
+    /// Defines the layout of the web application.
     /// </summary>
-    public class CHLayoutService
+    public class CHLayoutService : MBELLayoutService
     {
-        /// <summary>
-        /// Current theme of the application.
-        /// </summary>
-        public MudTheme Theme { get; protected set; }
-
-        /// <summary>
-        /// Determines whether to use the default scrollbar.
-        /// </summary>
-        public bool DefaultScrollbar { get; protected set; }
-
-        /// <summary>
-        /// Determines whether to use the dark palette.
-        /// </summary>
-        public bool IsDarkMode { get; protected set; }
-
-        /// <summary>
-        /// Determines whether to use the right-to-left layout.
-        /// </summary>
-        public bool RightToLeft { get; protected set; }
-
-        /// <summary>
-        /// Invoked when layout changes occur. Use this for
-        /// notifying ComponentBase.StateHasChanged() when necessary.
-        /// </summary>
-        public event EventHandler? LayoutChanged;
-
         public CHLayoutService()
         {
-            Theme = new MudTheme();
+            Theme = new MudTheme()
+            {
+                Palette = new Palette()
+                {
+                    Primary = new MudColor(127, 95, 255, 1.0),
+                    Secondary = new MudColor(15, 223, 191, 1.0),
+                    Tertiary = new MudColor(255, 127, 143, 1.0),
+                    HoverOpacity = 0.05
+                },
+                PaletteDark = new PaletteDark()
+                {
+                    Primary = new MudColor(127, 95, 255, 1.0),
+                    Secondary = new MudColor(15, 223, 191, 1.0),
+                    Tertiary = new MudColor(255, 127, 143, 1.0),
+                    HoverOpacity = 0.05
+                },
+                Shadows = new Shadow()
+                {
+                },
+                Typography = new Typography()
+                {
+                },
+                LayoutProperties = new LayoutProperties()
+                {
+                },
+                ZIndex = new ZIndex()
+                {
+                }
+            };
+
             DefaultScrollbar = false;
-            IsDarkMode = false;
+
+            IsDarkMode = true;
+
             RightToLeft = false;
-
-            LayoutChanged = null;
-        }
-
-        public void SetTheme(MudTheme theme)
-        {
-            Theme = theme;
-            LayoutChanged?.Invoke(this, EventArgs.Empty);
-        }
-
-        public void SetDefaultScrollbar(bool defaultScrollbar)
-        {
-            DefaultScrollbar = defaultScrollbar;
-            LayoutChanged?.Invoke(this, EventArgs.Empty);
-        }
-        public void ToggleDefaultScrollbar()
-        {
-            SetDefaultScrollbar(!DefaultScrollbar);
-        }
-
-        public void SetIsDarkMode(bool isDarkMode)
-        {
-            IsDarkMode = isDarkMode;
-            LayoutChanged?.Invoke(this, EventArgs.Empty);
-        }
-        public void ToggleIsDarkMode()
-        {
-            SetIsDarkMode(!IsDarkMode);
-        }
-
-        public void SetRightToLeft(bool rightToLeft)
-        {
-            RightToLeft = rightToLeft;
-            LayoutChanged?.Invoke(this, EventArgs.Empty);
-        }
-        public void ToggleRightToLeft()
-        {
-            SetRightToLeft(!RightToLeft);
         }
     }
 }
