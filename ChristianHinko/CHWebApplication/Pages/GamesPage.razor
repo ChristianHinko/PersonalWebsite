@@ -32,13 +32,19 @@
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Title="Strength Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
             <MudText Typo="Typo.body1">
-                Developed custom collision queries that are dependent on the concept of strength. The queries become weaker as they ricochet and travel through penetrable hits (the air as well). Functionality is made using a collection of specialized collision queries that build off of each other, each implementing its own feature.
+                Library of custom collision queries that are dependent on the concept of strength.
             </MudText>
             <MudText Typo="Typo.body1">
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                Penetration scene casts pass through blocking hits until a specified condition with a hit is met, and return data preserves the distinction between blocking hits and overlaps. Exit hits can optionally be included in the return data and are ordered in the direction of the query with the entrance hits.
+                The queries become weaker as they ricochet and travel through penetrable hits (as well as traveling through the air). Functionality is made using a collection of specialized collision queries that build off of each other, each implementing its own feature.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                Penetration scene casts pass through blocking hits until a specified condition is met for a hit. The data returned preserves the distinction between blocking hits and overlaps. Exit hits are optionally included in the return data. The hits returned are ordered in the direction of the scene cast.
             </MudText>
             <MudText Typo="Typo.body1">
                 <br>
