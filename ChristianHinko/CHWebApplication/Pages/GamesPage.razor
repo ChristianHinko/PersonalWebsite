@@ -26,11 +26,11 @@
         </MudText>
     </div>
     <MudStack Class="my-10" Row="false" Spacing="16">
-        <CHPortfolioProjectCard Title="Animation Setup" TeamSize="1" DevelopmentTime="6 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" TeamSize="1" DevelopmentTime="6 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
             <MudText Typo="Typo.body1">
             </MudText>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Title="Custom Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+        <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
             <MudText Typo="Typo.body1">
                 These custom collision query functions are made using a layered approach where each one implements its own feature and builds off of others.
             </MudText>
@@ -53,7 +53,7 @@
                 All collision queries are generic to both line traces and shape sweeps.
             </MudText>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Title="Ability System Setup" TeamSize="2" DevelopmentTime="2 Years" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
+        <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup" TeamSize="2" DevelopmentTime="2 Years" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
             <MudText Typo="Typo.body1">
                 An extension of Epic Games' Gameplay Ability System. This plugin offers an efficient workflow that eliminates boilerplate code and improves scalability.
             </MudText>
@@ -70,12 +70,12 @@
                 This plugin includes an efficient workflow for ability input binding that replaces GAS's input enum approach. This is achieved by using our Input Setup plugin and expanding its use to the ability system. With this approach, input events use their input action's tag to know its relevant abilities and execute GAS input events for them. The result is a full in-editor workflow for assigning abilities to inputs via Gameplay Tags!
             </MudText>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
+        <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
             <MudText Typo="Typo.body1">
                 Developed a C++ plugin that extends Enhanced Input and improves workflows both in code and in editor by streamlining the process for defining and accessing Input Actions. It makes use of Gameplay Tags to identify Input Actions via a configurable map in the project settings. The map is stored in an EngineSubsystem, creating a centralized place for all Input Actions and eliminating duplicate code scenarios. Modules external to the game project can also contribute to the Input Actions map through a provided Primary Data Asset. Dynamically loaded modules (e.g. Game Features) are also supported for adding input actions.
             </MudText>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
+        <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
             <MudText Typo="Typo.body1">
                 Developed a generic property wrapper that allows users to respond to changes in their variables’ values. This simplifies and cleans up code bases. Initially developed to improve the workflow of push model replication, Property Wrapper’s use has become more diverse. The wrapper is implemented as a lightweight UStruct, with functionality implemented generically across all types.
             </MudText>
