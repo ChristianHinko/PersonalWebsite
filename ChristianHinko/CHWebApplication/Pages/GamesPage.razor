@@ -30,21 +30,21 @@
             <MudText Typo="Typo.body1">
             </MudText>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Title="Strength Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+        <CHPortfolioProjectCard Title="Custom Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
             <MudText Typo="Typo.body1">
-                Library of custom collision queries that are dependent on the concept of strength.
+                These custom collision query functions are made using a layered approach where each one implements its own feature and builds off of others.
             </MudText>
             <MudText Typo="Typo.body1">
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                The queries become weaker as they ricochet and travel through penetrable hits (as well as traveling through the air). Functionality is made using a collection of specialized collision queries that build off of each other, each implementing its own feature.
+                These queries combined give us exit hits, can penetrate blocking hits, can ricochet, and can run out of strength. This is a powerful query that is useful for complex shooting systems in games.
             </MudText>
             <MudText Typo="Typo.body1">
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                Penetration scene casts pass through blocking hits until a specified condition is met for a hit. The data returned preserves the distinction between blocking hits and overlaps. Exit hits are optionally included in the return data. The hits returned are ordered in the direction of the scene cast.
+                Our game project ShooterTest uses this and has bullet damage determined by the query strength. ShooterTest also uses physical materials to determine which surfaces are ricochetable and how much strength to nerf.
             </MudText>
             <MudText Typo="Typo.body1">
                 <br>
