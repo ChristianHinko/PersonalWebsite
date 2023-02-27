@@ -35,7 +35,7 @@ app.Use(
             return;
         }
 
-        // Rebuild url to use HTTPS
+        // Rebuild URL to use HTTPS
         string urlHttps = UriHelper.BuildAbsolute(Uri.UriSchemeHttps, context.Request.Host, context.Request.PathBase, context.Request.Path, context.Request.QueryString);
         context.Response.Redirect(urlHttps, true);
     }
