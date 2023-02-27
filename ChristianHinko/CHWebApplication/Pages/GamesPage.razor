@@ -72,7 +72,19 @@
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
             <MudText Typo="Typo.body1">
-                Developed a C++ plugin that extends Enhanced Input and improves workflows both in code and in editor by streamlining the process for defining and accessing Input Actions. It makes use of Gameplay Tags to identify Input Actions via a configurable map in the project settings. The map is stored in an EngineSubsystem, creating a centralized place for all Input Actions and eliminating duplicate code scenarios. Modules external to the game project can also contribute to the Input Actions map through a provided Primary Data Asset. Dynamically loaded modules (e.g. Game Features) are also supported for adding input actions.
+                The Input Setup plugin is a central place where all Input Actions in the game can be accessed from.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                Input Action references are stored on an Engine Subsystem and identifiable by Gameplay Tags, allowing different game systems to use the same Input Actions without creating duplicate references.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                The game project can add Input Actions to the subsystem via project settings. External plugins are able to contribute via a Data Asset that is looked at by the subsystem. Contributions from dynamically-loaded plugins, e.g., Game Features, are supported as well.
             </MudText>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
