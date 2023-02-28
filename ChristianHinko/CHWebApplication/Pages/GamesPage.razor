@@ -44,7 +44,7 @@
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                Our game project ShooterTest uses this and has bullet damage determined by the query strength. ShooterTest also uses physical materials to determine which surfaces are ricochetable and how much strength to nerf.
+                The ShooterTest game project uses this and has bullet damage determined by the query strength. ShooterTest also uses physical materials to determine how much strength to nerf and which surfaces are ricochetable.
             </MudText>
             <MudText Typo="Typo.body1">
                 <br>
@@ -67,13 +67,13 @@
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                The AvatarActorExtension component initializes and uninitializes an Avatar Actor when provided with an Ability System Component and optional AbilitySets. It is agnostic to Ability System Component location and supports any type of Avatar Actor.
+                The AvatarActorExtension component initializes and uninitializes an Avatar Actor when provided with an Ability System Component and optional AbilitySets. It is agnostic to Ability System Component location and supports Avatar Actors of any type.
             </MudText>
             <MudText Typo="Typo.body1">
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                For Avatar Actors that are Pawns, the more specialized PawnAvatarActorExtension component provides additional logic for a better ability input binding workflow. Using the Input Setup plugin, input events use their Gameplay Tag to know their relevant Gameplay Abilities and execute events on the Ability System Component for them. The result is a full in-editor workflow for associating Gameplay Abilities with Input Actions via Gameplay Tags. This replaces the built-in ability input enum workflow.
+                For Pawns, the more specialized PawnAvatarActorExtension component provides additional logic for ability input binding. This makes a complete in-editor workflow for associating Gameplay Abilities with Input Actions via Gameplay Tags.
             </MudText>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
@@ -90,7 +90,13 @@
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                The game project can add Input Actions to the subsystem via project settings. External plugins are able to contribute via a Data Asset that is looked at by the subsystem. Contributions from dynamically-loaded plugins, e.g., Game Features, are supported as well.
+                The game project can add Input Actions to the subsystem via project settings. External plugins are able to contribute via a Data Asset that is loaded by the subsystem. Contributions from dynamically-loaded plugins, e.g., Game Features, are supported as well.
+            </MudText>
+            <MudText Typo="Typo.body1">
+                <br>
+            </MudText>
+            <MudText Typo="Typo.body1">
+                The Ability System Setup plugin uses this subsystem to execute input events for relevant Gameplay Abilities of the Input Actions.
             </MudText>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
@@ -107,7 +113,7 @@
                 <br>
             </MudText>
             <MudText Typo="Typo.body1">
-                The property wrapper's functionality is generic to any type. It is implemented as a lightweight USTRUCT with most functionality in a base class and boilerplate functionality in a macro.
+                The property wrapper's functionality is generic to any type. It is implemented as a lightweight USTRUCT with most functionality in a base class and boilerplate code in a macro.
             </MudText>
         </CHPortfolioProjectCard>
     </MudStack>
