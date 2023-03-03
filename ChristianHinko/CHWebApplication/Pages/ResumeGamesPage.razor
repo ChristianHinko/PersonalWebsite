@@ -1,0 +1,31 @@
+﻿@page "/games/resume"
+@layout Shared.Layouts.MainLayout
+@using MudBlazorExtensionLibrary.Services
+@inject MBELLayoutService LayoutService
+
+<MudContainer MaxWidth="@MaxWidth.Medium">
+    <MudText Typo="@Typo.h1" Align="@Align.Center">
+        Christian Hinkle
+    </MudText>
+    <MudText Typo="@Typo.h2">
+        Education
+    </MudText>
+    <div class="d-flex flex-row justify-space-between">
+        <MudText Typo="@Typo.body1">
+            Charleston Southern University - Bachelor of Science in Computer Science - 3.4 GPA
+        </MudText>
+        <MudText Typo="@Typo.body1" Align="@Align.End">
+            Graduating May, 2023
+        </MudText>
+    </div>
+</MudContainer>
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        LayoutService.SetIsDarkMode(false);
+    }
+}
