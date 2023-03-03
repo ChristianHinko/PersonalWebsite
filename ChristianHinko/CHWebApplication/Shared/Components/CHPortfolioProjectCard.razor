@@ -22,7 +22,7 @@
                 </MudText>
             </CHInfoChip>
             <div class="my-2"></div>
-            @ChildContent
+            @Description
             <div class="my-2"></div>
             <MudButton Href="@ProjectHref" Target="_blank" Variant="@Variant.Filled" DisableElevation="true">
                 <MudIcon Icon="@Icons.Custom.Brands.GitHub" />
@@ -32,6 +32,12 @@
                 </MudText>
             </MudButton>
         </div>
+    </div>
+    <div class="mud-width-full pa-4">
+        <MudText Typo="@Typo.h4">
+            Contributions
+        </MudText>
+        @Contributions
     </div>
 </MudPaper>
 
@@ -56,5 +62,8 @@
     public string DevelopmentTime { get; set; }
 
     [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    public RenderFragment Description { get; set; }
+
+    [Parameter]
+    public RenderFragment Contributions { get; set; }
 }
