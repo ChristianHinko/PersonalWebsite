@@ -1,0 +1,17 @@
+﻿<div class="mud-width-full d-flex flex-row justify-space-between">
+    <MudText Typo="@Typo.body1">
+        @Title
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        @Date
+    </MudText>
+</div>
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string Date { get; set; }
+}

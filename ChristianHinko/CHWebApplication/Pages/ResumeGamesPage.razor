@@ -2,33 +2,20 @@
 @layout Shared.Layouts.MainLayout
 @using MudBlazorExtensionLibrary.Services
 @inject MBELLayoutService LayoutService
+@using CHWebApplication.Shared.Components.Resume
 
 <MudContainer MaxWidth="@MaxWidth.Medium">
-    <MudText Typo="@Typo.h1" Align="@Align.Center">
+    <MudText Class="ch-resume-text-header" Typo="@Typo.h1" Align="@Align.Center">
         Christian Hinkle
     </MudText>
-    <MudText Typo="@Typo.h2">
+    <MudText Class="ch-resume-text-section" Typo="@Typo.h2">
         Education
     </MudText>
-    <div class="d-flex flex-row justify-space-between">
-        <MudText Typo="@Typo.body1">
-            Charleston Southern University - Bachelor of Science in Computer Science - 3.4 GPA
-        </MudText>
-        <MudText Typo="@Typo.body1">
-            Graduating May, 2023
-        </MudText>
-    </div>
-    <MudText Typo="@Typo.h2">
+    <CHResumeItem Title="Charleston Southern University - Bachelor of Science in Computer Science - 3.4 GPA" Date="Graduating May, 2023" />
+    <MudText Class="ch-resume-text-section" Typo="@Typo.h2">
         Personal Projects
     </MudText>
-    <div class="d-flex flex-row justify-space-between">
-        <MudText Typo="@Typo.body1">
-            Animation Setup
-        </MudText>
-        <MudText Typo="@Typo.body1">
-            September, 2022 - Present
-        </MudText>
-    </div>
+    <CHResumeItem Title="Animation Setup" Date="September, 2022 - Present" />
     <MudText Typo="@Typo.body1">
         &emsp;Contributions
     </MudText>
@@ -41,49 +28,14 @@
     <MudText Typo="@Typo.body1">
         &emsp;• Make attachment attacher component
     </MudText>
-    <div class="d-flex flex-row justify-space-between">
-        <MudText Typo="@Typo.body1">
-            Custom Collision Queries
-        </MudText>
-        <MudText Typo="@Typo.body1">
-            April, 2022 - June, 2022
-        </MudText>
-    </div>
-    <div class="d-flex flex-row justify-space-between">
-        <MudText Typo="@Typo.body1">
-            Ability System Setup
-        </MudText>
-        <MudText Typo="@Typo.body1">
-            May, 2020 - August, 2022
-        </MudText>
-    </div>
-    <div class="d-flex flex-row justify-space-between">
-        <MudText Typo="@Typo.body1">
-            Input Setup
-        </MudText>
-        <MudText Typo="@Typo.body1">
-            July 2022
-        </MudText>
-    </div>
-    <div class="d-flex flex-row justify-space-between">
-        <MudText Typo="@Typo.body1">
-            Property Wrapper
-        </MudText>
-        <MudText Typo="@Typo.body1">
-            June 2021 - November 2022
-        </MudText>
-    </div>
-    <MudText Typo="@Typo.h2">
+    <CHResumeItem Title="Custom Collision Queries" Date="April, 2022 - June, 2022" />
+    <CHResumeItem Title="Ability System Setup" Date="May, 2020 - August, 2022" />
+    <CHResumeItem Title="Input Setup" Date="July, 2022" />
+    <CHResumeItem Title="Property Wrapper" Date="June, 2021 - November, 2022" />
+    <MudText Class="ch-resume-text-section" Typo="@Typo.h2">
         Work Experience
     </MudText>
-    <div class="d-flex flex-row justify-space-between">
-        <MudText Typo="@Typo.body1">
-            Window Gang
-        </MudText>
-        <MudText Typo="@Typo.body1">
-            Summer, 2019
-        </MudText>
-    </div>
+    <CHResumeItem Title="Window Gang" Date="Summer, 2019" />
     <MudText Typo="@Typo.body1">
         &emsp;Part-time window cleaning, pressure washing, and gutter cleaning
     </MudText>
