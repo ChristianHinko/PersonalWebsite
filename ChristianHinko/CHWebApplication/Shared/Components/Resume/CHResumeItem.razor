@@ -1,17 +1,13 @@
 ﻿<div class="mud-width-full d-flex flex-row justify-space-between">
-    <MudText Typo="@Typo.body1">
-        @Title
-    </MudText>
-    <MudText Typo="@Typo.body1">
-        @Date
-    </MudText>
+    @Title
+    @Date
 </div>
 
 @code
 {
     [Parameter]
-    public string Title { get; set; }
+    public RenderFragment Title { get; set; }
 
     [Parameter]
-    public string Date { get; set; }
+    public RenderFragment Date { get; set; }
 }
