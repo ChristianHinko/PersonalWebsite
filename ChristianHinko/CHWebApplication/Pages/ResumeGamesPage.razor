@@ -5,53 +5,10 @@
 @using CHWebApplication.Shared.Components.Resume
 
 <MudContainer MaxWidth="@MaxWidth.Medium">
-    <!-- Resume header -->
-    <div class="my-4">
-        <MudText Class="ch-resume-text-header" Typo="@Typo.h1" Align="@Align.Center">
-            Christian Hinkle
-        </MudText>
-        <div class="my-1"></div>
-        <!-- Contact information -->
-        <div class="mud-width-full d-flex flex-row justify-space-around">
-            <div class="d-flex flex-row justify-center">
-                <MudIcon Icon="@MBELIcons.Material.EarthAmericas" Color="@Color.Primary" Size="@Size.Small" />
-                <div class="mx-1"></div>
-                <MudLink Href="https://christianhinkle.com/" Target="_blank" Underline="@Underline.Always">
-                    <MudText Typo="@Typo.body1">
-                        https://christianhinkle.com/
-                    </MudText>
-                </MudLink>
-            </div>
-            <div class="d-flex flex-row justify-center">
-                <MudIcon Icon="@Icons.Material.Filled.Email" Color="@Color.Primary" />
-                <div class="mx-1"></div>
-                <MudLink Href="mailto://christianhinko@gmail.com/" Target="_blank" Underline="@Underline.Always">
-                    <MudText Typo="@Typo.body1">
-                        christianhinko@gmail.com
-                    </MudText>
-                </MudLink>
-            </div>
-            <div class="d-flex flex-row justify-center">
-                <MudIcon Icon="@Icons.Custom.Brands.LinkedIn" Color="@Color.Primary" />
-                <div class="mx-1"></div>
-                <MudLink Href="https://www.linkedin.com/in/christianhinko/" Target="_blank" Underline="@Underline.Always">
-                    <MudText Typo="@Typo.body1">
-                        christianhinko
-                    </MudText>
-                </MudLink>
-            </div>
-            <div class="d-flex flex-row justify-center">
-                <MudIcon Icon="@Icons.Custom.Brands.GitHub" Color="@Color.Primary" />
-                <div class="mx-1"></div>
-                <MudLink Href="https://github.com/ChristianHinko" Target="_blank" Underline="@Underline.Always">
-                    <MudText Typo="@Typo.body1">
-                        ChristianHinko
-                    </MudText>
-                </MudLink>
-            </div>
-        </div>
-    </div>
-    <!-- Resume content -->
+    <div class="mt-16"></div>
+    <MudText Class="ch-resume-text-header" Typo="@Typo.h1" Align="@Align.Center">
+        Christian Hinkle
+    </MudText>
     <MudText Class="ch-resume-text-section" Typo="@Typo.h2">
         Education
     </MudText>
