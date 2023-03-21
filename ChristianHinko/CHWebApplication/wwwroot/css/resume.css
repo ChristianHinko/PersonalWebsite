@@ -1,7 +1,7 @@
 /**
  * 
  */
-.ch-resume-text-header {
+.ch-resume-header-text {
     font-weight: bold;
     font-size: 3rem;
 }
@@ -9,14 +9,14 @@
 /**
  * 
  */
-.ch-resume-text-subheader {
+.ch-resume-subheader-text {
     font-weight: bold;
 }
 
 /**
  * 
  */
-.ch-resume-text-section {
+.ch-resume-section-text {
     font-weight: bold;
     font-size: 2rem;
 }
