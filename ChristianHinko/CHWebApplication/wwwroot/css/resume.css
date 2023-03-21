@@ -9,6 +9,13 @@
 /**
  * 
  */
+.ch-resume-text-subheader {
+    font-weight: bold;
+}
+
+/**
+ * 
+ */
 .ch-resume-text-section {
     font-weight: bold;
     font-size: 2rem;
