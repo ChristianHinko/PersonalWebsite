@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+.ch-resume-text {
+    font-size: 0.9rem;
+}
+
+/**
+ * 
+ */
+.ch-resume-header-text {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/**
+ * 
+ */
+.ch-resume-subheader-text {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/**
+ * 
+ */
+.ch-resume-info-text {
+    font-size: 0.75rem;
+}
+
+/**
+ * 
+ */
+.ch-resume-section-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/**
+ * 
+ */
+.ch-resume-item-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+/**
+ * Dimensions of an A4 paper.
+ */
+.ch-paper-a4 {
+    width: 21.0cm;
+    height: 29.7cm;
+}
+
+/**
+ * Default padding for A4 paper.
+ * NOTE: In paper terminology, padding is called "margin".
+ */
+.ch-paper-a4-padding {
+    padding: 2.5cm;
+}
+
+/**
+ * Dimensions of a US Letter paper.
+ */
+.ch-paper-us-letter {
+    width: 8.5in;
+    height: 11in;
+}
+
+/**
+ * Default padding for US Letter paper.
+ * NOTE: In paper terminology, padding is called "margin".
+ */
+.ch-paper-us-letter-padding {
+    padding: 1in;
+}
+
+/**
+ * 
+ */
+.ch-paper-us-letter-padding-half {
+    padding: 0.5in;
+}
