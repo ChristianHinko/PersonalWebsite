@@ -1,14 +1,11 @@
 ﻿@page "/games/resume"
 @layout Shared.Layouts.MainLayout
-@using MudBlazorExtensionLibrary.Services
-@inject MBELLayoutService LayoutService
 @using CHWebApplication.Shared.Components.Resume
 
 <PageTitle>Christian Hinkle - Resume</PageTitle>
 
-<MudContainer MaxWidth="@MaxWidth.Medium">
+<CHPaperDocumentContainer>
     <!-- Resume header -->
-    <div class="my-2"></div>
     <MudText Class="ch-resume-header-text" Typo="@Typo.h1" Align="@Align.Center">
         Christian Hinkle
     </MudText>
@@ -257,14 +254,4 @@
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
         &emsp;• Develop usage of FProperty pointers for Push Model replication and generic serialization
     </MudText>
-</MudContainer>
-
-@code
-{
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-
-        LayoutService.SetIsDarkMode(false);
-    }
-}
+</CHPaperDocumentContainer>

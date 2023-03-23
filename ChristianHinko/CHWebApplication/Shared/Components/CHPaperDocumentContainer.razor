@@ -1,0 +1,21 @@
+﻿@using MudBlazorExtensionLibrary.Services
+@inject MBELLayoutService LayoutService
+
+<div class="mud-width-full mud-height-full" style="background-color: --mud-palette-background-grey;">
+    <MudPaper Class="ch-paper-us-letter mx-auto ch-paper-us-letter-padding" Square="true">
+        @ChildContent
+    </MudPaper>
+</div>
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        LayoutService.SetIsDarkMode(false);
+    }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
