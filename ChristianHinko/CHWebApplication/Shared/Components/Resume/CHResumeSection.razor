@@ -1,0 +1,11 @@
+﻿<div class="my-2"></div>
+<MudText Class="ch-resume-section-text" Typo="@Typo.h2">
+    @Title
+</MudText>
+<MudDivider Vertical="false" />
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; }
+}
