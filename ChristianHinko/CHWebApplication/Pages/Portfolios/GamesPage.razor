@@ -30,7 +30,7 @@
         </MudText>
     </div>
     <MudStack Class="my-10" Row="false" Spacing="16">
-        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" TeamSize="1" DevelopmentTime="6 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" TeamSize="1" DevelopmentTime="7 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
             <Description>
                 <MudText Typo="@Typo.body1">
                     The Animation Setup plugin provides tools for putting together modular characters and performing common character mesh setup.
@@ -41,13 +41,31 @@
                 <MudText Typo="@Typo.body1">
                     The skinless Skeletal Mesh system generates an animated skeleton that serves as the foundation for attaching modular character parts. The attached meshes may copy the animation, e.g., a character's arm moving, while others may perform their own animation, e.g., a character's gun shooting. This separation allows skeletal animation to be independent of Skeletal Meshes.
                 </MudText>
+                <MudText Typo="@Typo.body1">
+                    <br>
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    The portrayal system creates a workflow for portraying an Actor Component in unique ways for different viewers. Portrayals are implemented via a PortrayalDefinition and are identified by Gameplay Tag. An Actor can then associate its different components with different portrayal tags.
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    <br>
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    The NinjaGame game project implements a first-person portrayal that the Character decides to view when in first-person; meanwhile, other Actors see the default portrayal.
+                </MudText>
             </Description>
             <Contributions>
                 <MudText Typo="@Typo.body1">
                     &emsp;• Make skinless Skeletal Mesh generation functionality for creating animated skeletons
                 </MudText>
                 <MudText Typo="@Typo.body1">
-                    &emsp;• Make AttachmentAttacher component for assembling modular characters
+                    &emsp;• Make PortrayalDefinition for defining how viewers are included and excluded from viewing
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    &emsp;• Make ObjectReferenceLibrary subsystem for identifying PortrayalDefinitions by Gameplay Tag
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    &emsp;• Make general-purpose Primitive Scene Proxy implementations
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
