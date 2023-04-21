@@ -1,0 +1,83 @@
+﻿<iframe
+    class="@Class"
+    style="@Style"
+    frameborder="0"
+    type="text/html"
+        src="@("https://www.dailymotion.com/embed/video/" + VideoId + GetDailymotionEmbedQueryString())"
+    allow="autoplay; fullscreen; picture-in-picture;"
+    >
+</iframe>
+
+@code
+{
+    [Parameter]
+    public string Class { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Style { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Dailymotion video ID.
+    /// </summary>
+    [Parameter]
+    public string VideoId { get; set; } = string.Empty;
+
+    [Parameter]
+    public bool Controls { get; set; } = false;
+
+    [Parameter]
+    public bool Mute { get; set; } = true;
+
+    [Parameter]
+    public bool Autoplay { get; set; } = true;
+
+    [Parameter]
+    public bool Loop { get; set; } = true;
+
+
+    /// <summary>
+    /// Build the query string based on our parameters.
+    /// </summary>
+    protected string GetDailymotionEmbedQueryString()
+    {
+        Dictionary<string, string?> parameters = new();
+
+        if (Controls)
+        {
+            parameters.Add("controls", "1");
+        }
+        else
+        {
+            parameters.Add("controls", "0");
+        }
+
+        if (Mute)
+        {
+            parameters.Add("mute", "1");
+        }
+        else
+        {
+            parameters.Add("mute", "0");
+        }
+
+        if (Autoplay)
+        {
+            parameters.Add("autoplay", "1");
+        }
+        else
+        {
+            parameters.Add("autoplay", "0");
+        }
+
+        if (Loop)
+        {
+            parameters.Add("loop", "1");
+        }
+        else
+        {
+            parameters.Add("loop", "0");
+        }
+
+        return QueryString.Create(parameters).ToString();
+    }
+}

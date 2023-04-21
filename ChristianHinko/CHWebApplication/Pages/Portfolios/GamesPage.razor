@@ -2,14 +2,10 @@
 
 <!-- Title banner -->
 <div class="relative mud-width-full" style="height: 500px;">
-    <!-- Carousel background detached from the DOM -->
-    <MudCarousel Class="absolute mud-width-full mud-height-full" TData="object" AutoCycle="true" AutoCycleTime="@TimeSpan.FromSeconds(3)" ShowArrows="false" ShowBullets="false">
-        <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Primary" />
-        <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Secondary" />
-        <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Tertiary" />
-    </MudCarousel>
+    <!-- Video background detached from the DOM -->
+    <CHDailymotionVideo Class="absolute mud-width-full" VideoId="x8jecvv" />
     <!-- Title text on top of the detached background -->
-    <div class="relative mud-width-full mud-height-full d-flex flex-column justify-center align-center"> <!-- position has to be non-static in order to draw over the non-static-positioned mud carousel elements -->
+    <div class="relative mud-width-full mud-height-full d-flex flex-column justify-center align-center"> <!-- position has to be non-static in order to draw on top of the non-static-positioned background -->
         <header>
             <MudText Class="ch-header-text" Typo="@Typo.h1" Align="@Align.Center">
                 Games
@@ -209,8 +205,3 @@
         </CHPortfolioProjectCard>
     </MudStack>
 </MudContainer>
-
-@code
-{
-    private Transition CarouselItemTransition { get; set; } = Transition.Slide;
-}
