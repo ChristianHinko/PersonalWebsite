@@ -3,7 +3,7 @@
     style="@Style"
     frameborder="0"
     type="text/html"
-        src="@("https://www.dailymotion.com/embed/video/" + VideoId + GetDailymotionEmbedQueryString())"
+    src="@GetDailymotionEmbedUrl()"
     allow="autoplay; fullscreen; picture-in-picture;"
     >
 </iframe>
@@ -34,6 +34,14 @@
     [Parameter]
     public bool Loop { get; set; } = true;
 
+
+    /// <summary>
+    /// Get URL to Dailymotion embed video.
+    /// </summary>
+    public string GetDailymotionEmbedUrl()
+    {
+        return ("https://www.dailymotion.com/embed/video/" + VideoId + GetDailymotionEmbedQueryString());
+    }
 
     /// <summary>
     /// Build the query string based on our parameters.
