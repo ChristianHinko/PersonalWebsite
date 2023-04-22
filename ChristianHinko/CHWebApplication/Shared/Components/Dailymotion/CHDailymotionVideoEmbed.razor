@@ -31,16 +31,13 @@
     [Parameter]
     public bool Autoplay { get; set; } = true;
 
-    [Parameter]
-    public bool Loop { get; set; } = true;
-
 
     /// <summary>
     /// Get URL to Dailymotion embed video.
     /// </summary>
     public string GetDailymotionEmbedUrl()
     {
-        return ("https://www.dailymotion.com/embed/video/" + VideoId + GetDailymotionEmbedQueryString());
+        return ($"https://www.dailymotion.com/embed/video/{VideoId}" + GetDailymotionEmbedQueryString());
     }
 
     /// <summary>
@@ -75,15 +72,6 @@
         else
         {
             parameters.Add("autoplay", "0");
-        }
-
-        if (Loop)
-        {
-            parameters.Add("loop", "1");
-        }
-        else
-        {
-            parameters.Add("loop", "0");
         }
 
         return QueryString.Create(parameters).ToString();
