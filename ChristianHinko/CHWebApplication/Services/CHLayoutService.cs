@@ -41,6 +41,10 @@ namespace CHWebApplication.Services
                 }
             };
 
+            // Use the dark mode text color for our appbar text color
+            Theme.Palette.AppbarText = Theme.PaletteDark.TextPrimary;
+            Theme.PaletteDark.AppbarText = Theme.Palette.AppbarText;
+
             DefaultScrollbar = false;
 
             IsDarkMode = true;
