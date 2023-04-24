@@ -1,6 +1,10 @@
 ﻿<MudPaper id="@Id" Class="mud-width-full">
     <div class="d-lg-flex flex-row"> <!-- only use flex display on lg screen sizes and up -->
-        <MudImage Class="rounded" Style="aspect-ratio: 4 / 3;" Height="400" ObjectFit="@ObjectFit.Cover" Src="https://cdn2.unrealengine.com/unreal-engine-5-1-feed-1920x1080-32e2b379653e.png" />
+        <div>
+            <div class="rounded" style="height: 400px; aspect-ratio: 4 / 3; overflow: hidden;">
+                @Media
+            </div>
+        </div>
         <div class="mud-width-full pa-4">
             <MudText Typo="@Typo.h3">
                 @Title
@@ -60,6 +64,9 @@
 
     [Parameter]
     public string DevelopmentTime { get; set; }
+
+    [Parameter]
+    public RenderFragment Media { get; set; }
 
     [Parameter]
     public RenderFragment Description { get; set; }

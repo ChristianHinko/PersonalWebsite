@@ -1,15 +1,18 @@
 ﻿@page "/games"
+@using CHWebApplication.Shared.Components.Dailymotion
 
 <!-- Title banner -->
-<div class="relative mud-width-full" style="height: 500px;">
-    <!-- Carousel background detached from the DOM -->
-    <MudCarousel Class="absolute mud-width-full mud-height-full" TData="object" AutoCycle="true" AutoCycleTime="@TimeSpan.FromSeconds(3)" ShowArrows="false" ShowBullets="false">
-        <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Primary" />
-        <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Secondary" />
-        <MudCarouselItem Class="mud-width-full mud-height-full" Transition="@CarouselItemTransition" Color="@Color.Tertiary" />
-    </MudCarousel>
+<div class="relative mud-width-full" style="height: 600px; overflow: hidden;">
+    <!-- Background video detached from the DOM -->
+    <div class="absolute mud-width-full" style="z-index: -100; top: 50%; transform: translateY(-50%);"> <!-- vertically center ourselves -->
+        <div style="filter: opacity(0.2);">
+            <div class="mud-width-full" style="aspect-ratio: 16 / 9;"> <!-- wrap the video in a 16:9 block with full width -->
+                <CHDailymotionPlayerEmbed PlayerId="xdvwm" VideoId="x8jecvv" />
+            </div>
+        </div>
+    </div>
     <!-- Title text on top of the detached background -->
-    <div class="relative mud-width-full mud-height-full d-flex flex-column justify-center align-center"> <!-- position has to be non-static in order to draw over the non-static-positioned mud carousel elements -->
+    <div class="relative mud-width-full mud-height-full d-flex flex-column justify-center align-center"> <!-- position has to be non-static in order to draw on top of the non-static-positioned background -->
         <header>
             <MudText Class="ch-header-text" Typo="@Typo.h1" Align="@Align.Center">
                 Games
@@ -31,6 +34,9 @@
     </div>
     <MudStack Class="my-10" Row="false" Spacing="16">
         <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" TeamSize="1" DevelopmentTime="7 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+            <Media>
+                <MudImage Class="mud-width-full mud-height-full" Src="/images/SkinlessSkeletalMesh.png" ObjectFit="@ObjectFit.Cover" />
+            </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
                     The Animation Setup plugin provides tools for modular character assembly and common mesh setup.
@@ -70,6 +76,9 @@
             </Contributions>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+            <Media>
+                <CHDailymotionPlayerBlock Class="mud-width-full mud-height-full" PlayerId="xdvwm" VideoId="x8i0xvw" FitHeight="true" Link="true" />
+            </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
                     These custom collision query functions are made using a layered approach where each one implements its own feature and builds off of others.
@@ -112,6 +121,9 @@
             </Contributions>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup" TeamSize="2" DevelopmentTime="2 Years" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
+            <Media>
+                <CHDailymotionPlayerBlock Class="mud-width-full mud-height-full" PlayerId="xdvwm" VideoId="x8i0ylk" FitHeight="true" Link="true" />
+            </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
                     This plugin is an extension of Epic Games' Gameplay Ability System offering an efficient workflow that eliminates boilerplate code and improves scalability.
@@ -154,6 +166,9 @@
             </Contributions>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
+            <Media>
+                <CHDailymotionPlayerBlock Class="mud-width-full mud-height-full" PlayerId="xdvwm" VideoId="x8i0zfz" FitHeight="true" Link="true" />
+            </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
                     The Input Setup plugin is a central place where all Input Actions in the game can be accessed from.
@@ -184,6 +199,9 @@
             </Contributions>
         </CHPortfolioProjectCard>
         <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
+            <Media>
+                <CHDailymotionPlayerBlock Class="mud-width-full mud-height-full" PlayerId="xdvwm" VideoId="x8i0yuv" FitHeight="true" Link="true" />
+            </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
                     Using a property wrapper gives you an event to use for when the value of the property has been changed.
@@ -209,8 +227,3 @@
         </CHPortfolioProjectCard>
     </MudStack>
 </MudContainer>
-
-@code
-{
-    private Transition CarouselItemTransition { get; set; } = Transition.Slide;
-}
