@@ -3,10 +3,10 @@
 namespace CHWebApplication.Services
 {
     /// <summary>
-    /// Implement this and give a list of posts to use.
+    /// Implement this and give a list of post infos to use.
     /// </summary>
-    public interface ICHPostsService
+    public interface ICHPostInfoService
     {
-        public List<CHPost> Posts { get; set; }
+        public List<CHPostInfo> PostInfos { get; set; }
     }
 }

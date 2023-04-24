@@ -1,7 +1,7 @@
 ﻿@using CHWebApplication.Types
 
 <MudContainer MaxWidth="@MaxWidth.Large">
-    <CHPostHeader Post="@Post" />
+    <CHPostHeader PostInfo="@PostInfo" />
     <MudText Typo="@Typo.h2">
         Try It Yourself!
     </MudText>
@@ -12,6 +12,6 @@
 
 @code
 {
-    [CascadingParameter(Name = "Post")]
-    public CHPost Post { get; set; }
+    [CascadingParameter(Name = "PostInfo")]
+    public CHPostInfo PostInfo { get; set; }
 }

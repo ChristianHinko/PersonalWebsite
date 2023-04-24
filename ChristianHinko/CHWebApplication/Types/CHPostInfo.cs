@@ -1,9 +1,9 @@
 ﻿namespace CHWebApplication.Types
 {
     /// <summary>
-    /// Defines a post - basic information and what to render.
+    /// Defines information about a post, including what to render.
     /// </summary>
-    public record CHPost
+    public record CHPostInfo
     {
         public string Title { get; init; } = default!;
 
@@ -16,13 +16,13 @@
         /// <summary>
         /// The slug portion of the URL pathname.
         /// </summary>
-        /// <seealso cref="Pages.PostPage"/>
+        /// <seealso cref="Pages.Posts.Post"/>
         public string Slug { get; init; } = default!;
 
         /// <summary>
         /// Type of component to render.
         /// </summary>
-        /// <seealso cref="Pages.PostPage"/>
+        /// <seealso cref="Pages.Posts.Post"/>
         public Type Component { get; init; } = default!;
     }
 }

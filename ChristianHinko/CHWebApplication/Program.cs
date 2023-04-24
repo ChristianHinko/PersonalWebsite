@@ -17,7 +17,7 @@ builder.Services.Configure<ForwardedHeadersOptions>(
     }
 );
 builder.Services.AddMudServices();
-builder.Services.AddScoped<ICHPostsService, CHPostsService>();
+builder.Services.AddScoped<ICHPostInfoService, CHPostInfoService>();
 builder.Services.AddScoped<MBELLayoutService, CHLayoutService>();
 
 var app = builder.Build();

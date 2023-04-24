@@ -3,17 +3,17 @@
 namespace CHWebApplication.Services
 {
     /// <summary>
-    /// Central container of posts.
+    /// Central container of post infos.
     /// </summary>
-    public class CHPostsService : ICHPostsService
+    public class CHPostInfoService : ICHPostInfoService
     {
-        public List<CHPost> Posts { get; set; }
+        public List<CHPostInfo> PostInfos { get; set; }
 
-        public CHPostsService()
+        public CHPostInfoService()
         {
-            Posts = new List<CHPost>()
+            PostInfos = new List<CHPostInfo>()
             {
-                new CHPost()
+                new CHPostInfo()
                 {
                     Title = "Trig Functions Make So Much Sense!",
                     Subtitle = "Visualize and understand the circular functions.",
@@ -24,8 +24,8 @@ namespace CHWebApplication.Services
                 }
             };
 
-            // Sort Posts by date
-            Posts.Sort((a, b) => a.Date.CompareTo(b.Date));
+            // Sort PostInfos by date
+            PostInfos.Sort((a, b) => a.Date.CompareTo(b.Date));
         }
     }
 }
