@@ -29,6 +29,9 @@
     public string VideoId { get; set; } = string.Empty;
 
     [Parameter]
+    public bool Mute { get; set; } = true;
+
+    [Parameter]
     public bool Loop { get; set; } = true;
 
 
@@ -48,6 +51,15 @@
         Dictionary<string, string?> parameters = new();
 
         parameters.Add("video", VideoId);
+
+        if (Mute)
+        {
+            parameters.Add("mute", "true");
+        }
+        else
+        {
+            parameters.Add("mute", "false");
+        }
 
         if (Loop)
         {
