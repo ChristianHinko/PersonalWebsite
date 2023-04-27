@@ -1,0 +1,11 @@
+﻿<div class="mud-width-full py-8" style="background-color: var(--mud-palette-background-grey);">
+    <MudContainer MaxWidth="@MaxWidth.Large">
+        @ChildContent
+    </MudContainer>
+</div>
+
+@code
+{
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
