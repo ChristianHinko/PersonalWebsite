@@ -2,7 +2,7 @@
 @using CHWebApplication.Types
 @using CHWebApplication.Services
 @using CHWebApplication.Shared.Components.Post
-@inject ICHPostsService PostsService
+@inject ICHPostInfoService PostInfoService
 
 <MudContainer MaxWidth="@MaxWidth.Large">
     <div style="margin-top: 50px; margin-bottom: 50px;">
@@ -18,10 +18,10 @@
     <MudDivider Class="mb-2" Vertical="false" />
     <MudGrid Justify="@Justify.FlexStart">
         @* Populate the grid with post cards. *@
-        @foreach (CHPost post in PostsService.Posts.AsEnumerable().Reverse()) @* TODO: This is slow. Maybe cache this? Or just do a backwards for loop? *@
+        @foreach (CHPostInfo postInfo in PostInfoService.PostInfos.AsEnumerable().Reverse()) @* TODO: This is slow. Maybe cache this? Or just do a backwards for loop? *@
         {
             <MudItem xs="12" sm="6" md="4">
-                <CHPostCard Post="@post" />
+                <CHPostCard PostInfo="@postInfo" />
             </MudItem>
         }
     </MudGrid>

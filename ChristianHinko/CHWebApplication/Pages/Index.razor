@@ -2,15 +2,18 @@
 @using CHWebApplication.Shared.Components.Post
 
 <MudContainer MaxWidth="@MaxWidth.Large">
-    <div style="margin-top: 200px; margin-bottom: 200px;">
-        <header>
-            <MudText Class="ch-header-text" Typo="@Typo.h1">
-                Christian Hinkle
-            </MudText>
-            <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
-                Artist and Gameplay Programmer
-            </MudText>
-        </header>
+    <div class="mud-width-full" style="height: 700px;">
+        <div class="d-flex flex-row justify-space-between align-center mud-width-full mud-height-full">
+            <header>
+                <MudText Class="ch-header-text" Typo="@Typo.h1">
+                    Christian Hinkle
+                </MudText>
+                <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+                    Artist and Game Programmer
+                </MudText>
+            </header>
+            <MudImage Class="rounded" Style="transform: scaleX(-1);" Src="/images/ChristianHinkle.png" Width="400" Height="400" />
+        </div>
     </div>
     <CHNewestPosts />
 </MudContainer>

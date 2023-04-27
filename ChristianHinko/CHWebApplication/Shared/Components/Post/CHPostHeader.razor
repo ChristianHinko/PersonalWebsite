@@ -3,23 +3,23 @@
 <div class="my-16">
     <header>
         <MudText Class="ch-header-text" Typo="@Typo.h1">
-            @Post.Title
+            @PostInfo.Title
         </MudText>
         <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
-            @Post.Subtitle
+            @PostInfo.Subtitle
         </MudText>
     </header>
 </div>
 <div class="my-4">
-    <MudImage Class="mud-width-full rounded" Style="aspect-ratio: 16 / 9;" Src="@Post.ImageSrc" ObjectFit="@ObjectFit.Cover" />
+    <MudImage Class="mud-width-full rounded" Style="aspect-ratio: 16 / 9;" Src="@PostInfo.ImageSrc" ObjectFit="@ObjectFit.Cover" />
 </div>
 <MudText Typo="@Typo.h5" Align="@Align.End">
-    @Post.Date.ToString("MMMM d, yyyy")
+    @PostInfo.Date.ToString("MMMM d, yyyy")
 </MudText>
 <MudDivider Class="my-2" Vertical="false" />
 
 @code
 {
     [Parameter]
-    public CHPost Post { get; set; }
+    public CHPostInfo PostInfo { get; set; }
 }

@@ -1,5 +1,5 @@
 ﻿@using CHWebApplication.Services
-@inject ICHPostsService PostsService
+@inject ICHPostInfoService PostInfoService
 @using CHWebApplication.Types
 @using CHWebApplication.Shared.Components.Post
 
@@ -15,10 +15,10 @@
     </div>
     <MudDivider Class="mb-2" Vertical="false" />
     <MudGrid>
-        @foreach (CHPost post in PostsService.Posts.AsEnumerable().Reverse().Take(3))
+        @foreach (CHPostInfo postInfo in PostInfoService.PostInfos.AsEnumerable().Reverse().Take(3))
         {
             <MudItem xs="@(12 / 3)">
-                <CHPostCard Post="@post" />
+                <CHPostCard PostInfo="@postInfo" />
             </MudItem>
         }
     </MudGrid>
