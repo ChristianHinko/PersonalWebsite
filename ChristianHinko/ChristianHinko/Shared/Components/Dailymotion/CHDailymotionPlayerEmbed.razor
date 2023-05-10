@@ -1,4 +1,6 @@
-﻿<iframe
+﻿@using Microsoft.AspNetCore.Http.Extensions
+
+<iframe
     class="@Class"
     style="@Style"
     frameborder="0"
@@ -48,7 +50,7 @@
     /// </summary>
     protected string GetDailymotionEmbedQueryString()
     {
-        Dictionary<string, string?> parameters = new();
+        QueryBuilder parameters = new();
 
         parameters.Add("video", VideoId);
 
@@ -70,6 +72,6 @@
             parameters.Add("loop", "false");
         }
 
-        return QueryString.Create(parameters).ToString();
+        return parameters.ToString();
     }
 }

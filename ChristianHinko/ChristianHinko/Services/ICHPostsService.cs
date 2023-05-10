@@ -1,6 +1,6 @@
-﻿using ChristianHinko.Server.Types;
+﻿using ChristianHinko.Types;
 
-namespace ChristianHinko.Server.Services
+namespace ChristianHinko.Services
 {
     /// <summary>
     /// Implement this and give a list of post infos to use.

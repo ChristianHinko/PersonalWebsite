@@ -1,6 +1,6 @@
-﻿using ChristianHinko.Server.Types;
+﻿using ChristianHinko.Types;
 
-namespace ChristianHinko.Server.Services
+namespace ChristianHinko.Services
 {
     /// <summary>
     /// Central container of post infos.
@@ -18,7 +18,7 @@ namespace ChristianHinko.Server.Services
                     Title = "Trig Functions Make So Much Sense!",
                     Subtitle = "Visualize and understand the circular functions.",
                     Date = new DateTime(2023, 02, 04),
-                    ImageSrc = "/images/TrigFunctionsMakeSoMuchSense.png",
+                    ImageSrc = "/_content/ChristianHinko/images/TrigFunctionsMakeSoMuchSense.png",
                     Slug = "trig-functions-make-so-much-sense",
                     Component = typeof(Shared.Components.Posts.TrigFunctionsMakeSoMuchSense)
                 }

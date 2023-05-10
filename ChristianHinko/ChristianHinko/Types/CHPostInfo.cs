@@ -1,4 +1,4 @@
-﻿namespace ChristianHinko.Server.Types
+﻿namespace ChristianHinko.Types
 {
     /// <summary>
     /// Defines information about a post, including what to render.
