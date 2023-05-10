@@ -10,6 +10,7 @@ ENV ASPNETCORE_URLS=http://*:8080
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src/
 COPY ["./ChristianHinko/ChristianHinko.Server/ChristianHinko.Server.csproj", "./ChristianHinko/ChristianHinko.Server/"]
+COPY ["./ChristianHinko/ChristianHinko/ChristianHinko.csproj", "./ChristianHinko/ChristianHinko/"]
 COPY ["./MudBlazorExtension/MudBlazorExtension/MudBlazorExtensionLibrary/MudBlazorExtensionLibrary.csproj", "./MudBlazorExtension/MudBlazorExtension/MudBlazorExtensionLibrary/"]
 RUN dotnet restore "ChristianHinko/ChristianHinko.Server/ChristianHinko.Server.csproj"
 COPY ./ ./
