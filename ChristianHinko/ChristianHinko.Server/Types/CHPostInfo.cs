@@ -1,4 +1,4 @@
-﻿namespace CHWebApplication.Types
+﻿namespace ChristianHinko.Server.Types
 {
     /// <summary>
     /// Defines information about a post, including what to render.

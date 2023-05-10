@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CHWebApplication", "CHWebApplication\CHWebApplication.csproj", "{5BAE6824-AEAE-4B82-B546-CEC1E105D379}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChristianHinko.Server", "ChristianHinko.Server\ChristianHinko.Server.csproj", "{5BAE6824-AEAE-4B82-B546-CEC1E105D379}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MudBlazorExtensionLibrary", "..\MudBlazorExtension\MudBlazorExtension\MudBlazorExtensionLibrary\MudBlazorExtensionLibrary.csproj", "{AFA17757-ACDD-4D37-B8DF-D20A8EF121A5}"
 EndProject

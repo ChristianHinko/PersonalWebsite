@@ -1,4 +1,4 @@
-﻿namespace CHWebApplication.Types
+﻿namespace ChristianHinko.Server.Types
 {
     /// <summary>
     /// Library of helpful functions for CHPostInfo.

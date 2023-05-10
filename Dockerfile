@@ -9,16 +9,16 @@ ENV ASPNETCORE_URLS=http://*:8080
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src/
-COPY ["./ChristianHinko/CHWebApplication/CHWebApplication.csproj", "./ChristianHinko/CHWebApplication/"]
+COPY ["./ChristianHinko/ChristianHinko.Server/ChristianHinko.Server.csproj", "./ChristianHinko/ChristianHinko.Server/"]
 COPY ["./MudBlazorExtension/MudBlazorExtension/MudBlazorExtensionLibrary/MudBlazorExtensionLibrary.csproj", "./MudBlazorExtension/MudBlazorExtension/MudBlazorExtensionLibrary/"]
-RUN dotnet restore "ChristianHinko/CHWebApplication/CHWebApplication.csproj"
+RUN dotnet restore "ChristianHinko/ChristianHinko.Server/ChristianHinko.Server.csproj"
 COPY ./ ./
-RUN dotnet build "ChristianHinko/CHWebApplication/CHWebApplication.csproj" --output /app/build/ --configuration Release
+RUN dotnet build "ChristianHinko/ChristianHinko.Server/ChristianHinko.Server.csproj" --output /app/build/ --configuration Release
 
 FROM build AS publish
-RUN dotnet publish "ChristianHinko/CHWebApplication/CHWebApplication.csproj" --output /app/publish/ --configuration Release
+RUN dotnet publish "ChristianHinko/ChristianHinko.Server/ChristianHinko.Server.csproj" --output /app/publish/ --configuration Release
 
 FROM base AS final
 WORKDIR /app/
 COPY --from=publish ["./app/publish/", "./"]
-ENTRYPOINT ["dotnet", "CHWebApplication.dll"]
+ENTRYPOINT ["dotnet", "ChristianHinko.Server.dll"]

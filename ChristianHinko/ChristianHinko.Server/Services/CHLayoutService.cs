@@ -2,7 +2,7 @@
 using MudBlazor.Utilities;
 using MudBlazorExtensionLibrary.Services;
 
-namespace CHWebApplication.Services
+namespace ChristianHinko.Server.Services
 {
     /// <summary>
     /// Defines the layout of the web application.

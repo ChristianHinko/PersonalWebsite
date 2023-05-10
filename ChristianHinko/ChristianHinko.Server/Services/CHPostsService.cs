@@ -1,6 +1,6 @@
-﻿using CHWebApplication.Types;
+﻿using ChristianHinko.Server.Types;
 
-namespace CHWebApplication.Services
+namespace ChristianHinko.Server.Services
 {
     /// <summary>
     /// Central container of post infos.

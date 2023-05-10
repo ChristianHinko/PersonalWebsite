@@ -1,6 +1,6 @@
-﻿using CHWebApplication.Types;
+﻿using ChristianHinko.Server.Types;
 
-namespace CHWebApplication.Services
+namespace ChristianHinko.Server.Services
 {
     /// <summary>
     /// Implement this and give a list of post infos to use.
