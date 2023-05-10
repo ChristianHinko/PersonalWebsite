@@ -1,4 +1,5 @@
-﻿@using Microsoft.AspNetCore.Http.Extensions
+﻿@using System.Web
+@using System.Collections.Specialized
 
 <iframe
     class="@Class"
@@ -42,15 +43,15 @@
     /// </summary>
     public string GetDailymotionEmbedUrl()
     {
-        return ($"https://geo.dailymotion.com/player/{PlayerId}.html" + GetDailymotionEmbedQueryString());
+        return ($"https://geo.dailymotion.com/player/{PlayerId}.html" + "?" + GetDailymotionEmbedQueryStringParameters());
     }
 
     /// <summary>
     /// Build the query string based on our parameters.
     /// </summary>
-    protected string GetDailymotionEmbedQueryString()
+    protected string GetDailymotionEmbedQueryStringParameters()
     {
-        QueryBuilder parameters = new();
+        NameValueCollection parameters = HttpUtility.ParseQueryString(string.Empty);
 
         parameters.Add("video", VideoId);
 

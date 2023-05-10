@@ -1,24 +1,20 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using MudBlazor.Services;
-using ChristianHinko.Services;
-using MudBlazorExtensionLibrary.Services;
+using ChristianHinko;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Http.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddChristianHinkoServices();
 builder.Services.Configure<ForwardedHeadersOptions>(
-    (forwardedHeadersOptions) =>
-    {
-        // Ensure that we get information about the protocol that the client uses
-        forwardedHeadersOptions.ForwardedHeaders |= (ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto);
-    }
-);
-builder.Services.AddMudServices();
-builder.Services.AddScoped<ICHPostInfoService, CHPostInfoService>();
-builder.Services.AddScoped<MBELLayoutService, CHLayoutService>();
+        (forwardedHeadersOptions) =>
+        {
+            // Ensure that we get information about the protocol that the client uses
+            forwardedHeadersOptions.ForwardedHeaders |= (ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto);
+        }
+    );
 
 var app = builder.Build();
 
