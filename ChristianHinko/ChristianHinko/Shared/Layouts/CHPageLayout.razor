@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+@layout CHMainLayout
+@using ChristianHinko.Shared.Components.Footer
+
+<MudLayout>
+    <CHAppBar HrefTextButtonList="@HrefTextButtonList" />
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+    <div style="height: 100px;"></div>
+    <CHPageSection>
+        <CHFooter />
+    </CHPageSection>
+    <CHScrollToTop />
+</MudLayout>
+
+@code
+{
+    private List<CHAppBar.HrefText> HrefTextButtonList { get; set; } = new()
+    {
+        new() { Href = "/art", Text = "Art" },
+        new() { Href = "/games", Text = "Games" }
+    };
+}

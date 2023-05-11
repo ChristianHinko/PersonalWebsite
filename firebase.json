@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "ChristianHinko/ChristianHinko.Wasm/bin/Release/net7.0/browser-wasm/publish/wwwroot",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

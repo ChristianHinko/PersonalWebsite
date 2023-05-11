@@ -1,0 +1,25 @@
+﻿@using ChristianHinko.Types
+
+<div class="my-16">
+    <header>
+        <MudText Class="ch-header-text" Typo="@Typo.h1">
+            @PostInfo.Title
+        </MudText>
+        <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+            @PostInfo.Subtitle
+        </MudText>
+    </header>
+</div>
+<div class="my-4">
+    <MudImage Class="mud-width-full rounded" Style="aspect-ratio: 16 / 9;" Src="@PostInfo.ImageSrc" ObjectFit="@ObjectFit.Cover" />
+</div>
+<MudText Typo="@Typo.h5" Align="@Align.End">
+    @PostInfo.Date.ToString("MMMM d, yyyy")
+</MudText>
+<MudDivider Class="my-2" Vertical="false" />
+
+@code
+{
+    [Parameter]
+    public CHPostInfo PostInfo { get; set; }
+}

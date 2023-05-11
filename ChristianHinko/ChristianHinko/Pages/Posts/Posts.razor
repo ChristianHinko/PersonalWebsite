@@ -1,0 +1,29 @@
+﻿@page "/posts"
+@using ChristianHinko.Types
+@using ChristianHinko.Services
+@using ChristianHinko.Shared.Components.Post
+@inject ICHPostInfoService PostInfoService
+
+<MudContainer MaxWidth="@MaxWidth.Large">
+    <div style="margin-top: 50px; margin-bottom: 50px;">
+        <header>
+            <MudText Class="ch-header-text" Typo="@Typo.h1">
+                Posts
+            </MudText>
+            <MudText Class="ch-subheader-text" Typo="@Typo.subtitle1">
+                List of All Posts
+            </MudText>
+        </header>
+    </div>
+    <MudDivider Class="mb-2" Vertical="false" />
+    <MudGrid Justify="@Justify.FlexStart">
+        @* Populate the grid with post cards. *@
+        @foreach (CHPostInfo postInfo in PostInfoService.PostInfos.AsEnumerable().Reverse()) @* TODO: This is slow. Maybe cache this? Or just do a backwards for loop? *@
+        {
+            <MudItem xs="12" sm="6" md="4">
+                <CHPostCard PostInfo="@postInfo" />
+            </MudItem>
+        }
+    </MudGrid>
+    <MudDivider Class="mt-2" Vertical="false" />
+</MudContainer>

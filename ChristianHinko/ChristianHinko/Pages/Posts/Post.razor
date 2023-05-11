@@ -1,0 +1,36 @@
+﻿@page "/posts/{Slug}"
+@using ChristianHinko.Types
+@using ChristianHinko.Services;
+@inject ICHPostInfoService PostInfoService
+
+@if (PostInfo is not null)
+{
+    // Render the post info's component and use the post info as a cascading value
+    <CascadingValue Value="@PostInfo" Name="PostInfo" IsFixed="true">
+        <DynamicComponent Type="@PostInfo.Component" />
+    </CascadingValue>
+}
+
+@code
+{
+    /// <summary>
+    /// The requested slug from the URL.
+    /// </summary>
+    [Parameter]
+    public string Slug { get; set; }
+
+    /// <summary>
+    /// The post info corresponding to the requested slug.
+    /// </summary>
+    protected CHPostInfo? PostInfo { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        // Find post info by slug
+        PostInfo = PostInfoService.PostInfos.Find(
+                (postInfo) => (postInfo.Slug == Slug)
+            );
+    }
+}
