@@ -13,7 +13,8 @@
             </MudText>
         </MudButton>
     </div>
-    <MudDivider Class="mb-2" Vertical="false" />
+    <MudDivider Vertical="false" />
+    <div style="height: 10px;"></div>
     <MudGrid>
         @foreach (CHPostInfo postInfo in PostInfoService.PostInfos.AsEnumerable().Reverse().Take(3))
         {
@@ -22,5 +23,6 @@
             </MudItem>
         }
     </MudGrid>
-    <MudDivider Class="mt-2" Vertical="false" />
+    <div style="height: 10px;"></div>
+    <MudDivider Vertical="false" />
 </div>
