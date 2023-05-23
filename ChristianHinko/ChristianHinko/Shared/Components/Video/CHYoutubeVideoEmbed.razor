@@ -1,0 +1,131 @@
+﻿@using System.Web
+@using System.Collections.Specialized
+
+<iframe
+    class="@Class"
+    style="@Style"
+    frameborder="0"
+    type="text/html"
+    src="@GetYoutubeEmbedUrl()"
+    allow="autoplay; fullscreen; picture-in-picture;"
+    >
+</iframe>
+
+@code
+{
+    [Parameter]
+    public string Class { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Style { get; set; } = string.Empty;
+
+    /// <summary>
+    /// YouTube video ID.
+    /// </summary>
+    [Parameter]
+    public string VideoId { get; set; } = string.Empty;
+
+    [Parameter]
+    public bool Mute { get; set; } = true;
+
+    [Parameter]
+    public bool Autoplay { get; set; } = true;
+
+    [Parameter]
+    public bool PlaysInline { get; set; } = true;
+
+    [Parameter]
+    public bool Loop { get; set; } = true;
+
+    [Parameter]
+    public bool Controls { get; set; } = false;
+
+    [Parameter]
+    public bool Rel { get; set; } = false;
+
+    [Parameter]
+    public bool ModestBranding { get; set; } = true;
+
+
+    /// <summary>
+    /// Get URL to YouTube embed video.
+    /// </summary>
+    public string GetYoutubeEmbedUrl()
+    {
+        return ($"https://www.youtube.com/embed/{VideoId}" + "?" + GetYoutubeEmbedQueryStringParameters());
+    }
+
+    /// <summary>
+    /// Build the query string based on our parameters.
+    /// </summary>
+    protected string GetYoutubeEmbedQueryStringParameters()
+    {
+        NameValueCollection parameters = HttpUtility.ParseQueryString(string.Empty);
+
+        if (Mute)
+        {
+            parameters.Add("mute", "1");
+        }
+        else
+        {
+            parameters.Add("mute", "0");
+        }
+
+        if (Autoplay)
+        {
+            parameters.Add("autoplay", "1");
+        }
+        else
+        {
+            parameters.Add("autoplay", "0");
+        }
+
+        if (PlaysInline)
+        {
+            parameters.Add("playsinline", "1");
+        }
+        else
+        {
+            parameters.Add("playsinline", "0");
+        }
+
+        if (Loop)
+        {
+            parameters.Add("loop", "1");
+            parameters.Add("playlist", VideoId);
+        }
+        else
+        {
+            parameters.Add("loop", "0");
+        }
+
+        if (Controls)
+        {
+            parameters.Add("controls", "1");
+        }
+        else
+        {
+            parameters.Add("controls", "0");
+        }
+
+        if (Rel)
+        {
+            parameters.Add("rel", "1");
+        }
+        else
+        {
+            parameters.Add("rel", "0");
+        }
+
+        if (ModestBranding)
+        {
+            parameters.Add("modestbranding", "1");
+        }
+        else
+        {
+            parameters.Add("modestbranding", "0");
+        }
+
+        return parameters.ToString();
+    }
+}
