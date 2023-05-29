@@ -7,7 +7,7 @@
     <MudText Class="ch-resume-header-text" Typo="@Typo.h1" Align="@Align.Center">
         Christian Hinkle
     </MudText>
-    <MudText Class="ch-resume-subheader-text" Typo="@Typo.body1" Align="@Align.Center">
+    <MudText Class="ch-resume-subheader-text" Typo="@Typo.subtitle1" Align="@Align.Center">
         Unreal Engine | Online Multiplayer | C++ | Blueprint
     </MudText>
     <div class="my-2">
@@ -15,7 +15,7 @@
         <div class="mud-width-full d-flex flex-row justify-space-around">
             <div class="d-flex flex-row justify-center align-center">
                 <MudIcon Icon="@MBELIcons.Material.EarthAmericas" Color="@Color.Primary" Size="@Size.Small" />
-                <div class="mx-1"></div>
+                <div style="width: 6px;"></div>
                 <MudLink Href="https://christianhinkle.com/games" Target="_blank" Underline="@Underline.Always">
                     <MudText Class="ch-resume-info-text" Typo="@Typo.body1">
                         https://christianhinkle.com/games
@@ -24,8 +24,8 @@
             </div>
             <div class="d-flex flex-row justify-center align-center">
                 <MudIcon Icon="@Icons.Material.Filled.Email" Color="@Color.Primary" />
-                <div class="mx-1"></div>
-                <MudLink Href="mailto://christianhinko@gmail.com/" Target="_blank" Underline="@Underline.Always">
+                <div style="width: 6px;"></div>
+                <MudLink Href="mailto:christianhinko@gmail.com" Target="_blank" Underline="@Underline.Always">
                     <MudText Class="ch-resume-info-text" Typo="@Typo.body1">
                         christianhinko@gmail.com
                     </MudText>
@@ -33,16 +33,16 @@
             </div>
             <div class="d-flex flex-row justify-center align-center">
                 <MudIcon Icon="@Icons.Custom.Brands.LinkedIn" Color="@Color.Primary" />
-                <div class="mx-1"></div>
+                <div style="width: 6px;"></div>
                 <MudLink Href="https://www.linkedin.com/in/christianhinko/" Target="_blank" Underline="@Underline.Always">
                     <MudText Class="ch-resume-info-text" Typo="@Typo.body1">
-                        christianhinko
+                        in/christianhinko
                     </MudText>
                 </MudLink>
             </div>
             <div class="d-flex flex-row justify-center align-center">
                 <MudIcon Icon="@Icons.Custom.Brands.GitHub" Color="@Color.Primary" />
-                <div class="mx-1"></div>
+                <div style="width: 6px;"></div>
                 <MudLink Href="https://github.com/ChristianHinko" Target="_blank" Underline="@Underline.Always">
                     <MudText Class="ch-resume-info-text" Typo="@Typo.body1">
                         ChristianHinko
@@ -51,14 +51,13 @@
             </div>
         </div>
     </div>
-    <div class="my-4">
-        <MudText Class="ch-resume-text" Typo="@Typo.body1" Align="@Align.Center">
-            Multiplayer game systems programmer with a love for powering video games through modular designs.
-        </MudText>
-        <MudText Class="ch-resume-text" Typo="@Typo.body1" Align="@Align.Center">
-            Passionately developing with Unreal Engine for 4+ years as an indie.
-        </MudText>
-    </div>
+    <div style="height: 10px;"></div>
+    <MudText Class="ch-resume-text" Typo="@Typo.body1" Align="@Align.Center">
+        Multiplayer game systems programmer with a love for powering video games through modular designs.
+    </MudText>
+    <MudText Class="ch-resume-text" Typo="@Typo.body1" Align="@Align.Center">
+        Passionately developing with Unreal Engine for 4+ years as an indie.
+    </MudText>
     <!-- Resume content -->
     <CHResumeSection Title="Education" />
     <CHResumeItem>
@@ -137,7 +136,7 @@
                 Other
             </MudText>
             <MudText Class="ch-resume-text" Typo="@Typo.body1">
-                3D Software
+                3D Modeling
             </MudText>
             <MudText Class="ch-resume-text" Typo="@Typo.body1">
                 Drawing
@@ -161,16 +160,16 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make skinless Skeletal Mesh generation functionality for creating animated skeletons
+        <CHTextBullet IndentationLevel="1" />Make skinless Skeletal Mesh generation functionality for creating animated skeletons
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make PortrayalDefinition for defining how viewers are included and excluded from viewing
+        <CHTextBullet IndentationLevel="1" />Make PortrayalDefinition for defining how viewers are included and excluded from viewing
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make ObjectReferenceLibrary subsystem for identifying PortrayalDefinitions by Gameplay Tag
+        <CHTextBullet IndentationLevel="1" />Make ObjectReferenceLibrary subsystem for identifying PortrayalDefinitions by Gameplay Tag
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make general-purpose Primitive Scene Proxy implementations
+        <CHTextBullet IndentationLevel="1" />Make general-purpose Primitive Scene Proxy implementations
     </MudText>
     <CHResumeItem>
         <Title>
@@ -185,19 +184,19 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make method for penetrating any hit while preserving the desired hit responses
+        <CHTextBullet IndentationLevel="1" />Make method for penetrating any hit while preserving the desired hit responses
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make function for modifying Hit Result trace data
+        <CHTextBullet IndentationLevel="1" />Make function for modifying Hit Result trace data
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Optimize backwards query distance required for exit hits, reducing up to 50% of function time
+        <CHTextBullet IndentationLevel="1" />Optimize backwards query distance required for exit hits, reducing up to 50% of function time
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Develop function for ordering entrance and exit Hit Results to the query's forwards direction
+        <CHTextBullet IndentationLevel="1" />Develop function for ordering entrance and exit Hit Results to the query's forwards direction
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Develop query that can lose strength based on distances between entrance and exit Hit Results
+        <CHTextBullet IndentationLevel="1" />Develop query that can lose strength based on distances between entrance and exit Hit Results
     </MudText>
     <CHResumeItem>
         <Title>
@@ -212,19 +211,19 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Develop common initialization and uninitialization for Ability System Component with Avatar Actor
+        <CHTextBullet IndentationLevel="1" />Develop common initialization and uninitialization for Ability System Component with Avatar Actor
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Develop Gameplay Tag workflow for associating Input Actions with Gameplay Abilities
+        <CHTextBullet IndentationLevel="1" />Develop Gameplay Tag workflow for associating Input Actions with Gameplay Abilities
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make granting and removing of Ability Sets
+        <CHTextBullet IndentationLevel="1" />Make granting and removing of Ability Sets
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make a way to reuse Target Actors through several Ability Task usages
+        <CHTextBullet IndentationLevel="1" />Make a way to reuse Target Actors through several Ability Task usages
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Make custom Gameplay Target Data Filters
+        <CHTextBullet IndentationLevel="1" />Make custom Gameplay Target Data Filters
     </MudText>
     <CHResumeItem>
         <Title>
@@ -239,7 +238,7 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Develop subsystem gathering Input Action references from game project and dynamic plugins
+        <CHTextBullet IndentationLevel="1" />Develop subsystem gathering Input Action references from game project and dynamic plugins
     </MudText>
     <CHResumeItem>
         <Title>
@@ -254,6 +253,9 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        &emsp;• Develop usage of FProperty pointers for Push Model replication and generic serialization
+        <CHTextBullet IndentationLevel="1" />Design FGCPropertyWrapperBase base class and GC_PROPERTY_WRAPPER_CHILD_BODY() macro
+    </MudText>
+    <MudText Class="ch-resume-text" Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />Develop usage of FProperty pointers for Push Model replication and generic serialization
     </MudText>
 </CHPaperDocumentContainer>

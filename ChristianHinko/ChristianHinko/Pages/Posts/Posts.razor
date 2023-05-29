@@ -5,7 +5,7 @@
 @inject ICHPostInfoService PostInfoService
 
 <MudContainer MaxWidth="@MaxWidth.Large">
-    <div style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="my-16">
         <header>
             <MudText Class="ch-header-text" Typo="@Typo.h1">
                 Posts
@@ -15,7 +15,8 @@
             </MudText>
         </header>
     </div>
-    <MudDivider Class="mb-2" Vertical="false" />
+    <MudDivider Vertical="false" />
+    <div style="height: 10px;"></div>
     <MudGrid Justify="@Justify.FlexStart">
         @* Populate the grid with post cards. *@
         @foreach (CHPostInfo postInfo in PostInfoService.PostInfos.AsEnumerable().Reverse()) @* TODO: This is slow. Maybe cache this? Or just do a backwards for loop? *@
@@ -25,5 +26,6 @@
             </MudItem>
         }
     </MudGrid>
-    <MudDivider Class="mt-2" Vertical="false" />
+    <div style="height: 10px;"></div>
+    <MudDivider Vertical="false" />
 </MudContainer>

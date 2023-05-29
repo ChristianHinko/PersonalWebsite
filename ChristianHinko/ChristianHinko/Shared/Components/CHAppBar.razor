@@ -3,9 +3,10 @@
 
 <MudAppBar Color="@Color.Primary" Elevation="1">
     <!-- Navigation -->
-    <MudLink Class="me-4" Color="@Color.Default" Underline="@Underline.None" Href="/">
+    <MudLink Color="@Color.Default" Underline="@Underline.None" Href="/">
         <MudText Style="color: var(--mud-palette-appbar-text);" Typo="@Typo.h5">Christian Hinkle</MudText>
     </MudLink>
+    <div style="width: 10px;"></div>
     <MudStack Row="true" Spacing="4">
         @* Populate stack with buttons *@
         @foreach (var hrefText in HrefTextButtonList)

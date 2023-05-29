@@ -1,0 +1,21 @@
+﻿<div class="my-16">
+    <div class="d-flex flex-row align-center">
+        <div class="flex-grow-1">
+            <MudDivider />
+        </div>
+        <div style="width: 50px;"></div>
+        <MudText Style="font-weight: bold;" Typo="@Typo.h2" Align="@Align.Center">
+            @Title
+        </MudText>
+        <div style="width: 50px;"></div>
+        <div class="flex-grow-1">
+            <MudDivider />
+        </div>
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; }
+}
