@@ -1,6 +1,7 @@
 ﻿@page "/games"
 @using ChristianHinko.Shared.Components.Portfolio
 @using ChristianHinko.Shared.Components.Video
+@using ChristianHinko.Shared.Components.Portfolio.InfoChips
 
 <!-- Title banner -->
 <div class="relative mud-width-full" style="height: 600px; overflow: hidden;">
@@ -30,7 +31,12 @@
 <MudContainer MaxWidth="@MaxWidth.Large">
     <CHPortfolioSection Title="Plugins Showcase" />
     <MudStack Class="my-10" Row="false" Spacing="16">
-        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" TeamSize="1" DevelopmentTime="7 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+            <Info>
+                <CHInfoChip_TeamSize Value="1" />
+                <CHInfoChip_DevelopmentTime Value="7 Months" />
+                <CHInfoChip_ProjectStatus Value="In Development" />
+            </Info>
             <Media>
                 <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="PIclUQwI5Fs" FitHeight="false" Link="true" />
             </Media>
@@ -72,7 +78,12 @@
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+        <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="2 Months" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
                 <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="WQ95migPNMc" FitHeight="false" Link="true" />
             </Media>
@@ -117,7 +128,12 @@
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup" TeamSize="2" DevelopmentTime="2 Years" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
+        <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="2 Years" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
                 <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="lKwUsJqkRJ4" FitHeight="false" Link="true" />
             </Media>
@@ -162,7 +178,12 @@
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
+        <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" ProjectHref="https://github.com/ChristianHinko/InputSetup">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="1 Month" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
                 <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="EvwQgOc_Jrs" FitHeight="false" Link="true" />
             </Media>
@@ -195,7 +216,12 @@
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
+        <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="16 Months" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
                 <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="OTe3qDAHrFY" FitHeight="false" Link="true" />
             </Media>

@@ -1,0 +1,11 @@
+﻿<CHInfoChip>
+    <MudText Typo="@Typo.body1">
+        Team Size: @Value
+    </MudText>
+</CHInfoChip>
+
+@code
+{
+    [Parameter]
+    public string Value { get; set; } = string.Empty;
+}

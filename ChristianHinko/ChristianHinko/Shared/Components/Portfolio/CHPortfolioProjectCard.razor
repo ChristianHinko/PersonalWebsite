@@ -10,21 +10,7 @@
                 @Title
             </MudText>
             <div style="height: 10px;"></div>
-            <CHInfoChip>
-                <MudText Typo="@Typo.body1">
-                    @ProjectStatus
-                </MudText>
-            </CHInfoChip>
-            <CHInfoChip>
-                <MudText Typo="@Typo.body1">
-                    Development Time: @DevelopmentTime
-                </MudText>
-            </CHInfoChip>
-            <CHInfoChip>
-                <MudText Typo="@Typo.body1">
-                    Team Size: @TeamSize
-                </MudText>
-            </CHInfoChip>
+            @Info
             <div style="height: 10px;"></div>
             @Description
             <div style="height: 10px;"></div>
@@ -48,22 +34,16 @@
 @code
 {
     [Parameter]
-    public string Id { get; set; }
+    public string Id { get; set; } = string.Empty;
 
     [Parameter]
-    public string Title { get; set; }
+    public string Title { get; set; } = string.Empty;
 
     [Parameter]
-    public string ProjectHref { get; set; }
+    public RenderFragment Info { get; set; }
 
     [Parameter]
-    public int TeamSize { get; set; }
-
-    [Parameter]
-    public string ProjectStatus { get; set; }
-
-    [Parameter]
-    public string DevelopmentTime { get; set; }
+    public string ProjectHref { get; set; } = string.Empty;
 
     [Parameter]
     public RenderFragment Media { get; set; }
