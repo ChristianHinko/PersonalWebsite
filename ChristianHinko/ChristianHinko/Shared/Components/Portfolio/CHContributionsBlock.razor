@@ -1,0 +1,12 @@
+﻿<div class="mud-width-full pa-4">
+    <MudText Typo="@Typo.h4">
+        Contributions
+    </MudText>
+    @ChildContent
+</div>
+
+@code
+{
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
