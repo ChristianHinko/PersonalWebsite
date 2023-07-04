@@ -1,0 +1,19 @@
+﻿<MudButton Href="@Href" Target="_blank" Variant="@Variant.Filled" DisableElevation="true">
+    <MudIcon Icon="@Icon" />
+    <div style="width: 10px;"></div>
+    <MudText Typo="@Typo.body1">
+        @Text
+    </MudText>
+</MudButton>
+
+@code
+{
+    [Parameter]
+    public string Href { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Icon { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Text { get; set; } = string.Empty;
+}

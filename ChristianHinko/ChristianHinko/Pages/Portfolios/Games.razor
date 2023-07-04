@@ -31,7 +31,7 @@
 <MudContainer MaxWidth="@MaxWidth.Large">
     <CHPortfolioSection Title="Plugins Showcase" />
     <MudStack Class="my-10" Row="false" Spacing="16">
-        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup">
             <Info>
                 <CHInfoChip_TeamSize Value="1" />
                 <CHInfoChip_DevelopmentTime Value="7 Months" />
@@ -63,6 +63,9 @@
                     The NinjaGame project implements a first-person portrayal that the Character views when in first-person; meanwhile, other Actors see the default portrayal.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/ChristianHinko/AnimationSetup" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
                 <MudText Typo="@Typo.body1">
                     <CHTextBullet IndentationLevel="1" />Make skinless Skeletal Mesh generation functionality for creating animated skeletons
@@ -78,7 +81,7 @@
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+        <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries">
             <Info>
                 <CHInfoChip_TeamSize Value="2" />
                 <CHInfoChip_DevelopmentTime Value="2 Months" />
@@ -110,6 +113,9 @@
                     All collision queries are generic to both line traces and shape sweeps.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
                 <MudText Typo="@Typo.body1">
                     <CHTextBullet IndentationLevel="1" />Make method for penetrating any hit while preserving the desired hit responses
@@ -128,7 +134,7 @@
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
+        <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup">
             <Info>
                 <CHInfoChip_TeamSize Value="2" />
                 <CHInfoChip_DevelopmentTime Value="2 Years" />
@@ -160,6 +166,9 @@
                     For Pawns, the more specialized PawnAvatarActorExtension component provides additional logic for ability input binding. This makes a complete in-editor workflow for associating Gameplay Abilities with Input Actions via Gameplay Tags.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/ChristianHinko/AbilitySystemSetup" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
                 <MudText Typo="@Typo.body1">
                     <CHTextBullet IndentationLevel="1" />Develop common initialization and uninitialization for Ability System Component with Avatar Actor
@@ -178,7 +187,7 @@
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" ProjectHref="https://github.com/ChristianHinko/InputSetup">
+        <CHPortfolioProjectCard Id="input-setup" Title="Input Setup">
             <Info>
                 <CHInfoChip_TeamSize Value="2" />
                 <CHInfoChip_DevelopmentTime Value="1 Month" />
@@ -210,13 +219,16 @@
                     The Ability System Setup plugin uses this subsystem to execute input events for relevant Gameplay Abilities of the Input Actions.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/ChristianHinko/InputSetup" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
                 <MudText Typo="@Typo.body1">
                     <CHTextBullet IndentationLevel="1" />Develop subsystem gathering Input Action references from game project and dynamic plugins
                 </MudText>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
+        <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper">
             <Info>
                 <CHInfoChip_TeamSize Value="2" />
                 <CHInfoChip_DevelopmentTime Value="16 Months" />
@@ -242,6 +254,9 @@
                     The property wrapper's functionality is generic to any type. It is implemented as a lightweight USTRUCT with most functionality in a base class and boilerplate code in a macro.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
                 <MudText Typo="@Typo.body1">
                     <CHTextBullet IndentationLevel="1" />Design FGCPropertyWrapperBase base class and GC_PROPERTY_WRAPPER_CHILD_BODY() macro

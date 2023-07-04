@@ -14,13 +14,7 @@
             <div style="height: 10px;"></div>
             @Description
             <div style="height: 10px;"></div>
-            <MudButton Href="@ProjectHref" Target="_blank" Variant="@Variant.Filled" DisableElevation="true">
-                <MudIcon Icon="@Icons.Custom.Brands.GitHub" />
-                <div style="width: 10px;"></div>
-                <MudText Typo="@Typo.body1">
-                    Source Available on GitHub
-                </MudText>
-            </MudButton>
+            @References
         </div>
     </div>
     <div class="mud-width-full pa-4">
@@ -43,13 +37,13 @@
     public RenderFragment Info { get; set; }
 
     [Parameter]
-    public string ProjectHref { get; set; } = string.Empty;
-
-    [Parameter]
     public RenderFragment Media { get; set; }
 
     [Parameter]
     public RenderFragment Description { get; set; }
+
+    [Parameter]
+    public RenderFragment References { get; set; }
 
     [Parameter]
     public RenderFragment Contributions { get; set; }
