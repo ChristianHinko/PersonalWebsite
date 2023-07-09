@@ -1,0 +1,14 @@
+﻿<MudPaper Class="pa-2 mud-background-gray" Elevation="0">
+    <pre class="mud-secondary-text" lang="@Lang">
+        @CodeString
+    </pre>
+</MudPaper>
+
+@code
+{
+    [Parameter]
+    public string CodeString { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Lang { get; set; } = string.Empty;
+}

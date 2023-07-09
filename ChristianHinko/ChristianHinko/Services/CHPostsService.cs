@@ -1,4 +1,5 @@
 ﻿using ChristianHinko.Types;
+using ChristianHinko.Shared.Components.Posts;
 
 namespace ChristianHinko.Services
 {
@@ -20,7 +21,16 @@ namespace ChristianHinko.Services
                     Date = new DateTime(2023, 02, 04),
                     ImageSrc = "/_content/ChristianHinko/images/TrigFunctionsMakeSoMuchSense.png",
                     Slug = "trig-functions-make-so-much-sense",
-                    Component = typeof(Shared.Components.Posts.TrigFunctionsMakeSoMuchSense)
+                    Component = typeof(TrigFunctionsMakeSoMuchSense)
+                },
+                new CHPostInfo()
+                {
+                    Title = "Get Faster Unreal Engine Build Times!",
+                    Subtitle = "Use UBT BuildConfiguration to optimize build times.",
+                    Date = new DateTime(2023, 07, 05),
+                    ImageSrc = "/_content/ChristianHinko/images/GetFasterUnrealEngineBuildTimes.png",
+                    Slug = "get-faster-unreal-engine-build-times",
+                    Component = typeof(GetFasterUnrealEngineBuildTimes)
                 }
             };
 
