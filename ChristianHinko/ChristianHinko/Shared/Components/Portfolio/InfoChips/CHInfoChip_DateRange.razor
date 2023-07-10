@@ -1,0 +1,10 @@
+﻿<CHInfoChip_Text Text="@($"{DateFrom} - {DateTo}")" />
+
+@code
+{
+    [Parameter]
+    public string DateFrom { get; set; } = string.Empty;
+
+    [Parameter]
+    public string DateTo { get; set; } = string.Empty;
+}

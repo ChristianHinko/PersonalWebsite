@@ -29,8 +29,24 @@
 </div>
 <!-- Content -->
 <MudContainer MaxWidth="@MaxWidth.Large">
+    <CHPortfolioSection Title="Experience" />
+    <CHPortfolioProjectStack>
+        <CHPortfolioProjectCard Id="engineer-at-dreamlit-games" Title="Engineer at Dreamlit Games">
+            <Info>
+                <CHInfoChip_DateRange DateFrom="June 2023" DateTo="Present" />
+            </Info>
+            <Media>
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="4vQzZMrSnMM" Start="81" Link="true" />
+                </CHAspectRatioFitBlock>
+            </Media>
+            <References>
+                <CHIconButtonLink Href="https://www.dreamlit.games" Icon="@Icons.Material.Filled.Link" Text="Dreamlit Games" />
+            </References>
+        </CHPortfolioProjectCard>
+    </CHPortfolioProjectStack>
     <CHPortfolioSection Title="Plugins Showcase" />
-    <MudStack Class="my-10" Row="false" Spacing="16">
+    <CHPortfolioProjectStack>
         <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup">
             <Info>
                 <CHInfoChip_TeamSize Value="1" />
@@ -38,7 +54,9 @@
                 <CHInfoChip_ProjectStatus Value="In Development" />
             </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="PIclUQwI5Fs" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="PIclUQwI5Fs" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -90,7 +108,9 @@
                 <CHInfoChip_ProjectStatus Value="Finished" />
             </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="WQ95migPNMc" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="WQ95migPNMc" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -145,7 +165,9 @@
                 <CHInfoChip_ProjectStatus Value="Finished" />
             </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="lKwUsJqkRJ4" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="lKwUsJqkRJ4" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -200,7 +222,9 @@
                 <CHInfoChip_ProjectStatus Value="Finished" />
             </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="EvwQgOc_Jrs" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="EvwQgOc_Jrs" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -243,7 +267,9 @@
                 <CHInfoChip_ProjectStatus Value="Finished" />
             </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="OTe3qDAHrFY" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="OTe3qDAHrFY" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -276,7 +302,7 @@
                 </CHContributionsBlock>
             </Contributions>
         </CHPortfolioProjectCard>
-    </MudStack>
+    </CHPortfolioProjectStack>
     <CHPortfolioSection Title="My Story" />
     <MudText Typo="@Typo.body1" Align="@Align.Center">
         Hi! My name is Christian Hinkle, a multiplayer game systems programmer.

@@ -1,0 +1,11 @@
+﻿<CHInfoChip>
+    <MudText Typo="@Typo.body1">
+        @Text
+    </MudText>
+</CHInfoChip>
+
+@code
+{
+    [Parameter]
+    public string Text { get; set; } = string.Empty;
+}
