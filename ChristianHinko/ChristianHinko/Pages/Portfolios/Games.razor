@@ -1,6 +1,7 @@
 ﻿@page "/games"
 @using ChristianHinko.Shared.Components.Portfolio
 @using ChristianHinko.Shared.Components.Video
+@using ChristianHinko.Shared.Components.Portfolio.InfoChips
 
 <!-- Title banner -->
 <div class="relative mud-width-full" style="height: 600px; overflow: hidden;">
@@ -28,11 +29,34 @@
 </div>
 <!-- Content -->
 <MudContainer MaxWidth="@MaxWidth.Large">
-    <CHPortfolioSection Title="Plugins Showcase" />
-    <MudStack Class="my-10" Row="false" Spacing="16">
-        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup" TeamSize="1" DevelopmentTime="7 Months" ProjectStatus="In Development" ProjectHref="https://github.com/ChristianHinko/AnimationSetup">
+    <CHPortfolioSection Title="Experience" />
+    <CHPortfolioProjectStack>
+        <CHPortfolioProjectCard Id="engineer-at-dreamlit-games" Title="Engineer at Dreamlit Games">
+            <Info>
+                <CHInfoChip_DateRange DateFrom="June 2023" DateTo="Present" />
+            </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="PIclUQwI5Fs" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="4vQzZMrSnMM" Start="81" Link="true" />
+                </CHAspectRatioFitBlock>
+            </Media>
+            <References>
+                <CHIconButtonLink Href="https://www.dreamlit.games" Icon="@Icons.Material.Filled.Link" Text="Dreamlit Games" />
+            </References>
+        </CHPortfolioProjectCard>
+    </CHPortfolioProjectStack>
+    <CHPortfolioSection Title="Plugins Showcase" />
+    <CHPortfolioProjectStack>
+        <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup">
+            <Info>
+                <CHInfoChip_TeamSize Value="1" />
+                <CHInfoChip_DevelopmentTime Value="7 Months" />
+                <CHInfoChip_ProjectStatus Value="In Development" />
+            </Info>
+            <Media>
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="PIclUQwI5Fs" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -57,24 +81,36 @@
                     The NinjaGame project implements a first-person portrayal that the Character views when in first-person; meanwhile, other Actors see the default portrayal.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/ChristianHinko/AnimationSetup" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make skinless Skeletal Mesh generation functionality for creating animated skeletons
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make PortrayalDefinition for defining how viewers are included and excluded from viewing
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make ObjectReferenceLibrary subsystem for identifying PortrayalDefinitions by Gameplay Tag
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make general-purpose Primitive Scene Proxy implementations
-                </MudText>
+                <CHContributionsBlock>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make skinless Skeletal Mesh generation functionality for creating animated skeletons
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make PortrayalDefinition for defining how viewers are included and excluded from viewing
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make ObjectReferenceLibrary subsystem for identifying PortrayalDefinitions by Gameplay Tag
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make general-purpose Primitive Scene Proxy implementations
+                    </MudText>
+                </CHContributionsBlock>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries" TeamSize="2" DevelopmentTime="2 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery">
+        <CHPortfolioProjectCard Id="custom-collision-queries" Title="Custom Collision Queries">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="2 Months" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="WQ95migPNMc" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="WQ95migPNMc" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -99,27 +135,39 @@
                     All collision queries are generic to both line traces and shape sweeps.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/BlueprintFunctionLibraries/CollisionQuery" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make method for penetrating any hit while preserving the desired hit responses
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make function for modifying Hit Result trace data
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Optimize backwards query distance required for exit hits, reducing up to 50% of function time
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Develop function for ordering entrance and exit Hit Results to the query's forwards direction
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Develop query that can lose strength based on distances between entrance and exit Hit Results
-                </MudText>
+                <CHContributionsBlock>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make method for penetrating any hit while preserving the desired hit responses
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make function for modifying Hit Result trace data
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Optimize backwards query distance required for exit hits, reducing up to 50% of function time
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Develop function for ordering entrance and exit Hit Results to the query's forwards direction
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Develop query that can lose strength based on distances between entrance and exit Hit Results
+                    </MudText>
+                </CHContributionsBlock>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup" TeamSize="2" DevelopmentTime="2 Years" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/AbilitySystemSetup">
+        <CHPortfolioProjectCard Id="ability-system-setup" Title="Ability System Setup">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="2 Years" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="lKwUsJqkRJ4" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="lKwUsJqkRJ4" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -144,27 +192,39 @@
                     For Pawns, the more specialized PawnAvatarActorExtension component provides additional logic for ability input binding. This makes a complete in-editor workflow for associating Gameplay Abilities with Input Actions via Gameplay Tags.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/ChristianHinko/AbilitySystemSetup" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Develop common initialization and uninitialization for Ability System Component with Avatar Actor
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Develop Gameplay Tag workflow for associating Input Actions with Gameplay Abilities
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make granting and removing of Ability Sets
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make a way to reuse Target Actors through several Ability Task usages
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Make custom Gameplay Target Data Filters
-                </MudText>
+                <CHContributionsBlock>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Develop common initialization and uninitialization for Ability System Component with Avatar Actor
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Develop Gameplay Tag workflow for associating Input Actions with Gameplay Abilities
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make granting and removing of Ability Sets
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make a way to reuse Target Actors through several Ability Task usages
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Make custom Gameplay Target Data Filters
+                    </MudText>
+                </CHContributionsBlock>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="input-setup" Title="Input Setup" TeamSize="2" DevelopmentTime="1 Month" ProjectStatus="Finished" ProjectHref="https://github.com/ChristianHinko/InputSetup">
+        <CHPortfolioProjectCard Id="input-setup" Title="Input Setup">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="1 Month" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="EvwQgOc_Jrs" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="EvwQgOc_Jrs" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -189,15 +249,27 @@
                     The Ability System Setup plugin uses this subsystem to execute input events for relevant Gameplay Abilities of the Input Actions.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/ChristianHinko/InputSetup" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Develop subsystem gathering Input Action references from game project and dynamic plugins
-                </MudText>
+                <CHContributionsBlock>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Develop subsystem gathering Input Action references from game project and dynamic plugins
+                    </MudText>
+                </CHContributionsBlock>
             </Contributions>
         </CHPortfolioProjectCard>
-        <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper" TeamSize="2" DevelopmentTime="16 Months" ProjectStatus="Finished" ProjectHref="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers">
+        <CHPortfolioProjectCard Id="property-wrapper" Title="Property Wrapper">
+            <Info>
+                <CHInfoChip_TeamSize Value="2" />
+                <CHInfoChip_DevelopmentTime Value="16 Months" />
+                <CHInfoChip_ProjectStatus Value="Finished" />
+            </Info>
             <Media>
-                <CHYoutubeVideoBlock Class="mud-width-full mud-height-full" VideoId="OTe3qDAHrFY" FitHeight="false" Link="true" />
+                <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
+                    <CHYoutubeVideoEmbed VideoId="OTe3qDAHrFY" Link="true" />
+                </CHAspectRatioFitBlock>
             </Media>
             <Description>
                 <MudText Typo="@Typo.body1">
@@ -216,16 +288,21 @@
                     The property wrapper's functionality is generic to any type. It is implemented as a lightweight USTRUCT with most functionality in a base class and boilerplate code in a macro.
                 </MudText>
             </Description>
+            <References>
+                <CHIconButtonLink Href="https://github.com/b2hinkle/GameCore/tree/master/Source/GameCore/Public/Types/PropertyWrappers" Icon="@Icons.Custom.Brands.GitHub" Text="Source Available on GitHub" />
+            </References>
             <Contributions>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Design FGCPropertyWrapperBase base class and GC_PROPERTY_WRAPPER_CHILD_BODY() macro
-                </MudText>
-                <MudText Typo="@Typo.body1">
-                    <CHTextBullet IndentationLevel="1" />Develop usage of FProperty pointers for Push Model replication and generic serialization
-                </MudText>
+                <CHContributionsBlock>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Design FGCPropertyWrapperBase base class and GC_PROPERTY_WRAPPER_CHILD_BODY() macro
+                    </MudText>
+                    <MudText Typo="@Typo.body1">
+                        <CHTextBullet IndentationLevel="1" />Develop usage of FProperty pointers for Push Model replication and generic serialization
+                    </MudText>
+                </CHContributionsBlock>
             </Contributions>
         </CHPortfolioProjectCard>
-    </MudStack>
+    </CHPortfolioProjectStack>
     <CHPortfolioSection Title="My Story" />
     <MudText Typo="@Typo.body1" Align="@Align.Center">
         Hi! My name is Christian Hinkle, a multiplayer game systems programmer.

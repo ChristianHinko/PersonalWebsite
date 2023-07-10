@@ -1,0 +1,32 @@
+﻿﻿@using MudBlazor.Utilities
+
+<div class="@Class" style="@Style">
+    <!-- Flexblox with content centered -->
+    <div class="mud-width-full mud-height-full d-flex align-center justify-center">
+        <div class="@(FitHeight ? "mud-height-full" : "mud-width-full")" style="aspect-ratio: @AspectRatio;"> <!-- block with aspect ratio for the content to fit inside of -->
+            @ChildContent
+        </div>
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public string Class { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Style { get; set; } = string.Empty;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string AspectRatio { get; set; } = "16 / 9";
+
+    /// <summary>
+    /// If true, have content fill width.
+    /// If false, have content fill height.
+    /// </summary>
+    [Parameter]
+    public bool FitHeight { get; set; } = false;
+}

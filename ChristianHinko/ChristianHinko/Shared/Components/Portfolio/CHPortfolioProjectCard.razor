@@ -10,66 +10,35 @@
                 @Title
             </MudText>
             <div style="height: 10px;"></div>
-            <CHInfoChip>
-                <MudText Typo="@Typo.body1">
-                    @ProjectStatus
-                </MudText>
-            </CHInfoChip>
-            <CHInfoChip>
-                <MudText Typo="@Typo.body1">
-                    Development Time: @DevelopmentTime
-                </MudText>
-            </CHInfoChip>
-            <CHInfoChip>
-                <MudText Typo="@Typo.body1">
-                    Team Size: @TeamSize
-                </MudText>
-            </CHInfoChip>
+            @Info
             <div style="height: 10px;"></div>
             @Description
             <div style="height: 10px;"></div>
-            <MudButton Href="@ProjectHref" Target="_blank" Variant="@Variant.Filled" DisableElevation="true">
-                <MudIcon Icon="@Icons.Custom.Brands.GitHub" />
-                <div style="width: 10px;"></div>
-                <MudText Typo="@Typo.body1">
-                    Source Available on GitHub
-                </MudText>
-            </MudButton>
+            @References
         </div>
     </div>
-    <div class="mud-width-full pa-4">
-        <MudText Typo="@Typo.h4">
-            Contributions
-        </MudText>
-        @Contributions
-    </div>
+    @Contributions
 </MudPaper>
 
 @code
 {
     [Parameter]
-    public string Id { get; set; }
+    public string Id { get; set; } = string.Empty;
 
     [Parameter]
-    public string Title { get; set; }
+    public string Title { get; set; } = string.Empty;
 
     [Parameter]
-    public string ProjectHref { get; set; }
-
-    [Parameter]
-    public int TeamSize { get; set; }
-
-    [Parameter]
-    public string ProjectStatus { get; set; }
-
-    [Parameter]
-    public string DevelopmentTime { get; set; }
+    public RenderFragment Info { get; set; }
 
     [Parameter]
     public RenderFragment Media { get; set; }
 
     [Parameter]
     public RenderFragment Description { get; set; }
+
+    [Parameter]
+    public RenderFragment References { get; set; }
 
     [Parameter]
     public RenderFragment Contributions { get; set; }

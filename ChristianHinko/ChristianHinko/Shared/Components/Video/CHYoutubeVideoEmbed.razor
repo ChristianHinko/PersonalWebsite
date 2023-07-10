@@ -1,15 +1,19 @@
 ﻿@using System.Web
 @using System.Collections.Specialized
 
-<iframe
-    class="@Class"
-    style="@Style"
-    frameborder="0"
-    type="text/html"
-    src="@GetYoutubeEmbedUrl()"
-    allow="autoplay; fullscreen; picture-in-picture;"
-    >
-</iframe>
+<MudLink Href="@($"https://www.youtube.com/embed/{VideoId}?autoplay=1")" Target="_blank" Disabled=@(!Link)>
+    <div class="mud-width-full mud-height-full" style="pointer-events: none;">
+        <iframe
+            class="@Class"
+            style="@Style"
+            frameborder="0"
+            type="text/html"
+            src="@GetYoutubeEmbedUrl()"
+            allow="autoplay; fullscreen; picture-in-picture;"
+            >
+        </iframe>
+    </div>
+</MudLink>
 
 @code
 {
@@ -19,11 +23,17 @@
     [Parameter]
     public string Style { get; set; } = string.Empty;
 
+    [Parameter]
+    public bool Link { get; set; } = false;
+
     /// <summary>
     /// YouTube video ID.
     /// </summary>
     [Parameter]
     public string VideoId { get; set; } = string.Empty;
+
+    [Parameter]
+    public int Start { get; set; } = 0;
 
     [Parameter]
     public bool Mute { get; set; } = true;
@@ -124,6 +134,11 @@
         else
         {
             parameters.Add("modestbranding", "0");
+        }
+
+        if (Start != 0)
+        {
+            parameters.Add("start", Start.ToString());
         }
 
         return parameters.ToString();

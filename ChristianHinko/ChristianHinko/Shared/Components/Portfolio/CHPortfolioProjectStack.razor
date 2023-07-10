@@ -1,0 +1,9 @@
+﻿<MudStack Class="my-10" Row="false" Spacing="16">
+    @ChildContent
+</MudStack>
+
+@code
+{
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
