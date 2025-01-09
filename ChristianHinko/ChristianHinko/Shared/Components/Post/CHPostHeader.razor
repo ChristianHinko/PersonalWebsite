@@ -1,6 +1,6 @@
 ﻿@using ChristianHinko.Types
 
-<div class="my-16">
+<div class="my-8">
     <header>
         <MudText Class="ch-header-text" Typo="@Typo.h1">
             @PostInfo.Title
@@ -9,9 +9,10 @@
             @PostInfo.Subtitle
         </MudText>
     </header>
-</div>
-<div class="my-4">
-    <MudImage Class="mud-width-full rounded" Style="aspect-ratio: 16 / 9;" Src="@PostInfo.ImageSrc" ObjectFit="@ObjectFit.Cover" />
+    <div class="my-2"></div>
+    <div class="d-flex flex-row justify-center">
+        <MudImage Class="rounded" Style="width: 50%; aspect-ratio: 16 / 9;" Src="@PostInfo.ImageSrc" ObjectFit="@ObjectFit.Cover" />
+    </div>
 </div>
 <MudText Typo="@Typo.h5" Align="@Align.End">
     @PostInfo.Date.ToString("MMMM d, yyyy")
