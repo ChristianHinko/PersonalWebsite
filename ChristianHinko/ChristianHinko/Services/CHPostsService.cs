@@ -31,6 +31,15 @@ namespace ChristianHinko.Services
                     ImageSrc = "/_content/ChristianHinko/images/GetFasterUnrealEngineBuildTimes.png",
                     Slug = "get-faster-unreal-engine-build-times",
                     Component = typeof(GetFasterUnrealEngineBuildTimes)
+                },
+                new CHPostInfo()
+                {
+                    Title = "Play DDR At Home!",
+                    Subtitle = "Run the original DanceDanceRevolution arcade game on your own PC.",
+                    Date = new DateTime(2025, 01, 08),
+                    ImageSrc = "/_content/ChristianHinko/images/PlayDDRAtHome.png",
+                    Slug = "play-ddr-at-home",
+                    Component = typeof(PlayDDRAtHome)
                 }
             };
 

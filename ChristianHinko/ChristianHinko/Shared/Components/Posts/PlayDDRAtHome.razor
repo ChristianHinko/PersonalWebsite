@@ -1,0 +1,264 @@
+﻿<MudContainer MaxWidth="@MaxWidth.Large">
+    <CHPostHeader PostInfo="@PostInfo" />
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
+        Disclaimer!
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Continue supporting local arcades! A home DDR setup should mainly be used for special practice.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Also, any download links may be taken off of this page in the future. These are pretty much just raw notes I documented for myself while getting this set up.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Note: These notes assume you're running Windows.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
+        How To Get The Game Running
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="1." />Get the DanceDanceRevolution A20 PLUS dumped game files. Download link: <MudLink Href="https://nyaa.si/view/1509737" Target="_blank">https://nyaa.si/view/1509737</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />Open the magnet file with your BitTorrent client of choice (I use Tixati) and start the download.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="2." />Download spice2x from <MudLink Href="https://github.com/spice2x/spice2x.github.io/releases" Target="_blank">https://github.com/spice2x/spice2x.github.io/releases</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="3." />Configure spice2x.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />Note: The following steps are roughly copied from <MudLink Href="https://two-torial.xyz/games/ddrace/setup" Target="_blank">https://two-torial.xyz/games/ddrace/setup</MudLink> and <MudLink Href="https://nyaa.si/view/1509737" Target="_blank">https://nyaa.si/view/1509737</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />Copy "spice.exe" (the non-64-bit version!) and "spicecfg.exe" to the "contents" directory of the game.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />Run spicecfg.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="2" />Go to the "Options" tab.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="2" />Enable "Basic Local EA Emulation".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="2" />Assign "PCBID" to <CHCodeInline>00010203040506070809</CHCodeInline>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="3" />Idk what this does but it's a code I copied from that nyaa.si page.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="4." />Attempt to run the game by starting "spice.exe".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />You will likely crash from an access violation after the log "M:ddr: Renderer:initGs() end."
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="2" />If so, you need to install Direct X. Download link: <MudLink Href="https://www.microsoft.com/en-us/download/details.aspx?id=35" Target="_blank">https://www.microsoft.com/en-us/download/details.aspx?id=35</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="5." />Download and install a K-Lite Codec Pack from <MudLink Href="https://codecguide.com/download_kl.htm" Target="_blank">https://codecguide.com/download_kl.htm</MudLink>. This is for the game to be able to play the music videos.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />I got the "Standard" pack so I can also have fun looking at the game files but you only need the "Basic" pack for the videos to work in-game.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
+        Extra Steps
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Tip: Spice's "Coin Mech" button doesn't seem to do anything to the credits/coins in-game. You can use the "Service" input instead to add coins.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        How to enable English (or other languages) by default.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="1." />Open the game's test menu (via the "Test" input).
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="2." />Enter "GAME OPTIONS".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="3." />Assign "LANGUAGE SETTING" to "English".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />Use "Service" input to sift through the choices.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        You might be interested in setting a few other options as well in the test menu. E.g., required coins per credit.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Note: The base game version for A20 PLUS is <CHCodeInline>2022020200</CHCodeInline>. Updates can be applied from there if you want A3 or beyond.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
+        Using Patches (And Tweaking Latency!)
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Patches are like "cheats". They are similar to Gecko codes for the Wii/GameCube.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Note: Steps copied from <MudLink Href="https://two-torial.xyz/extras/patchsp2x" Target="_blank">https://two-torial.xyz/extras/patchsp2x</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="1." />Open your game's spicecfg and go to the "Patches" tab.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="2." />Enable "Auto apply patches on game start" (unless you want to permanently modify the game files for some reason).
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="3." />Hit "Import from URL" and enter <MudLink Href="https://sp2x.two-torial.xyz/" Target="_blank">https://sp2x.two-torial.xyz/</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" BulletString="4." />Enable the desired patches.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Patches I use:
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />"Song Unlock"
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />"Unlock options"
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />"SSQ Offset" or a combination of "Render Offset" and "Sound Offset".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="1" />Set these offsets to the latency of your TV and/or speakers.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
+        Applying Updates
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Download link: <MudLink Href="https://pixeldrain.com/l/5qZrnRd1" Target="_blank">https://pixeldrain.com/l/5qZrnRd1</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        An "update" is just a file structure of the game which contains only the files that differ from the previous version of the game and any new files as well.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        "Applying" an update just means adding and replacing your game files with the update's files. Make sure you apply these updates in order.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        The next time you open the game you'll get a new Windows firewall pop-up. After accepting, you'll get a warning log and the game will be frozen on startup. Just restart the game and it will work the next time now that the firewall is configured.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
+        Additional Notes
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        The 1cc Discord server has a lot of good info and download links. Invite link: <MudLink Href="https://discord.gg/e7xffWFf9p" Target="_blank">https://discord.gg/e7xffWFf9p</MudLink>. This server seems to be the revival of an original "1cc" Discord community.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        Random note: Convenient window position for a fullscreen-like experience at 1920x1080: <CHCodeInline>-8,-31</CHCodeInline>. Double these offsets if your running 4k (3840x2160).
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />Helpful for testing the game while being able to alt-tab out and back in.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />The game seems to break if window focus is taken away during fullscreen.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />It's definitely worth using fullscreen though when you actually want to play! Runs way faster.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        My current choice for key bindings:
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />P1 menu arrows: WASD.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />P1 start: Left shift.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />P2 menu arrows: Arrow keys.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />P2 start: Right shift.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />Test menu: Backtick key (the "tilde" key).
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextBullet IndentationLevel="0" />Insert coin: Insert key.
+    </MudText>
+</MudContainer>
+
+@code
+{
+    [CascadingParameter(Name = "PostInfo")]
+    public CHPostInfo PostInfo { get; set; }
+}
