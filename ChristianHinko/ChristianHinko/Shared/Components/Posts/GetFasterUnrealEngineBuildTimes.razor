@@ -1,65 +1,134 @@
 ﻿<MudContainer MaxWidth="@MaxWidth.Large">
     <CHPostHeader PostInfo="@PostInfo" />
     <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
         Unreal Build Tool has a configurable XML file located "%userprofile%\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
     </MudText>
     <MudText Typo="@Typo.body1">
         The default, empty BuildConfiguration.xml looks like this:
     </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
     <CHCodeBlock Lang="xml" CodeString="@BuildConfigurationXml_Default" />
-    <MudText Typo="@Typo.h2">
-        Process Count Tweaking
+    <MudText Typo="@Typo.body1">
+        <br>
     </MudText>
     <MudText Typo="@Typo.h3">
+        Process Count Tweaking
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h4">
         Use All Logical Processors
     </MudText>
     <MudText Typo="@Typo.body1">
-        By default, UBT uses only the amount of physical cores on your machine as the number of processes to use for building. E.g., I have a six-core processor so it will only make 6 processes to use - WAIT SO IT’S NOT USING ALL MY 12 THREADS!? We can change this by configuring BuildConfiguration.bAllCores:
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        By default, UBT uses only the amount of physical cores on your machine as the number of processes to use for building. E.g., I have a six-core processor so it will only make 6 processes to use - WAIT SO IT'S NOT USING ALL MY 12 THREADS!? We can change this by configuring BuildConfiguration.bAllCores:
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
     </MudText>
     <CHCodeBlock Lang="xml" CodeString="@BuildConfigurationXml_bAllCores" />
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
     <MudText Typo="@Typo.body1">
         This will have UBT use all logical cores on your machine. E.g., my processor has twelve threads so it will create 12 processes to use for building. That is assuming the best case though - where I have enough memory available for all of that.
     </MudText>
     <MudText Typo="@Typo.body1">
-        Note: UBT will limit the number of processes when there isn’t enough memory to provide every action with the required <CHCodeInline>MemoryPerActionBytes</CHCodeInline>. RAM is super important!
+        <br>
     </MudText>
-    <MudText Typo="@Typo.h3">
-        Use Custom Number of Processes
+    <MudText Typo="@Typo.body1">
+        Note: UBT will limit the number of processes when there isn't enough memory to provide every action with the required <CHCodeInline>MemoryPerActionBytes</CHCodeInline>. RAM is super important!
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h4">
+        Use Custom Number Of Processes
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
     </MudText>
     <MudText Typo="@Typo.body1">
         You can add a custom multiplier by configuring ParallelExecutor.ProcessorCountMultiplier:
     </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
     <CHCodeBlock Lang="xml" CodeString="@BuildConfigurationXml_ProcessorCountMultiplier" />
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
     <MudText Typo="@Typo.body1">
         Where <CHCodeInline>4</CHCodeInline> is the multiplier you want to apply to your number of processes. E.g., with a <CHCodeInline>ProcessorCountMultiplier</CHCodeInline> of 4, I get 6 cores * 4 = 24 processes!
     </MudText>
     <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
         In a recent engine change, however, it maxes out your process count to the number of logical processors. So, e.g., the resulting 24 would be capped at 12. This maxing logic was introduced by commit: <MudLink Href="https://github.com/EpicGames/UnrealEngine/commit/f3f15a7aa5f3e9020182ad5537e7aa93f7320663" Target="_blank">https://github.com/EpicGames/UnrealEngine/commit/f3f15a7aa5f3e9020182ad5537e7aa93f7320663</MudLink>.
     </MudText>
-    <MudText Typo="@Typo.h2">
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
         Process Priority Tweaking
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
     </MudText>
     <MudText Typo="@Typo.body1">
         You can set the priority of the processes spawned with ParallelExecutor.ProcessPriority:
     </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
     <CHCodeBlock Lang="xml" CodeString="@BuildConfigurationXml_ProcessPriority" />
     <MudText Typo="@Typo.body1">
-        I set this to <CHCodeInline>AboveNormal</CHCodeInline>. This improves times but causes your computer to stutter if you’re running all cores.
+        <br>
     </MudText>
-    <MudText Typo="@Typo.h2">
+    <MudText Typo="@Typo.body1">
+        I set this to <CHCodeInline>AboveNormal</CHCodeInline>. This improves times but causes your computer to stutter if you're running all cores.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
         Memory Usage Tweaking
     </MudText>
     <MudText Typo="@Typo.body1">
-        It is possible to change the required memory per action by configuring the ParallelExecutor’s <CHCodeInline>MemoryPerActionBytes</CHCodeInline>.
+        <br>
     </MudText>
-    <MudText Typo="@Typo.h2">
+    <MudText Typo="@Typo.body1">
+        It is possible to change the required memory per action by configuring the ParallelExecutor's <CHCodeInline>MemoryPerActionBytes</CHCodeInline>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.h3">
         More Settings
     </MudText>
     <MudText Typo="@Typo.body1">
-        Epic has documentation for all of the settings here: https://docs.unrealengine.com/build-configuration-for-unreal-engine/.
+        <br>
     </MudText>
     <MudText Typo="@Typo.body1">
-        You can get all of the information you need by looking into the UnrealBuildTool project source code. Doing a find in the project for "XmlConfigFile" will show you all of the settings that can be configured from XML. The <CHCodeInline>UnrealBuildTool.BuildConfiguration</CHCodeInline> and <CHCodeInline>UnrealBuildTool.ParallelExecutor</CHCodeInline> classes have really good settings to tweak.
+        Epic has documentation for all of the settings here: <MudLink Href="https://docs.unrealengine.com/build-configuration-for-unreal-engine/" Target="_blank">https://docs.unrealengine.com/build-configuration-for-unreal-engine/</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <br>
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        You can get all of the information you need by looking into the UnrealBuildTool project source code. Doing a find in the project for "XmlConfigFile" will show you all of the settings that can be configured from XML. The <CHCodeInline>UnrealBuildTool.BuildConfiguration</CHCodeInline> and <CHCodeInline>UnrealBuildTool.ParallelExecutor</CHCodeInline> classes have really good settings to configure.
     </MudText>
 </MudContainer>
 
