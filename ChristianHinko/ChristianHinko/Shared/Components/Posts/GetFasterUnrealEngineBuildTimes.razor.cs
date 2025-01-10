@@ -5,13 +5,15 @@
 /// </summary>
 public partial class GetFasterUnrealEngineBuildTimes
 {
-    protected const string BuildConfigurationXml_Default = """
+    protected const string BuildConfigurationXml_Default =
+        """
         <?xml version="1.0" encoding="utf-8" ?>
         <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
         </Configuration>
         """;
 
-    protected const string BuildConfigurationXml_bAllCores = """
+    protected const string BuildConfigurationXml_bAllCores =
+        """
         <?xml version="1.0" encoding="utf-8" ?>
         <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
             <BuildConfiguration>
@@ -20,7 +22,8 @@ public partial class GetFasterUnrealEngineBuildTimes
         </Configuration>
         """;
 
-    protected const string BuildConfigurationXml_ProcessorCountMultiplier = """
+    protected const string BuildConfigurationXml_ProcessorCountMultiplier =
+        """
         <?xml version="1.0" encoding="utf-8" ?>
         <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
             <ParallelExecutor>
