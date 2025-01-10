@@ -37,6 +37,16 @@
         In a recent engine change, however, it maxes out your process count to the number of logical processors. So, e.g., the resulting 24 would be capped at 12. This maxing logic was introduced by commit: <MudLink Href="https://github.com/EpicGames/UnrealEngine/commit/f3f15a7aa5f3e9020182ad5537e7aa93f7320663" Target="_blank">https://github.com/EpicGames/UnrealEngine/commit/f3f15a7aa5f3e9020182ad5537e7aa93f7320663</MudLink>.
     </MudText>
     <MudText Typo="@Typo.h2">
+        Process Priority Tweaking
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        You can set the priority of the processes spawned with ParallelExecutor.ProcessPriority:
+    </MudText>
+    <CHCodeBlock Lang="xml" CodeString="@BuildConfigurationXml_ProcessPriority" />
+    <MudText Typo="@Typo.body1">
+        I set this to <CHCodeInline>AboveNormal</CHCodeInline>. This improves times but causes your computer to stutter if you’re running all cores.
+    </MudText>
+    <MudText Typo="@Typo.h2">
         Memory Usage Tweaking
     </MudText>
     <MudText Typo="@Typo.body1">

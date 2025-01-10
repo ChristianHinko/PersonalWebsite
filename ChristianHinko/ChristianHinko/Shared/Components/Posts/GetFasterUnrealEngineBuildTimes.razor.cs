@@ -16,9 +16,9 @@ public partial class GetFasterUnrealEngineBuildTimes
         """
         <?xml version="1.0" encoding="utf-8" ?>
         <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
-            <BuildConfiguration>
-                <bAllCores>true</bAllCores>
-            </BuildConfiguration>
+          <BuildConfiguration>
+            <bAllCores>true</bAllCores>
+          </BuildConfiguration>
         </Configuration>
         """;
 
@@ -26,9 +26,19 @@ public partial class GetFasterUnrealEngineBuildTimes
         """
         <?xml version="1.0" encoding="utf-8" ?>
         <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
-            <ParallelExecutor>
-                <ProcessorCountMultiplier>4</ProcessorCountMultiplier>
-            </ParallelExecutor>
+          <ParallelExecutor>
+            <ProcessorCountMultiplier>4</ProcessorCountMultiplier>
+          </ParallelExecutor>
+        </Configuration>
+        """;
+
+    protected const string BuildConfigurationXml_ProcessPriority =
+        """
+        <?xml version="1.0" encoding="utf-8" ?>
+        <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
+          <ParallelExecutor>
+            <ProcessPriority>AboveNormal</ProcessPriority>
+          </ParallelExecutor>
         </Configuration>
         """;
 }
