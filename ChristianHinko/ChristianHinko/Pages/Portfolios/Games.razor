@@ -29,23 +29,43 @@
 </div>
 <!-- Content -->
 <MudContainer MaxWidth="@MaxWidth.Large">
-    <CHPortfolioSection Title="Experience" />
+    <CHPortfolioSection Title="Professional Experience" />
     <CHPortfolioProjectStack>
-        <CHPortfolioProjectCard Id="engineer-at-dreamlit-games" Title="Engineer at Dreamlit Games">
+        <CHPortfolioProjectCard Id="mesh-tree-to-skeletal-mesh-tool" Title="Mesh Tree To Skeletal Mesh Tool">
             <Info>
-                <CHInfoChip_DateRange DateFrom="June, 2023" DateTo="Present" />
+                <CHInfoChip_GameStudio Value="Dreamlit" />
+                <CHInfoChip_GameTitle Value="Towers of Aghasba" />
+                <CHInfoChip_TeamSize Value="1" />
+                <CHInfoChip_DevelopmentTime Value="3 Months" />
             </Info>
             <Media>
                 <CHAspectRatioFitBlock Class="mud-width-full mud-height-full" FitHeight="false">
                     <CHYoutubeVideoEmbed VideoId="4vQzZMrSnMM" Start="81" Link="true" />
                 </CHAspectRatioFitBlock>
             </Media>
+            <Description>
+                <MudText Typo="@Typo.body1">
+                    Editor tool that generates skeletal mesh assets along with anim sequences for the Colossal Trees in Towers of Aghasba.
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    <br>
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    This tool merges a hierarchy of static mesh components into a single skeletal mesh asset, ready for animation. Appends mesh descriptions together and minimizes material slots by sharing them where possible. Generates skin weights and registers them as skeletal mesh attributes to the appropriate vertices. The tool also supports empty scene components to serve as unskinned bones in the resulting skeleton.
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    <br>
+                </MudText>
+                <MudText Typo="@Typo.body1">
+                    The tool also generates anim sequences, used for the visual of trees growing to higher tiers. The mesh hierarchy that was used to generate the skeleton asset is the one chosen as the rest pose. Other mesh hierarchies must have compatible naming for the tool to associate their bones with the rest pose's. The user can then create their of sequence of keyframes using these mesh hierarchies.
+                </MudText>
+            </Description>
             <References>
                 <CHIconButtonLink Href="https://www.dreamlit.games" Icon="@Icons.Material.Filled.Link" Text="Dreamlit Games" />
             </References>
         </CHPortfolioProjectCard>
     </CHPortfolioProjectStack>
-    <CHPortfolioSection Title="Plugins Showcase" />
+    <CHPortfolioSection Title="Personal Code Work" />
     <CHPortfolioProjectStack>
         <CHPortfolioProjectCard Id="animation-setup" Title="Animation Setup">
             <Info>
