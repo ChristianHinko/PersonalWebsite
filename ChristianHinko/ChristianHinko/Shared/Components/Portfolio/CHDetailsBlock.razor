@@ -1,12 +1,15 @@
 ﻿<div class="mud-width-full pa-4">
     <MudText Typo="@Typo.h4">
-        Contributions
+        @Title
     </MudText>
     @ChildContent
 </div>
 
 @code
 {
+    [Parameter]
+    public string Title { get; set; } = "Contributions";
+
     [Parameter]
     public RenderFragment ChildContent { get; set; }
 }
