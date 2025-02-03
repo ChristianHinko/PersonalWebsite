@@ -2,13 +2,11 @@
 using MudBlazor.Services;
 using MudBlazorExtensionLibrary.Services;
 using ChristianHinko.Services;
+using System.Reflection;
 
 namespace ChristianHinko
 {
-    /// <summary>
-    /// Library of helpful functions for the Program.
-    /// </summary>
-    public static class CHProgramFunctionLibrary
+    public static class CHProgramUtils
     {
         public static IServiceCollection AddChristianHinkoServices(this IServiceCollection inServiceCollection)
         {
@@ -16,6 +14,13 @@ namespace ChristianHinko
                 .AddMudServices()
                 .AddScoped<MBELLayoutService, CHLayoutService>()
                 .AddScoped<ICHPostInfoService, CHPostInfoService>();
+        }
+
+        public static DateTime GetExecutingAssemblyFileDate()
+        {
+            Assembly executingAssembly = Assembly.GetExecutingAssembly();
+            FileInfo assemblyFileInfo = new FileInfo(executingAssembly.Location);
+            return assemblyFileInfo.LastWriteTime;
         }
     }
 }

@@ -31,8 +31,15 @@
 }
 
 /**
- * 
+ *
  */
 .ch-paper-us-letter-padding-half {
     padding: 0.5in;
+}
+
+/**
+ *
+ */
+.ch-paper-us-letter-padding-quarter {
+    padding: 0.25in;
 }
