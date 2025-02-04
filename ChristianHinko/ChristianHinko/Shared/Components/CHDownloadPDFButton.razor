@@ -1,7 +1,7 @@
 ﻿@using System.Text
 @inject IJSRuntime jsRuntime
 
-<div class="@Class" style="@Style">
+<div class="@BuildClassString()" style="@Style">
     <MudButton OnClick="@Print" StartIcon="@Icons.Material.Filled.FileDownload" Variant="@Variant.Filled" style="background-color: var(--mud-palette-background-grey);" DisableElevation="false">
         Download
     </MudButton>
@@ -18,5 +18,16 @@
     private async Task Print()
     {
         await jsRuntime.InvokeVoidAsync("window.print");
+    }
+
+    private string BuildClassString()
+    {
+        StringBuilder stringBuilder = new();
+
+        stringBuilder.Append("ch-print-hidden");
+        stringBuilder.Append(' ');
+        stringBuilder.Append(Class);
+
+        return stringBuilder.ToString();
     }
 }
