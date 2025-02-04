@@ -1,0 +1,22 @@
+﻿@using System.Text
+@inject IJSRuntime jsRuntime
+
+<div class="@Class" style="@Style">
+    <MudButton OnClick="@Print" StartIcon="@Icons.Material.Filled.FileDownload" Variant="@Variant.Filled" style="background-color: var(--mud-palette-background-grey);" DisableElevation="false">
+        Download
+    </MudButton>
+</div>
+
+@code
+{
+    [Parameter]
+    public string Class { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Style { get; set; } = string.Empty;
+
+    private async Task Print()
+    {
+        await jsRuntime.InvokeVoidAsync("window.print");
+    }
+}

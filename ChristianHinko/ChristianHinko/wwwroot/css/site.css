@@ -29,3 +29,12 @@
     max-height: 100%;
     width: auto;
 }
+
+@media print {
+    /**
+     * Hides element when in print mode.
+     */
+    .ch-print-hidden {
+        display: none;
+    }
+}
