@@ -2,12 +2,6 @@
 
 @code
 {
-    /// <summary>
-    /// A single indent string.
-    /// </summary>
-    [Parameter]
-    public string IndentString { get; set; } = "&nbsp;&nbsp;&nbsp;&nbsp;";
-
     [Parameter]
     public string BulletString { get; set; } = "•";
 
@@ -17,18 +11,8 @@
     [Parameter]
     public string PostBulletString { get; set; } = " ";
 
-    [Parameter]
-    public int IndentationLevel { get; set; } = 0;
-
     protected MarkupString GetMarkupString()
     {
-        string indentationString = string.Empty;
-
-        for (int i = 0; i < IndentationLevel; ++i)
-        {
-            indentationString += IndentString;
-        }
-
-        return new MarkupString(indentationString + BulletString + PostBulletString);
+        return new MarkupString(BulletString + PostBulletString);
     }
 }
