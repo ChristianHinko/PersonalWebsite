@@ -49,16 +49,37 @@
         <CHTextIndent IndentationLevel="2" /><CHTextBullet />Assign "PCBID" to <CHCodeInline>00010203040506070809</CHCodeInline>.
     </MudText>
     <MudText Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="0" /><CHTextBullet BulletString="4." />Attempt to run the game by starting Spice ("spice.exe").
+        <CHTextIndent IndentationLevel="0" /><CHTextBullet BulletString="3." />Attempt to run the game by starting Spice ("spice.exe").
     </MudText>
     <MudText Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="1" /><CHTextBullet />You may crash from an access violation after the log "M:ddr: Renderer:initGs() end."
+        <CHTextIndent IndentationLevel="0" /><CHTextBullet BulletString="4." />Ensure Direct X is installed.
     </MudText>
     <MudText Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" /><CHTextBullet />If so, you need to install Direct X. Download link: <MudLink Href="https://www.microsoft.com/en-us/download/details.aspx?id=35" Target="_blank">https://www.microsoft.com/en-us/download/details.aspx?id=35</MudLink>.
+        <CHTextIndent IndentationLevel="1" /><CHTextBullet />If you encounter a startup crash from an access violation after the log "M:ddr: Renderer:initGs() end.", then you'll need to install Direct X.
     </MudText>
     <MudText Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="0" /><CHTextBullet BulletString="5." />Download and install a K-Lite Codec Pack from <MudLink Href="https://codecguide.com/download_kl.htm" Target="_blank">https://codecguide.com/download_kl.htm</MudLink>. This is for the game to be able to play the music videos.
+        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Download link: <MudLink Href="https://www.microsoft.com/en-us/download/details.aspx?id=35" Target="_blank">https://www.microsoft.com/en-us/download/details.aspx?id=35</MudLink>.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextIndent IndentationLevel="0" /><CHTextBullet BulletString="5." />Ensure you're using the "J" region, for maximum stability and compatibility.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextIndent IndentationLevel="1" /><CHTextBullet />Your game's soft id code should look something like "MDX:J:A:A:2022020200". You can find this string in Spice's "log.txt", or at the top-left of the screen during game startup.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextIndent IndentationLevel="1" /><CHTextBullet />The format for the soft id code is "model:dest:spec:rev:ext".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextIndent IndentationLevel="1" /><CHTextBullet />If the "dest" portion of your code is not a "J", then your game's region is not set to Japan and needs to be changed.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Spice will log a warning for this case which looks something like: "W:ddr: U-REGION WARNING".
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Open the file "contents/prop/ea3-ident.xml" in a text editor, change the XML property "ea3_conf.soft.dest" to "J", and save.
+    </MudText>
+    <MudText Typo="@Typo.body1">
+        <CHTextIndent IndentationLevel="0" /><CHTextBullet BulletString="6." />Download and install a K-Lite Codec Pack from <MudLink Href="https://codecguide.com/download_kl.htm" Target="_blank">https://codecguide.com/download_kl.htm</MudLink>. This is for the game to be able to play the music videos.
     </MudText>
     <MudText Typo="@Typo.body1">
         <CHTextIndent IndentationLevel="1" /><CHTextBullet />I got the "Standard" pack so I can also have fun looking at the game files but you only need the "Basic" pack for the videos to work in-game.
