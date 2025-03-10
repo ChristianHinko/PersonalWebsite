@@ -35,7 +35,7 @@ namespace ChristianHinko.Services
                 new CHPostInfo()
                 {
                     Title = "Play DDR At Home!",
-                    Subtitle = "Run the original DanceDanceRevolution arcade game on your own PC.",
+                    Subtitle = "Run your DanceDanceRevolution arcade game on your PC.",
                     Date = new DateTime(2025, 01, 08),
                     ImageSrc = "/_content/ChristianHinko/images/PlayDDRAtHome.png",
                     Slug = "play-ddr-at-home",
