@@ -69,10 +69,10 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="1" />Charleston Southern University - 3.5 GPA
+        <CHIndentText IndentationLevel="1" />Charleston Southern University - 3.5 GPA
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="1" />Studied: Data Structures, Calc 3, Algorithms, Computer Architecture, Operating Systems, Networking
+        <CHIndentText IndentationLevel="1" />Studied: Data Structures, Calc 3, Algorithms, Computer Architecture, Operating Systems, Networking
     </MudText>
     <CHResumeSection Title="Professional Experience" />
     <CHResumeItem>
@@ -87,27 +87,80 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" />Shipped PS5 title Towers of Aghasba, developing for 2 years in both pre-launch and post-launch phases.
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <span class="ch-resume-item-category-text"><CHTextIndent IndentationLevel="1" />Multiplayer - </span>Refactored existing game systems to support multiplayer.
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Implemented the core network replication code used by all game systems.
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Optimize network bandwidth overhead for all game systems (e.g., delta-based replication, variable-length serialization, and local ID mapping).
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <span class="ch-resume-item-category-text"><CHTextIndent IndentationLevel="1" />Developer Tools - </span>Automate and streamline workflows for the rest of the team (artists, designers, and QA).
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Generate assets with custom editor and command-line tools.
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Speed up QA testing with custom runtime cheats and console auto-complete.
-    </MudText>
+    <ul style="list-style-type: none">
+        <li>
+            <div class="d-flex flex-row">
+                <CHIndentBlock IndentationLevel="1" />
+                <ul style="list-style-type: none">
+                    <li>
+                        <div class="d-flex flex-row">
+                            <CHIndentBlock IndentationLevel="1" />
+                            <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                                Shipped PS5 title Towers of Aghasba, developing for 2 years in both pre-launch and post-launch phases.
+                            </MudText>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="mud-width-full d-flex flex-row">
+                <CHIndentBlock IndentationLevel="1" />
+                <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                    <span class="ch-resume-item-category-text">Multiplayer - </span>Refactored existing game systems to support multiplayer.
+                </MudText>
+            </div>
+            <div class="mud-width-full d-flex flex-row">
+                <CHIndentBlock IndentationLevel="1" />
+                <ul style="list-style-type: none">
+                    <li>
+                        <div class="mud-width-full d-flex flex-row">
+                            <CHIndentBlock IndentationLevel="1" />
+                            <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                                <CHBulletText />Implemented the core network replication code used by all game systems.
+                            </MudText>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mud-width-full d-flex flex-row">
+                            <CHIndentBlock IndentationLevel="1" /><MudText Class="ch-resume-text" Typo="@Typo.body1">
+                                <CHBulletText />Optimize network bandwidth overhead for all game systems (e.g., delta-based replication, variable-length serialization, and local ID mapping).
+                            </MudText>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="mud-width-full d-flex flex-row">
+                <CHIndentBlock IndentationLevel="1" />
+                <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                    <span class="ch-resume-item-category-text">Developer Tools - </span>Automate and streamline workflows for the rest of the team (artists, designers, and QA).
+                </MudText>
+            </div>
+            <div class="mud-width-full d-flex flex-row">
+                <CHIndentBlock IndentationLevel="1" />
+                <ul style="list-style-type: none">
+                    <li>
+                        <div class="mud-width-full d-flex flex-row">
+                            <CHIndentBlock IndentationLevel="1" />
+                            <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                                <CHBulletText />Generate assets with custom editor and command-line tools.
+                            </MudText>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mud-width-full d-flex flex-row">
+                            <CHIndentBlock IndentationLevel="1" />
+                            <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                                <CHBulletText />Speed up QA testing with custom runtime cheats and console auto-complete.
+                            </MudText>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
     <CHResumeSection Title="Personal Projects and Open Source" />
     <CHResumeItem>
         <Title>
@@ -122,13 +175,13 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" />Built a library of C++ utilities for Unreal Engine which is being used across a handful of game projects (including Towers of Aghasba).
+        <CHIndentText IndentationLevel="2" />Built a library of C++ utilities for Unreal Engine which is being used across a handful of game projects (including Towers of Aghasba).
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Encourages modern C++ practices by providing a concepts library for Unreal Engine classes.
+        <CHIndentText IndentationLevel="2" /><CHBulletText />Encourages modern C++ practices by providing a concepts library for Unreal Engine classes.
     </MudText>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" /><CHTextBullet />Minimizes free-store allocations from Unreal Engine types.
+        <CHIndentText IndentationLevel="2" /><CHBulletText />Minimizes free-store allocations from Unreal Engine types.
     </MudText>
     <CHResumeItem>
         <Title>
@@ -143,7 +196,7 @@
         </Date>
     </CHResumeItem>
     <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHTextIndent IndentationLevel="2" />Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK". Consists of an executable project and a few static library projects which it depends on. This also demonstrates how to add third-party libraries as dependencies, such as the Boost C++ Libraries.
+        <CHIndentText IndentationLevel="2" />Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK". Consists of an executable project and a few static library projects which it depends on. This also demonstrates how to add third-party libraries as dependencies, such as the Boost C++ Libraries.
     </MudText>
     <CHResumeSection Title="Skills" />
     @{

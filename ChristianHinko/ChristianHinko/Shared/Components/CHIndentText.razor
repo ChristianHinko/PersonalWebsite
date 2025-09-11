@@ -1,4 +1,6 @@
-﻿@GetMarkupString()
+﻿@using System.Text
+
+@GetMarkupString()
 
 @code
 {
@@ -13,13 +15,13 @@
 
     protected MarkupString GetMarkupString()
     {
-        string indentationString = string.Empty;
+        StringBuilder stringBuilder = new();
 
         for (int i = 0; i < IndentationLevel; ++i)
         {
-            indentationString += IndentString;
+            stringBuilder.Append(IndentString);
         }
 
-        return new MarkupString(indentationString);
+        return new MarkupString(stringBuilder.ToString());
     }
 }
