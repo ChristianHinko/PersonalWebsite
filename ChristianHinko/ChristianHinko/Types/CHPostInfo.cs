@@ -16,13 +16,13 @@
         /// <summary>
         /// The slug portion of the URL pathname.
         /// </summary>
-        /// <seealso cref="Pages.Posts.Post"/>
+        /// <seealso cref="Pages.Posts.Post" />
         public string Slug { get; init; } = default!;
 
         /// <summary>
         /// Type of component to render.
         /// </summary>
-        /// <seealso cref="Pages.Posts.Post"/>
+        /// <seealso cref="Pages.Posts.Post" />
         public Type Component { get; init; } = default!;
     }
 }
