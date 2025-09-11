@@ -68,12 +68,20 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHIndentText IndentationLevel="1" />Charleston Southern University - 3.5 GPA
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHIndentText IndentationLevel="1" />Studied: Data Structures, Calc 3, Algorithms, Computer Architecture, Operating Systems, Networking
-    </MudText>
+    <ul style="list-style-type: none">
+        <li class="d-flex flex-row">
+            <CHIndentBlock IndentationLevel="1" />
+            <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                Charleston Southern University - 3.5 GPA
+            </MudText>
+        </li>
+        <li class="d-flex flex-row">
+            <CHIndentBlock IndentationLevel="1" />
+            <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                Studied: Data Structures, Calc 3, Algorithms, Computer Architecture, Operating Systems, Networking
+            </MudText>
+        </li>
+    </ul>
     <CHResumeSection Title="Professional Experience" />
     <CHResumeItem>
         <Title>
@@ -157,15 +165,31 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHIndentText IndentationLevel="2" />Built a library of C++ utilities for Unreal Engine which is being used across a handful of game projects (including Towers of Aghasba).
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHIndentText IndentationLevel="2" /><CHBulletText />Encourages modern C++ practices by providing a concepts library for Unreal Engine classes.
-    </MudText>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHIndentText IndentationLevel="2" /><CHBulletText />Minimizes free-store allocations from Unreal Engine types.
-    </MudText>
+    <ul style="list-style-type: none">
+        <li class="d-flex flex-row">
+            <CHIndentBlock IndentationLevel="1" />
+            <ul style="list-style-type: none">
+                <li class="d-flex flex-row">
+                    <CHIndentBlock IndentationLevel="1" />
+                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                        Built a library of C++ utilities for Unreal Engine which is being used across a handful of game projects (including Towers of Aghasba).
+                    </MudText>
+                </li>
+                <li class="d-flex flex-row">
+                    <CHIndentBlock IndentationLevel="1" />
+                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                        <CHBulletText />Encourages modern C++ practices by providing a concepts library for Unreal Engine classes.
+                    </MudText>
+                </li>
+                <li class="d-flex flex-row">
+                    <CHIndentBlock IndentationLevel="1" />
+                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                        <CHBulletText />Minimizes free-store allocations from Unreal Engine types.
+                    </MudText>
+                </li>
+            </ul>
+        </li>
+    </ul>
     <CHResumeItem>
         <Title>
             <MudText Class="ch-resume-item-text" Typo="@Typo.body1">
@@ -178,9 +202,19 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-        <CHIndentText IndentationLevel="2" />Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK". Consists of an executable project and a few static library projects which it depends on. This also demonstrates how to add third-party libraries as dependencies, such as the Boost C++ Libraries.
-    </MudText>
+    <ul style="list-style-type: none">
+        <li class="d-flex flex-row">
+            <CHIndentBlock IndentationLevel="1" />
+            <ul style="list-style-type: none">
+                <li class="d-flex flex-row">
+                    <CHIndentBlock IndentationLevel="1" />
+                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                        Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK". Consists of an executable project and a few static library projects which it depends on. This also demonstrates how to add third-party libraries as dependencies, such as the Boost C++ Libraries.
+                    </MudText>
+                </li>
+            </ul>
+        </li>
+    </ul>
     <CHResumeSection Title="Skills" />
     @{
         const string SkillGridStyle = "display: grid; grid-auto-flow: column; column-gap: 10px; grid-template-rows: repeat(3, minmax(0, 1fr));";
