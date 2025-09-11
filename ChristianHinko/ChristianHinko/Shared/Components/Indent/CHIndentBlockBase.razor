@@ -1,0 +1,21 @@
+﻿@using System.Text
+@inherits CHIndentBase
+
+@code
+{
+    [Parameter]
+    public int IndentValue { get; set; } = 1;
+
+    [Parameter]
+    public string IndentUnits { get; set; } = "em";
+
+    protected string GetStyleWidthValue()
+    {
+        StringBuilder stringBuilder = new();
+
+        stringBuilder.Append(IndentationLevel * IndentValue);
+        stringBuilder.Append(IndentUnits);
+
+        return stringBuilder.ToString();
+    }
+}

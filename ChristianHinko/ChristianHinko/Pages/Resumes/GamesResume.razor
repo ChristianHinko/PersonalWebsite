@@ -3,7 +3,7 @@
 <PageTitle>ChristianHinkle_Resume</PageTitle>
 
 <div class="relative mud-width-full">
-    <CHDownloadPDFButton Class="absolute" Style="left: 10px; top: 10px"></CHDownloadPDFButton>
+    <CHDownloadPDFButton Class="absolute" Style="left: 10px; top: 10px;"></CHDownloadPDFButton>
 </div>
 <CHPaperDocumentContainer>
     <!-- Resume header -->
@@ -68,7 +68,7 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <ul style="list-style-type: none">
+    <ul style="list-style-type: none;">
         <li class="d-flex flex-row">
             <CHIndentBlock IndentationLevel="1" />
             <MudText Class="ch-resume-text" Typo="@Typo.body1">
@@ -95,10 +95,10 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <ul style="list-style-type: none">
+    <ul style="list-style-type: none;">
         <li class="d-flex flex-row">
             <CHIndentBlock IndentationLevel="1" />
-            <ul style="list-style-type: none">
+            <ul style="list-style-type: none;">
                 <li class="d-flex flex-row">
                     <CHIndentBlock IndentationLevel="1" />
                     <MudText Class="ch-resume-text" Typo="@Typo.body1">
@@ -113,7 +113,7 @@
                 <MudText Class="ch-resume-text" Typo="@Typo.body1">
                     <span class="ch-resume-item-category-text">Multiplayer - </span>Refactored existing game systems to support multiplayer.
                 </MudText>
-                <ul style="list-style-type: none">
+                <ul style="list-style-type: none;">
                     <li class="mud-width-full d-flex flex-row">
                         <CHIndentBlock IndentationLevel="1" />
                         <MudText Class="ch-resume-text" Typo="@Typo.body1">
@@ -135,7 +135,7 @@
                 <MudText Class="ch-resume-text" Typo="@Typo.body1">
                     <span class="ch-resume-item-category-text">Developer Tools - </span>Automate and streamline workflows for the rest of the team (artists, designers, and QA).
                 </MudText>
-                <ul style="list-style-type: none">
+                <ul style="list-style-type: none;">
                     <li class="mud-width-full d-flex flex-row">
                         <CHIndentBlock IndentationLevel="1" />
                         <MudText Class="ch-resume-text" Typo="@Typo.body1">
@@ -165,29 +165,28 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <ul style="list-style-type: none">
+    <ul style="list-style-type: none;">
         <li class="d-flex flex-row">
             <CHIndentBlock IndentationLevel="1" />
-            <ul style="list-style-type: none">
-                <li class="d-flex flex-row">
-                    <CHIndentBlock IndentationLevel="1" />
-                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-                        Built a library of C++ utilities for Unreal Engine which is being used across a handful of game projects (including Towers of Aghasba).
-                    </MudText>
-                </li>
-                <li class="d-flex flex-row">
-                    <CHIndentBlock IndentationLevel="1" />
-                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-                        <CHBulletText />Encourages modern C++ practices by providing a concepts library for Unreal Engine classes.
-                    </MudText>
-                </li>
-                <li class="d-flex flex-row">
-                    <CHIndentBlock IndentationLevel="1" />
-                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-                        <CHBulletText />Minimizes free-store allocations from Unreal Engine types.
-                    </MudText>
-                </li>
-            </ul>
+            <div>
+                <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                    <CHIndentBlockInline IndentationLevel="1" />Built a library of C++ utilities for Unreal Engine which is being used across a handful of game projects (including Towers of Aghasba).
+                </MudText>
+                <ul style="list-style-type: none;">
+                    <li class="d-flex flex-row">
+                        <CHIndentBlock IndentationLevel="1" />
+                        <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                            <CHBulletText />Encourages modern C++ practices by providing a concepts library for Unreal Engine classes.
+                        </MudText>
+                    </li>
+                    <li class="d-flex flex-row">
+                        <CHIndentBlock IndentationLevel="1" />
+                        <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                            <CHBulletText />Minimizes free-store allocations from Unreal Engine types.
+                        </MudText>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
     <CHResumeItem>
@@ -202,17 +201,12 @@
             </MudText>
         </Date>
     </CHResumeItem>
-    <ul style="list-style-type: none">
+    <ul style="list-style-type: none;">
         <li class="d-flex flex-row">
             <CHIndentBlock IndentationLevel="1" />
-            <ul style="list-style-type: none">
-                <li class="d-flex flex-row">
-                    <CHIndentBlock IndentationLevel="1" />
-                    <MudText Class="ch-resume-text" Typo="@Typo.body1">
-                        Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK". Consists of an executable project and a few static library projects which it depends on. This also demonstrates how to add third-party libraries as dependencies, such as the Boost C++ Libraries.
-                    </MudText>
-                </li>
-            </ul>
+            <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                <CHIndentBlockInline IndentationLevel="1" />Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK". Consists of an executable project and a few static library projects which it depends on. This also demonstrates how to add third-party libraries as dependencies, such as the Boost C++ Libraries.
+            </MudText>
         </li>
     </ul>
     <CHResumeSection Title="Skills" />

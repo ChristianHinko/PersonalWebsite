@@ -1,4 +1,5 @@
 ﻿@using System.Text
+@inherits Indent.CHIndentBase
 
 @GetMarkupString()
 
@@ -9,9 +10,6 @@
     /// </summary>
     [Parameter]
     public string IndentString { get; set; } = "&nbsp;&nbsp;&nbsp;&nbsp;";
-
-    [Parameter]
-    public int IndentationLevel { get; set; } = 0;
 
     protected MarkupString GetMarkupString()
     {
