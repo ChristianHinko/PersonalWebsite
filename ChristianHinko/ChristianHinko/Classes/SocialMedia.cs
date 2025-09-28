@@ -9,5 +9,8 @@
         public const string GitHubProfileUsername = "ChristianHinko";
         public const string GitHubProfileUsernamePretty = $"@{GitHubProfileUsername}";
         public const string GitHubProfileUrl = $"https://github.com/{GitHubProfileUsername}";
+
+        public const string EmailAddress = "christianthinkle@gmail.com";
+        public const string EmailAddressHyperlink = $"mailto:{EmailAddress}";
     }
 }
