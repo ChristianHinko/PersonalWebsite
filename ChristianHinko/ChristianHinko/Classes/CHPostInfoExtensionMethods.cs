@@ -1,4 +1,4 @@
-﻿namespace ChristianHinko.Types
+﻿namespace ChristianHinko.Classes
 {
     /// <summary>
     /// Library of helpful functions for CHPostInfo.

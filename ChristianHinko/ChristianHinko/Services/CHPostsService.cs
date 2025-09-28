@@ -1,4 +1,4 @@
-﻿using ChristianHinko.Types;
+﻿using ChristianHinko.Classes;
 using ChristianHinko.Shared.Components.Posts;
 
 namespace ChristianHinko.Services

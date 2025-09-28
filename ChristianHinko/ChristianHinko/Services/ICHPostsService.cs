@@ -1,4 +1,4 @@
-﻿using ChristianHinko.Types;
+﻿using ChristianHinko.Classes;
 
 namespace ChristianHinko.Services
 {
