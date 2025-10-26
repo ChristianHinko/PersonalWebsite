@@ -26,20 +26,48 @@
  * Default padding for US Letter paper.
  * NOTE: In paper terminology, padding is called "margin".
  */
-.ch-paper-us-letter-padding {
-    padding: 1in;
+.ch-paper-us-letter-padding-x {
+    padding-left: 1in;
+    padding-right: 1in;
+}
+
+/**
+ * Default padding for US Letter paper.
+ * NOTE: In paper terminology, padding is called "margin".
+ */
+.ch-paper-us-letter-padding-y {
+    padding-top: 1in;
+    padding-bottom: 1in;
 }
 
 /**
  *
  */
-.ch-paper-us-letter-padding-half {
-    padding: 0.5in;
+.ch-paper-us-letter-padding-half-x {
+    padding-left: 0.5in;
+    padding-right: 0.5in;
 }
 
 /**
  *
  */
-.ch-paper-us-letter-padding-quarter {
-    padding: 0.25in;
+.ch-paper-us-letter-padding-half-y {
+    padding-top: 0.5in;
+    padding-bottom: 0.5in;
+}
+
+/**
+ *
+ */
+.ch-paper-us-letter-padding-quarter-x {
+    padding-left: 0.25in;
+    padding-right: 0.25in;
+}
+
+/**
+ *
+ */
+.ch-paper-us-letter-padding-quarter-y {
+    padding-top: 0.25in;
+    padding-bottom: 0.25in;
 }
