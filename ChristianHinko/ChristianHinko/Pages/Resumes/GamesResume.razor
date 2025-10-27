@@ -210,9 +210,31 @@
     <ul style="list-style-type: none;">
         <li class="d-flex flex-row">
             <CHIndentBlock IndentationLevel="1" />
-            <MudText Class="ch-resume-text" Typo="@Typo.body1">
-                <CHIndentBlockInline IndentationLevel="1" />Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK". Consists of an executable project and a few static library projects which it depends on. This also demonstrates how to add third-party libraries as dependencies, such as the Boost C++ Libraries.
-            </MudText>
+            <div>
+                <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                    <CHIndentBlockInline IndentationLevel="1" />Consolidated the best practices of modern CMake into a collection of C++ projects named "MeddySDK".
+                </MudText>
+                <ul style="list-style-type: none;">
+                    <li class="d-flex flex-row">
+                        <CHIndentBlock IndentationLevel="1" />
+                        <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                            <CHBulletText />Designed a project structure that fulfills any CMake use case.
+                        </MudText>
+                    </li>
+                    <li class="d-flex flex-row">
+                        <CHIndentBlock IndentationLevel="1" />
+                        <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                            <CHBulletText />Separates dependencies from each other and ties them together with `find_package`.
+                        </MudText>
+                    </li>
+                    <li class="d-flex flex-row">
+                        <CHIndentBlock IndentationLevel="1" />
+                        <MudText Class="ch-resume-text" Typo="@Typo.body1">
+                            <CHBulletText />Wrote automated tests (CTest), made it a package for distribution (CPack), and created CMakePresets.
+                        </MudText>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
     <CHResumeSection Title="Skills" />
